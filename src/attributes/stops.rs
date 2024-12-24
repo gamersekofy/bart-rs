@@ -3,6 +3,7 @@ use std::fmt::{Display, Formatter};
 use std::fs::File;
 use std::io::{BufRead, BufReader, Read};
 use std::path::Path;
+use crate::helper::trim_quotes;
 
 #[derive(Debug)]
 pub struct Stop<'a> {
@@ -16,10 +17,6 @@ pub struct Stop<'a> {
     plc_url: &'a str,
     location_type: &'a str,
     parent_station: &'a str,
-}
-
-fn trim_quotes(s: &str) -> &str {
-    s.trim_matches('"')
 }
 
 impl<'a> Display for Stop<'a> {
