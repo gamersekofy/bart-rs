@@ -1,9 +1,10 @@
+use crate::helper::trim_quotes;
+use colored::Colorize;
 use std::fmt;
 use std::fmt::{Display, Formatter};
 use std::fs::File;
 use std::io::{BufRead, BufReader, Read};
-use std::path::Path;
-use crate::helper::trim_quotes;
+use std::process::exit;
 
 #[derive(Debug)]
 pub struct Stop<'a> {
@@ -24,7 +25,7 @@ impl<'a> Display for Stop<'a> {
         write!(
             f,
             "{} at {}, {}",
-            self.stop_name, self.stop_lat, self.stop_long
+            self.stop_name.blue(), self.stop_lat.yellow(), self.stop_long.yellow()
         )
     }
 }
@@ -63,7 +64,8 @@ impl<'a> Stop<'a> {
         // Read stops file and split at lines
         match File::open(file_path) {
             Ok(mut file) => {
-                file.read_to_string(&mut contents).unwrap();
+                file.read_to_string(&mut contents)
+                    .expect("Can't read file. Does it exist?");
                 for line in contents.lines() {
                     let parts: Vec<&str> = line.split(",").collect();
                     stops.push(Stop::new(
@@ -80,7 +82,10 @@ impl<'a> Stop<'a> {
                     ));
                 }
             }
-            Err(_) => eprint!("File not found."),
+            Err(_) => {
+                println!("{} {} {}", "File".red(), file_path, "not found 🤯".red());
+                exit(1)
+            }
         }
         stops
     }
@@ -88,7 +93,6 @@ impl<'a> Stop<'a> {
 
 pub fn old_parse_stops_file(file_path: &str) {
     let mut stops_vec: Vec<String> = Vec::new();
-    let mut better_stops_vec: Vec<Stop> = Vec::new();
 
     println!("Reading file at: {}", file_path);
 

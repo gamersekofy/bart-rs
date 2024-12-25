@@ -1,0 +1,2129 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,trip_load_information,wheelchair_accessible,bikes_allowed
+5,2024_08_12-DX-MVS-Weekday-001,1561500,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561596,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561501,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561551,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561502,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561597,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561503,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561552,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561504,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561598,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561505,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561553,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561506,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561554,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561507,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561555,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561508,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561556,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561509,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561557,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561510,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561558,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561511,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561559,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561512,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561560,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561513,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561561,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561514,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561562,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561515,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561563,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561516,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561564,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561517,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561565,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561518,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561566,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561519,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561567,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561520,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561568,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561521,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561569,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561522,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561570,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561523,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561571,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561524,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561572,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561525,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561582,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561526,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561573,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561527,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561583,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561528,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561574,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561529,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561575,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561530,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561576,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561532,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561577,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561533,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561584,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561534,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561578,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561531,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561579,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561535,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561580,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561536,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561581,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561537,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561585,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561538,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561586,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561539,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561587,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561540,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561588,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561541,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561589,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561542,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561590,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561543,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561591,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-DX-MVS-Weekday-001,1561544,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561592,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561593,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561594,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-DX-MVS-Weekday-001,1561595,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561117,"OAK Airport / Richmond",0,,003A_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561178,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561118,"OAK Airport / Richmond",0,,003B_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561119,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561062,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561120,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561063,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561121,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561064,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561122,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561065,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561123,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561066,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561124,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561067,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561125,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561068,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561126,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561069,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561127,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561070,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561128,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561071,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561129,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561072,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561130,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561073,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561131,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561074,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561132,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561075,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561133,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561076,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561134,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561077,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561135,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561078,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561136,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561079,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561137,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561080,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561138,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561081,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561139,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561082,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561140,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561083,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561141,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561084,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561142,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561085,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561143,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561086,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561144,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561087,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561145,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561088,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561146,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561089,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561148,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561090,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561149,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561091,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561150,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561092,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561147,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561093,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561151,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561094,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561152,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561095,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561153,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561096,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561154,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561097,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561155,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561098,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561156,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561099,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561157,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561102,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561158,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561100,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561159,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561103,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561160,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561104,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561161,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561101,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561162,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561105,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561163,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561106,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561164,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561107,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561165,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561108,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561166,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561109,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561167,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561110,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561168,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561111,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561169,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561112,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561170,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561113,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561171,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561114,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561172,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561115,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561173,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1561116,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561174,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1575535,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561175,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1575536,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561176,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-DX-MVS-Weekday-001,1575534,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-DX-MVS-Weekday-001,1561177,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561042,"San Francisco International Airport",1,,001F_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561190,"San Francisco / Antioch",0,,002C_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561041,"San Francisco International Airport",1,,001F_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561291,"SF / Pittsburg/Bay Point",0,,002D_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560995,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561248,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560938,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560996,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561191,"San Francisco / Antioch",0,,002C_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560939,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561192,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560997,"San Francisco International Airport",1,,001B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560940,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561249,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560994,"San Francisco International Airport",1,,001B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560937,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561189,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560998,"San Francisco International Airport",1,,001B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560941,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561250,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560999,"San Francisco International Airport",1,,001B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560942,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561193,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561000,"San Francisco International Airport",1,,001B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560943,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561251,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561001,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561194,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560944,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561252,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561002,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561195,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560945,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561253,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561003,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561196,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560946,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561254,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561004,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561197,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560947,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561255,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561005,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561198,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560948,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561256,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561006,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561199,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560949,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561257,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561007,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561200,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560950,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561258,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561008,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561201,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560951,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561259,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561009,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561202,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560952,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561260,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561010,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561203,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560953,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561261,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561011,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561204,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560954,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561264,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561012,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561208,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560955,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561265,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561013,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561205,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560956,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561266,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561014,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561209,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560957,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561262,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561015,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561210,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560958,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561263,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561016,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561206,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560959,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561267,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561017,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561207,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560960,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561268,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561025,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561211,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560961,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561269,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561018,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561212,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560963,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561270,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561019,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561213,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560964,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561271,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561020,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561214,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560965,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561272,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561026,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561215,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560962,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561273,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561021,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561216,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560966,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561274,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561027,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561217,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560967,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561275,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561022,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561218,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560968,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561276,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561023,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561219,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560969,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561277,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561024,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561220,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560970,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561278,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561028,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561221,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560971,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561279,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561029,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561222,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560972,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561280,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561030,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561223,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560973,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561281,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561031,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561224,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560974,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561282,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561032,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561225,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560975,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561283,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561033,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561226,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560976,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561284,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561034,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561227,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560977,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561285,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561035,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561229,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560978,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561286,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561036,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561230,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560979,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561287,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561037,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561231,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560980,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561288,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561038,"San Francisco Int'l Airport / Millbrae",1,,001D_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561228,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560981,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561289,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561039,"San Francisco Int'l Airport / Millbrae",1,,001D_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561232,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560982,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561290,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561040,"San Francisco Int'l Airport / Millbrae",1,,001D_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561233,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560983,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561293,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561052,"San Francisco Int'l Airport / Millbrae",1,,001D_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561234,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560984,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561294,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561053,"San Francisco Int'l Airport / Millbrae",1,,001D_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561235,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560985,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561295,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561054,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561236,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560986,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561296,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560987,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561237,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560988,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561297,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561056,"San Francisco International Airport",1,,001B_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561238,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560989,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561313,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560990,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561239,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560991,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561240,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560992,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561314,"SF / Pittsburg/Bay Point",0,,002B_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1560993,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-DX-MVS-Weekday-001,1561055,"Millbrae (Caltrain Transfer Platform)",1,,001E_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561241,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561292,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561242,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561243,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561244,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561245,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561247,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-DX-MVS-Weekday-001,1561246,"San Francisco / Antioch",0,,002A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561316,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561317,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561406,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561318,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561319,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561407,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561320,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561408,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561321,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561409,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561322,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561410,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561323,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561411,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561324,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561412,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561325,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561413,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561326,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561414,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561327,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561415,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561328,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561416,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561329,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561417,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561330,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561418,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561331,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561419,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561332,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561420,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561333,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561421,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561334,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561422,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561335,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561423,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561336,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561424,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561337,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561425,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561338,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561426,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561339,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561427,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561340,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561428,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561341,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561429,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561342,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561430,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561343,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561431,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561344,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561432,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561345,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561433,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561346,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561434,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561347,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561435,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561348,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561436,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561349,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561437,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561350,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561438,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561351,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561439,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561352,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561440,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561353,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561441,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561354,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561442,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561355,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561443,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561356,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561444,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561357,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561445,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561358,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561446,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561359,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561447,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-DX-MVS-Weekday-001,1561360,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561448,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561449,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-DX-MVS-Weekday-001,1561495,"SFO / SF / Richmond",0,,008A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561599,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561659,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561600,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561714,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561601,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561660,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561602,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561661,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561603,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561662,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561604,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561663,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561605,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561665,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561606,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561666,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561607,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561667,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561608,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561664,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561609,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561668,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561610,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561669,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561611,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561670,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561612,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561671,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561613,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561672,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561614,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561673,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561615,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561674,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561616,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561675,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561617,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561676,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561618,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561677,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561619,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561678,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561620,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561679,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561621,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561680,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561622,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561702,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561623,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561703,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561624,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561681,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561625,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561682,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561626,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561683,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561627,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561684,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561628,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561704,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561629,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561685,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561630,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561686,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561631,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561687,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561632,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561688,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561633,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561689,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561634,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561690,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561635,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561691,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561636,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561692,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561637,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561693,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561638,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561694,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561639,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561695,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561640,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561696,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561641,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561697,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561642,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561698,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561643,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561699,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561644,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561700,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561645,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561701,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561646,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561705,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561647,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561716,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561648,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561715,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561649,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561706,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561650,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561707,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561651,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561708,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561652,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561709,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561653,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561710,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561654,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561711,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561655,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561712,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561656,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561713,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-DX-MVS-Weekday-001,1561657,"Bay Fair",1,,011B_shp,,0,0
+12,2024_08_12-DX-MVS-Weekday-001,1561658,"Dublin/Pleasanton",0,,012B_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679816,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679817,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679818,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679819,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679820,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679821,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679822,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679823,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679824,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679825,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679826,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679827,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679828,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679829,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679830,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679831,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679832,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679833,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679834,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679835,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679836,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679837,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679838,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679839,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679840,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679841,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679842,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679843,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679844,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679845,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679846,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679847,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679848,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679849,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679850,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679851,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679852,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679853,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679854,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679855,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679856,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679857,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679858,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679859,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679860,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679861,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679862,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679863,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679864,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679865,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679866,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679867,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679868,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679869,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679870,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679871,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679872,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679873,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679874,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679875,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679876,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679877,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679878,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679879,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679880,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679881,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679882,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679883,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679884,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679885,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679886,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679887,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679888,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679889,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679890,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679891,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679892,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679893,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679894,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679895,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679896,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679897,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679898,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679899,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679900,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679901,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679902,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679903,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679904,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679905,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679906,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-DX19-Weekday-002,1679907,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680255,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680256,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680257,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680258,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680259,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680260,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680261,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680262,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680263,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680264,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680265,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680266,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680267,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680268,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680269,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680270,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680271,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680272,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680273,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680274,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680275,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680276,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680277,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680278,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680279,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680280,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680281,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680282,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680283,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680284,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680285,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680286,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680287,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680288,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680289,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680290,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680291,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680292,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680293,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680294,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680295,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680296,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680297,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680298,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680299,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680300,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680301,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680302,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680303,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680304,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680305,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680306,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680307,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680308,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680309,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680310,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680311,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680312,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680313,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680314,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680315,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680316,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680317,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680318,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680319,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680320,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680321,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680322,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680323,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680324,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680325,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680326,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680327,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680328,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680329,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680330,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680331,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680332,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680333,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680334,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680335,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680336,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680337,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680338,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680339,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680340,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680341,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680342,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680343,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680344,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680345,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680346,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680347,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-DX20-Weekday-002,1680348,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1576714,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1576716,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1576715,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1576717,"Berryessa/North San Jose",0,,006B_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1576718,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575752,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575753,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575862,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575754,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575863,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575755,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575864,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575756,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575865,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575757,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575866,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575758,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575867,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575759,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575868,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575760,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575869,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575761,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575870,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575762,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575871,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575763,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575872,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575764,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575873,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575765,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575874,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575766,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575875,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575767,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575876,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575768,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575877,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575769,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575878,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575770,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575879,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575771,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575880,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575772,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575881,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575773,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575882,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575774,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575883,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575775,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575884,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575776,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575885,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575777,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575886,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575778,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575887,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575779,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575888,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575780,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575889,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575781,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575890,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575782,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575891,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575783,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575892,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575784,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575893,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575785,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575894,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575786,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575895,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575787,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575896,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575788,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575897,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575789,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575898,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575790,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575899,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SA-MVS-Saturday-001,1575791,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575900,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575901,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575902,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SA-MVS-Saturday-001,1575903,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1577093,"OAK Airport / Richmond",0,,003A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1577094,"OAK Airport / Richmond",0,,003B_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575695,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575696,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575586,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575697,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575587,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575698,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575588,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575699,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575589,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575700,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575590,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575701,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575591,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575702,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575592,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575703,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575593,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575704,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575594,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575705,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575595,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575706,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575596,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575707,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575597,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575708,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575598,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575709,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575599,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575710,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575600,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575711,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575601,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575712,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575602,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575713,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575603,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575714,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575604,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575715,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575605,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575716,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575606,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575717,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575607,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575718,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575608,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575719,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575609,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575720,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575610,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575721,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575611,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575722,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575612,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575723,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575613,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575724,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575614,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575725,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575615,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575726,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575616,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575727,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575617,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575728,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575618,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575729,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575619,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575730,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575620,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575731,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575621,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575732,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575622,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575733,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575623,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575734,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575624,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575735,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575625,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575736,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575626,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575737,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575627,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575738,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575628,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575739,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575629,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575740,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575630,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575741,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575631,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575742,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575632,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575743,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575633,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575744,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575634,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575745,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575635,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575746,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575636,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575747,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575637,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575748,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575639,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575749,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575640,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575750,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SA-MVS-Saturday-001,1575638,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SA-MVS-Saturday-001,1575751,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1577101,"San Francisco / Antioch",0,,002C_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1577100,"San Francisco International Airport",1,,001F_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1577099,"San Francisco International Airport",1,,001F_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575345,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575346,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575347,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575470,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575348,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575471,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575349,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575472,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575350,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575473,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575351,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575474,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575352,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575475,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575353,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575476,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575354,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575477,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575355,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575478,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575356,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575479,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575357,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575480,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575358,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575481,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575359,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575482,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575360,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575483,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575361,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575484,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575362,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575485,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575363,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575486,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575364,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575487,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575365,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575488,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575366,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575489,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575367,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575490,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575368,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575491,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575369,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575492,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575370,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575493,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575371,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575494,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575372,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575495,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575373,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575496,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575374,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575497,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575375,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575498,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575376,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575499,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575377,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575500,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575378,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575501,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575379,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575502,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575380,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575503,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575381,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575504,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575382,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575505,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575383,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575506,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575384,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575507,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575385,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575508,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575386,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575509,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575387,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575510,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575388,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575511,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575389,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575512,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575390,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575513,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575391,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575392,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575514,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575393,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575515,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575394,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575395,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575516,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575396,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575517,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575397,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575398,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SA-MVS-Saturday-001,1575399,"Millbrae (Caltrain Transfer Platform)",1,,001E_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575518,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575519,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575520,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575521,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575522,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575523,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575524,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SA-MVS-Saturday-001,1575525,"San Francisco / Antioch",0,,002A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575904,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575906,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575908,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576061,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575910,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576063,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575912,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576065,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575914,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576067,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575916,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576069,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575918,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576071,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575920,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576073,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575922,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576075,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575924,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576077,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575926,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576079,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575928,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576081,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575930,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576083,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575932,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576085,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575934,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576087,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575936,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576089,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575938,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576091,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575940,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576093,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575942,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576095,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575944,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576097,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575946,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576099,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575948,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576101,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575950,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576103,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575952,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576105,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575954,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576107,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575956,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576109,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575958,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576111,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575960,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576113,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575962,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576115,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575964,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576117,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575966,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576119,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575968,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576121,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575970,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576123,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575972,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576125,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575974,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576127,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575976,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576129,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575978,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576131,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575980,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576133,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575982,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576135,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575984,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576137,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SA-MVS-Saturday-001,1575986,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576139,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576141,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-SA-MVS-Saturday-001,1576143,"SFO / SF / Richmond",0,,008A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576216,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576322,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576217,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576323,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576218,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576324,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576219,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576325,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576220,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576326,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576221,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576327,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576222,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576328,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576223,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576329,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576224,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576330,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576225,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576331,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576226,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576332,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576227,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576333,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576228,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576334,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576229,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576335,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576230,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576336,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576231,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576337,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576232,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576338,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576233,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576339,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576234,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576340,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576235,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576341,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576236,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576342,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576237,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576343,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576238,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576344,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576239,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576345,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576240,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576346,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576241,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576347,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576242,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576348,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576243,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576349,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576244,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576350,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576245,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576351,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576246,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576352,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576247,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576353,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576248,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576354,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576249,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576355,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576250,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576356,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576251,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576357,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576252,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576358,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576253,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576359,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576254,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576360,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576255,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576361,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576256,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576362,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576257,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576363,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576258,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576364,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576259,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576365,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576260,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576366,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576261,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576367,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576262,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576368,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576263,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576369,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576264,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576370,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576265,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576371,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576266,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576372,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576267,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576373,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576268,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576374,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576269,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576375,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576270,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576376,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SA-MVS-Saturday-001,1576271,"Bay Fair",1,,011B_shp,,0,0
+12,2024_08_12-SA-MVS-Saturday-001,1576377,"Dublin/Pleasanton",0,,012B_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680088,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680089,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680090,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680091,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680092,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680093,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680094,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680095,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680096,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680097,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680098,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680099,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680100,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680101,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680102,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680103,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680104,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680105,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680106,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680107,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680108,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680109,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680110,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680111,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680112,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680113,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680114,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680115,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680116,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680117,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680118,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680119,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680120,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680121,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680122,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680123,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680124,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680125,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680126,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680127,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680128,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680129,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680130,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680131,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680132,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680133,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680134,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680135,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680136,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680137,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680138,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680139,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680140,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680141,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680142,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680143,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680144,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680145,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680146,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680147,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680148,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680149,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680150,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680151,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680152,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680153,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680154,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680155,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680156,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680157,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680158,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680159,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680160,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680161,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680162,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680163,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680164,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680165,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680166,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680167,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680168,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680169,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680170,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680171,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680172,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680173,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680174,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SA19-Saturday-002,1680175,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680443,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680354,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680355,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680356,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680357,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680358,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680359,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680360,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680361,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680362,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680363,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680364,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680365,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680366,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680367,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680368,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680369,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680370,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680371,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680372,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680373,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680374,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680375,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680376,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680377,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680378,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680379,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680380,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680381,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680382,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680383,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680384,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680385,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680386,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680387,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680388,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680389,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680390,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680391,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680392,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680393,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680394,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680395,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680396,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680397,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680398,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680399,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680400,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680401,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680402,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680403,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680404,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680405,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680406,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680407,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680408,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680409,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680410,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680411,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680412,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680413,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680414,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680415,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680416,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680417,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680418,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680419,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680420,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680421,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680422,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680423,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680424,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680425,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680426,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680427,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680428,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680429,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680430,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680431,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680432,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680433,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680434,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680435,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680436,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680437,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680438,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680439,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680440,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680441,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SA20-Saturday-002,1680442,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1580708,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1580705,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1580709,"OAK Airport / SF / Daly City",1,,005B_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1580706,"Berryessa/North San Jose",0,,006B_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1580707,"Berryessa/North San Jose",0,,006B_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575792,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575793,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575826,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575794,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575827,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575795,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575828,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575796,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575829,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575797,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575830,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575798,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575831,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575799,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575832,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575800,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575833,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575801,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575834,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575802,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575835,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575803,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575836,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575804,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575837,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575805,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575838,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575806,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575839,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575807,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575840,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575808,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575841,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575809,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575842,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575810,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575843,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575811,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575844,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575812,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575845,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575813,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575846,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575814,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575847,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575815,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575848,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575816,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575849,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575817,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575850,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575818,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575851,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575819,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575852,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575820,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575853,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575821,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575854,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575822,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575855,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575823,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575856,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575824,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575857,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+5,2024_08_12-SU-MVS-Sunday-001,1575825,"OAK Airport / SF / Daly City",1,,005A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575858,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575859,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575860,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+6,2024_08_12-SU-MVS-Sunday-001,1575861,"SF / OAK Airport / Berryessa",0,,006A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1580711,"OAK Airport / Richmond",0,,003A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1580710,"OAK Airport / Richmond",0,,003B_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575644,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575645,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575537,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575646,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575538,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575647,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575539,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575648,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575540,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575649,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575541,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575650,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575542,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575651,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575543,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575652,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575544,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575653,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575545,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575654,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575546,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575655,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575547,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575656,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575548,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575657,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575549,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575658,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575550,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575659,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575551,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575660,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575552,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575661,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575553,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575662,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575554,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575663,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575555,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575664,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575556,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575665,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575557,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575666,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575558,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575667,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575559,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575668,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575560,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575669,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575561,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575670,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575562,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575671,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575563,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575672,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575564,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575673,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575565,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575674,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575566,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575675,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575567,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575676,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575568,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575677,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575569,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575678,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575570,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575679,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575571,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575680,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575572,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575681,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575573,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575682,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575574,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575683,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575575,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575684,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575576,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575685,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575577,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575686,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575578,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575687,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575579,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575688,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575580,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575689,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575581,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575690,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575582,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575691,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575583,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575692,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575584,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575693,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+3,2024_08_12-SU-MVS-Sunday-001,1575585,"OAK Airport / Richmond",0,,003C_shp,,0,0
+4,2024_08_12-SU-MVS-Sunday-001,1575694,"OAK Airport / Berryessa/North San Jose",1,,004A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1580806,"San Francisco International Airport",1,,001F_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1580807,"San Francisco International Airport",1,,001F_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1580811,"San Francisco / Antioch",0,,002C_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577107,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577108,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577109,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577169,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577110,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577170,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577111,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577171,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577112,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577172,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577113,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577173,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577114,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577174,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577115,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577175,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577116,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577176,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577117,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577177,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577118,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577178,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577119,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577179,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577120,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577180,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577121,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577181,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577122,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577182,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577123,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577183,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577124,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577184,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577125,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577185,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577126,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577186,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577127,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577187,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577128,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577188,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577129,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577189,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577130,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577190,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577131,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577191,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577132,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577192,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577133,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577193,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577134,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577194,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577135,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577195,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577136,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577196,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577137,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577197,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577138,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577198,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577139,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577199,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577140,"San Francisco International Airport",1,,001A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577200,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577141,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577201,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577142,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577202,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577143,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577203,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577144,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577204,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577145,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577205,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577147,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577206,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577149,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577151,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577207,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577153,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577208,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577155,"San Francisco International Airport",1,,001A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577157,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577210,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577159,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577212,"San Francisco / Antioch",0,,002A_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577161,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577163,"San Francisco Int'l Airport / Millbrae",1,,001C_shp,,0,0
+1,2024_08_12-SU-MVS-Sunday-001,1577168,"Millbrae (Caltrain Transfer Platform)",1,,001E_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577214,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577216,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577218,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577220,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577222,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577224,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577226,"San Francisco / Antioch",0,,002A_shp,,0,0
+2,2024_08_12-SU-MVS-Sunday-001,1577227,"San Francisco / Antioch",0,,002A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575988,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575990,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575992,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576145,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575994,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576147,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575996,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576149,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1575998,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576151,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576000,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576153,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576002,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576155,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576004,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576157,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576006,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576159,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576008,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576161,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576010,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576163,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576012,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576165,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576014,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576167,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576016,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576169,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576018,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576171,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576020,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576173,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576022,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576175,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576024,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576177,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576026,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576179,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576028,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576181,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576030,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576183,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576032,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576185,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576034,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576187,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576036,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576189,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576038,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576191,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576040,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576193,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576042,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576195,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576044,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576197,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576046,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576199,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576048,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576201,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576050,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576203,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576052,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576205,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576054,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576207,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576056,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576209,"SFO / SF / Richmond",0,,008A_shp,,0,0
+7,2024_08_12-SU-MVS-Sunday-001,1576058,"SF / SFO Airport / Millbrae",1,,007A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576211,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576213,"SFO / SF / Richmond",0,,008A_shp,,0,0
+8,2024_08_12-SU-MVS-Sunday-001,1576215,"SFO / SF / Richmond",0,,008A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576272,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576378,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576273,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576379,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576274,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576380,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576275,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576381,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576276,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576382,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576277,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576383,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576278,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576384,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576279,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576385,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576280,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576386,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576281,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576387,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576282,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576388,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576283,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576389,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576284,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576390,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576285,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576391,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576286,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576392,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576287,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576393,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576288,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576394,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576289,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576395,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576290,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576396,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576291,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576397,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576292,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576398,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576293,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576399,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576294,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576400,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576295,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576401,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576296,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576402,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576297,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576403,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576298,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576404,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576299,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576405,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576300,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576406,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576301,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576407,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576302,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576408,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576303,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576409,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576304,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576410,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576305,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576411,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576306,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576412,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576307,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576413,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576308,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576414,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576309,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576415,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576310,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576416,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576311,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576417,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576312,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576418,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576313,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576419,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576314,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576420,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576315,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576421,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576316,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576422,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576317,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576423,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576318,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576424,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576319,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576425,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576320,"OAK Airport / SF / Daly City",1,,011A_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576426,"SF / OAK Airport / Dublin/Pleasanton",0,,012A_shp,,0,0
+11,2024_08_12-SU-MVS-Sunday-001,1576321,"Bay Fair",1,,011B_shp,,0,0
+12,2024_08_12-SU-MVS-Sunday-001,1576427,"Dublin/Pleasanton",0,,012B_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680180,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680181,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680182,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680183,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680184,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680185,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680186,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680187,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680188,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680189,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680190,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680191,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680192,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680193,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680194,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680195,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680196,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680197,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680198,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680199,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680200,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680201,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680202,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680203,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680204,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680205,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680206,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680207,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680208,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680209,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680210,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680211,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680212,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680213,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680214,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680215,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680216,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680217,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680218,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680219,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680220,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680221,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680222,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680223,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680224,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680225,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680226,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680227,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680228,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680229,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680230,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680231,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680232,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680233,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680234,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680235,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680236,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680237,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680238,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680239,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680240,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680241,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680242,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680243,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680244,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680245,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680246,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680247,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680248,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680249,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680250,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680251,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680252,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680253,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680254,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680176,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680177,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680178,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+19,2024_08_12-SU19-Sunday-002,1680179,"Service between Oakland Airport & Coliseum",0,,019_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680458,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680459,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680460,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680461,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680462,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680463,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680464,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680465,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680466,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680467,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680468,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680469,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680470,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680471,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680472,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680473,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680474,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680475,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680476,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680477,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680478,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680479,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680480,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680481,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680482,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680483,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680484,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680485,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680486,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680487,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680488,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680489,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680490,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680491,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680492,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680493,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680494,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680495,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680496,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680497,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680498,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680499,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680500,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680501,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680502,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680503,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680504,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680505,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680506,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680507,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680508,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680509,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680510,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680511,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680512,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680513,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680514,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680515,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680516,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680517,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680518,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680519,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680520,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680521,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680522,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680523,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680524,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680525,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680526,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680527,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680528,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680529,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680530,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680531,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680532,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680444,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680445,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680446,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680447,"Coliseum to Oakland Airport",1,,020_shp,,0,0
+20,2024_08_12-SU20-Sunday-002,1680448,"Coliseum to Oakland Airport",1,,020_shp,,0,0

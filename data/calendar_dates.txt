@@ -1,0 +1,2 @@
+service_id,date,exception_type
+2024_08_12-SU-MVS-Sunday-001,20250101,1

@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 gtfs-structures = "0.42.0"
+colored = "2.2.0"
