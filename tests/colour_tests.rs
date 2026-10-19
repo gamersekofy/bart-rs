@@ -1,4 +1,4 @@
-//! Route colours.
+//! Route colours and the tables they appear in.
 //!
 //! BART publishes route colours as six-digit hex strings. `colored`'s own
 //! string-to-colour conversion only understands the sixteen named colours
@@ -11,7 +11,7 @@
 
 #![cfg(feature = "cli")]
 
-use bart_rs::commands::swatch;
+use bart_rs::commands::{swatch, visible_width};
 
 #[test]
 fn route_colours_are_rendered_in_colour() {
@@ -59,4 +59,18 @@ fn route_colours_are_rendered_in_colour() {
     assert_eq!(swatch(Some("FF00")), " ");
     assert_eq!(swatch(Some("GGGGGG")), " ");
     assert_eq!(swatch(Some("not a colour")), " ");
+}
+
+#[test]
+fn escape_sequences_do_not_count_towards_a_columns_width() {
+    assert_eq!(visible_width("plain"), 5);
+    assert_eq!(visible_width(""), 0);
+    assert_eq!(visible_width("█"), 1);
+    assert_eq!(visible_width("\u{1b}[38;2;255;0;0m█\u{1b}[0m"), 1);
+    assert_eq!(visible_width("\u{1b}[1mbold\u{1b}[0m"), 4);
+    assert_eq!(visible_width("\u{1b}[38;2;255;0;0mred\u{1b}[0m"), 3);
+
+    // A swatch is one column wide on screen, however many bytes it takes.
+    let block = swatch(Some("FF0000"));
+    assert_eq!(visible_width(&block), 1);
 }

@@ -29,7 +29,8 @@ pub fn run(cli: &Cli, args: &TripArgs) -> Result<()> {
     println!("Trip {}", trip.trip_id);
     println!();
     println!(
-        "  route         {} ({})",
+        "  route         {} {} ({})",
+        super::swatch(route.and_then(|r| r.color.as_deref())),
         route.map(|r| r.display_name()).unwrap_or("?"),
         trip.route_id
     );

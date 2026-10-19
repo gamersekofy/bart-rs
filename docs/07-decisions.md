@@ -565,3 +565,61 @@ ourselves is four lines and cannot fail silently.
 - *Emit the escape sequence directly, bypassing `colored`.* Would have to
   reimplement `--no-color` and `NO_COLOR` handling, and the nearest-ANSI
   fallback, for no gain.
+
+---
+
+## D20 — Measure table columns in visible characters, not bytes
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `print_table` sized its columns with `str::chars().count()`.
+That counts the escape sequences in a coloured cell as though they were
+printed, so a cell holding a colour swatch — one character on screen, about
+twenty bytes of escape sequence — made its column twenty columns too wide
+and pushed everything after it out of line. The `bart-rs routes` table was
+visibly ragged for this reason: the `COLOR` heading sat eleven columns to
+the right of the colour it labelled.
+
+**Decision.** Size columns with a `visible_width` function that skips ANSI
+escape sequences, and pad cells to that width rather than relying on
+`format!`'s width specifier, which also counts the escapes.
+
+**Why.** The table is the main way this tool reports things, and a ragged
+table is the sort of thing that makes a reader distrust the numbers next to
+it. The bug predated the colour work and was invisible until a swatch was
+put in a table.
+
+**Cost.** About thirty lines: a small ANSI scanner and a padding helper.
+
+**Rejected.**
+
+- *Do not put coloured cells in tables.* That would mean giving up the
+  swatch everywhere, which is the point of it.
+- *Put the swatch in its own trailing column.* The escape sequences would
+  still be counted, just less visibly.
+- *Use a crate that handles this.* There is one that would do; hand-writing
+  thirty lines keeps the dependency list short and the behaviour obvious.
+
+---
+
+## D21 — Give the swatch its own column, rather than colouring the text
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `bart-rs arrivals` and `departures` list the line serving each
+train. There are two ways to colour-code them: colour the text, or put a
+swatch next to it.
+
+**Decision.** A swatch in its own column, immediately before the route's
+short name. The same treatment is applied to `bart-rs stop`'s list of the
+lines serving a station, and to the route line of `bart-rs trip`.
+
+**Why.** A coloured *background* on the text is unreadable when the colour
+is light — BART's yellow is `FFFF33`, which on a white terminal is
+invisible, and on a dark one is blinding. A solid block of the colour is
+readable either way, and it is the same shape BART uses in its own maps and
+timetables, so it reads as "this is the colour of the line" rather than as
+decoration. It also survives `--no-color`: the swatch becomes a blank
+column and the table still lines up.
+
+**Cost.** One extra column in three commands.

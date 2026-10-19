@@ -32,7 +32,7 @@ Live next to the code they test. Cover the pure functions:
 
 ### Integration tests — `tests/*.rs`
 
-These use the public library API and the committed fixtures. There are 103
+These use the public library API and the committed fixtures. There are 107
 tests in total; they run offline and take well under a second.
 
 | File | Covers |
@@ -43,8 +43,8 @@ tests in total; they run offline and take well under a second.
 | `tests/feed_tests.rs` | `routes_serving`, `stations_on_route`, `arrivals_at`, `departures_from`, `fare`, `station_of`, `find_stops` |
 | `tests/coverage_tests.rs` | the coverage window comes from the calendar, not from `feed_info.txt`; a current feed is not reported as expired |
 | `tests/release_tests.rs` | two releases with the same `feed_version` are still different releases; the release is recovered from `state.json` |
-| `tests/colour_tests.rs` | a hex route colour becomes a true-colour escape, and never the white fallback |
-| `tests/cli_tests.rs` | spawn the built binary; assert on exit codes and key substrings in stdout |
+| `tests/colour_tests.rs` | a hex route colour becomes a true-colour escape, and never the white fallback; escape sequences do not count towards a column's width |
+| `tests/cli_tests.rs` | spawn the built binary; assert on exit codes and key substrings in stdout; the swatch does not push a table out of alignment; a closed output pipe is not an error |
 | `tests/live_feed.rs` | `#[ignore]`d; downloads the real feed and cross-checks against `gtfs-structures` |
 
 ### Regression tests for the upstream quirks

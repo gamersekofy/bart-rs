@@ -66,11 +66,17 @@ pub fn run(cli: &Cli, args: &StopArgs) -> Result<()> {
         println!("  No lines serve this station.");
     } else {
         println!("  Lines serving this station");
-        let names: Vec<String> = routes
+        let rows: Vec<Vec<String>> = routes
             .iter()
-            .map(|r| r.short_name.clone().unwrap_or_else(|| r.id.clone()))
+            .map(|route| {
+                vec![
+                    super::swatch(route.color.as_deref()),
+                    route.short_name.clone().unwrap_or_else(|| route.id.clone()),
+                    route.long_name.clone().unwrap_or_default(),
+                ]
+            })
             .collect();
-        println!("    {}", names.join("  "));
+        print_table(&["", "ROUTE", "NAME"], &rows);
     }
 
     Ok(())

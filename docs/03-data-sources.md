@@ -61,8 +61,8 @@ redirects to:
 
 ```
 google_transit_20260810-20270108_v02.zip
-           ^^^^^^^^ ^^^^^^^   ^^
-           coverage window    revision counter
+               ^^^^^^^^ ^^^^^^^   ^^
+               coverage window    revision counter
 ```
 
 Both parts change on every release. A `HEAD` request to the permalink

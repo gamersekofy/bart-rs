@@ -75,12 +75,17 @@ pub fn dispatch(cli: Cli) -> Result<()> {
 }
 
 /// Print a table with aligned columns.
+///
+/// Cells may contain ANSI escape sequences — a colour swatch, for example —
+/// so the column widths are measured in *visible* characters. Measuring the
+/// raw string would count the escape bytes and push every column after the
+/// swatch out of alignment.
 pub fn print_table(headers: &[&str], rows: &[Vec<String>]) {
-    let mut widths: Vec<usize> = headers.iter().map(|h| h.chars().count()).collect();
+    let mut widths: Vec<usize> = headers.iter().map(|h| visible_width(h)).collect();
     for row in rows {
         for (i, cell) in row.iter().enumerate() {
             if i < widths.len() {
-                widths[i] = widths[i].max(cell.chars().count());
+                widths[i] = widths[i].max(visible_width(cell));
             }
         }
     }
@@ -88,7 +93,7 @@ pub fn print_table(headers: &[&str], rows: &[Vec<String>]) {
     let header: Vec<String> = headers
         .iter()
         .enumerate()
-        .map(|(i, h)| format!("{h:<width$}", width = widths[i]))
+        .map(|(i, h)| pad_to(h, widths[i]))
         .collect();
     println!("{}", header.join("  ").trim_end().bold());
 
@@ -98,11 +103,47 @@ pub fn print_table(headers: &[&str], rows: &[Vec<String>]) {
             .enumerate()
             .map(|(i, cell)| {
                 let width = widths.get(i).copied().unwrap_or(0);
-                format!("{cell:<width$}")
+                pad_to(cell, width)
             })
             .collect();
         println!("{}", line.join("  ").trim_end());
     }
+}
+
+/// The number of columns `text` occupies on screen.
+///
+/// ANSI escape sequences are not printed, so they do not count.
+pub fn visible_width(text: &str) -> usize {
+    let mut width = 0;
+    let mut chars = text.chars();
+
+    while let Some(c) = chars.next() {
+        if c != '\u{1b}' {
+            width += 1;
+            continue;
+        }
+
+        // A control sequence: ESC [ parameters intermediates final-byte.
+        if chars.next() != Some('[') {
+            continue;
+        }
+        for c in chars.by_ref() {
+            if ('\u{40}'..='\u{7e}').contains(&c) {
+                break;
+            }
+        }
+    }
+
+    width
+}
+
+/// Pad `text` out to `width` visible columns.
+fn pad_to(text: &str, width: usize) -> String {
+    let mut padded = text.to_string();
+    for _ in visible_width(text)..width {
+        padded.push(' ');
+    }
+    padded
 }
 
 /// Print a value as JSON.

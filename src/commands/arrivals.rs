@@ -97,6 +97,10 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
             };
             vec![
                 schedule::fmt_short_time(arrival.time),
+                super::swatch(
+                    feed.route(&arrival.route_id)
+                        .and_then(|route| route.color.as_deref()),
+                ),
                 arrival.route_short_name.clone().unwrap_or_default(),
                 arrival.headsign.clone().unwrap_or_default(),
                 arrival.platform_id.clone().unwrap_or_default(),
@@ -106,7 +110,7 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
         .collect();
 
     print_table(
-        &["TIME", "ROUTE", "DESTINATION", "PLATFORM", "STATUS"],
+        &["TIME", "", "ROUTE", "DESTINATION", "PLATFORM", "STATUS"],
         &rows,
     );
 

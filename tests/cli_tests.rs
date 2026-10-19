@@ -276,3 +276,105 @@ fn a_closed_output_pipe_is_not_an_error() {
 
     let _ = std::fs::remove_dir_all(&data_dir);
 }
+
+#[test]
+fn a_swatch_does_not_push_the_table_out_of_alignment() {
+    // The colour swatch is a single character on screen but twenty-odd
+    // bytes of escape sequence. The table's column widths have to be
+    // measured in visible characters, or everything after the swatch is
+    // out of line.
+    let data_dir = fixture_data_dir();
+
+    // CLICOLOR_FORCE makes the tool emit colour even though its output is
+    // a pipe, so the swatch really does carry escape sequences.
+    let output = Command::new(binary())
+        .arg("routes")
+        .env("BART_RS_DATA_DIR", &data_dir)
+        .env("CLICOLOR_FORCE", "1")
+        .env_remove("NO_COLOR")
+        .output()
+        .expect("the binary runs");
+
+    let stdout = String::from_utf8_lossy(&output.stdout).to_string();
+    assert!(
+        stdout.contains('\u{1b}'),
+        "the output has no colour in it, so the test proves nothing"
+    );
+
+    let lines: Vec<String> = stdout.lines().map(strip_ansi).collect();
+    let header = &lines[0];
+    let row = &lines[1];
+
+    // The colour column's heading and its value have to start in the same
+    // column.
+    let heading = visible_column(header, "COLOR").expect("the header has a colour column");
+    let value = visible_column(row, "FFFF33")
+        .or_else(|| visible_column(row, "339933"))
+        .or_else(|| visible_column(row, "FF0000"))
+        .expect("the row has a colour");
+    assert_eq!(
+        heading, value,
+        "the table is out of alignment:\n{header}\n{row}"
+    );
+
+    let _ = std::fs::remove_dir_all(&data_dir);
+}
+
+/// Remove ANSI escape sequences, leaving only what is printed.
+fn strip_ansi(text: &str) -> String {
+    let mut out = String::new();
+    let mut chars = text.chars();
+
+    while let Some(c) = chars.next() {
+        if c != '\u{1b}' {
+            out.push(c);
+            continue;
+        }
+        if chars.next() != Some('[') {
+            continue;
+        }
+        for c in chars.by_ref() {
+            if ('\u{40}'..='\u{7e}').contains(&c) {
+                break;
+            }
+        }
+    }
+
+    out
+}
+
+/// The column at which `needle` starts, counted in characters.
+///
+/// Byte offsets would be wrong here: the swatch is one character but three
+/// bytes, so a byte offset after it is two too far right.
+fn visible_column(line: &str, needle: &str) -> Option<usize> {
+    let stripped = strip_ansi(line);
+    let byte = stripped.find(needle)?;
+    Some(stripped[..byte].chars().count())
+}
+
+#[test]
+fn departures_are_colour_coded_by_line() {
+    let data_dir = fixture_data_dir();
+
+    let output = Command::new(binary())
+        .args(["departures", "LAKE"])
+        .env("BART_RS_DATA_DIR", &data_dir)
+        .env("CLICOLOR_FORCE", "1")
+        .env("COLORTERM", "truecolor")
+        .env_remove("NO_COLOR")
+        .output()
+        .expect("the binary runs");
+
+    let stdout = String::from_utf8_lossy(&output.stdout).to_string();
+    assert!(
+        stdout.contains("\u{1b}[38;2;"),
+        "the departures have no colour in them:\n{stdout}"
+    );
+    assert!(
+        stdout.contains('█'),
+        "the departures have no swatch in them:\n{stdout}"
+    );
+
+    let _ = std::fs::remove_dir_all(&data_dir);
+}

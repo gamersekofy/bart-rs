@@ -36,6 +36,17 @@ rejected with a clear error rather than silently ignored.
 | `1` | The command failed. The error is printed to stderr in its `Display` form. |
 | `2` | The command line was wrong. `clap` prints the usage message. |
 
+### Tables
+
+Every command that prints a list prints a table with aligned columns.
+
+Column widths are measured in **visible** characters. A colour swatch is one
+character on screen but about twenty bytes of escape sequence, so measuring
+the raw string would push every column after the swatch out of alignment.
+
+The swatch column has no heading of its own; it is the empty column before
+the route's short name.
+
 ---
 
 ## `bart-rs update`
@@ -263,7 +274,20 @@ A10-2  2
     A1 NE Chinatown Entrance / Exit
 
   Lines serving this station
-    Blue-S  Blue-N  Orange-N  Orange-S  Green-S  Green-N
+       Blue-S   Blue-N   Orange-N  Orange-S  Green-S  Green-N
+```
+
+The lines are listed with a swatch in the line's own colour, so the lines
+serving a station can be picked out at a glance:
+
+```
+  Lines serving this station
+  █   Blue-S    Dublin/Pleasanton to Daly City
+  █   Blue-N    Daly City to Dublin/Pleasanton
+  █   Orange-N  Berryessa/North San Jose to Richmond
+  █   Orange-S  Richmond to Berryessa/North San Jose
+  █   Green-S   Berryessa/North San Jose to Daly City
+  █   Green-N   Daly City to Berryessa/North San Jose
 ```
 
 ---
@@ -285,22 +309,26 @@ bart-rs arrivals <STOP> [--at HH:MM] [--date YYYY-MM-DD] [--limit N] [--realtime
 
 ```
 $ bart-rs arrivals EMBR --at 17:30
-TIME   ROUTE     DESTINATION                          PLATFORM
-17:31  Yellow-S  San Francisco International Airport  M16-1
-17:31  Yellow-N  SFO / SF / Pittsburg/Bay Point       M16-2
-17:36  Blue-S    OAK Airport / SF / Daly City         M16-1
-17:37  Green-N   SF / OAK Airport / Berryessa         M16-2
-17:40  Yellow-S  San Francisco International Airport  M16-1
+TIME       ROUTE     DESTINATION                          PLATFORM
+17:31  █   Yellow-S  San Francisco International Airport  M16-1
+17:31  █   Yellow-N  SFO / SF / Pittsburg/Bay Point       M16-2
+17:36  █   Blue-S    OAK Airport / SF / Daly City         M16-1
+17:37  █   Green-N   SF / OAK Airport / Berryessa         M16-2
+17:40  █   Yellow-S  San Francisco International Airport  M16-1
 ```
+
+The swatch column holds the route's own colour, so the lines can be told
+apart at a glance. It is empty in `--json` output, which carries the
+`route_id` instead.
 
 With `--realtime`:
 
 ```
 $ bart-rs arrivals EMBR --realtime --limit 3
-TIME   ROUTE     DESTINATION                           PLATFORM  STATUS
-12:45  Blue-N    SF / OAK Airport / Dublin/Pleasanton  M16-2     on time
-12:45  Green-S   OAK Airport / SF / Daly City          M16-1     +1 min late
-12:47  Red-S     SF / SFO Airport / Millbrae           M16-1     on time
+TIME       ROUTE     DESTINATION                           PLATFORM  STATUS
+12:45  █   Blue-N    SF / OAK Airport / Dublin/Pleasanton  M16-2     on time
+12:45  █   Green-S   OAK Airport / SF / Daly City          M16-1     +1 min late
+12:47  █   Red-S     SF / SFO Airport / Millbrae           M16-1     on time
 ```
 
 Realtime rows that cannot be matched to a scheduled trip are shown with the
@@ -314,8 +342,9 @@ Scheduled departures from a stop. Same flags as `arrivals`.
 
 ```
 $ bart-rs departures EMBR --at 17:30
-17:32  Red-S      Antioch             platform A10-1
-17:36  Blue-S     Dublin/Pleasanton   platform A10-1
+TIME       ROUTE     DESTINATION                           PLATFORM
+17:32  █   Red-S     SF / SFO Airport / Millbrae            A10-1
+17:36  █   Blue-S    OAK Airport / SF / Daly City          A10-1
 ```
 
 ---
@@ -332,7 +361,7 @@ bart-rs trip <TRIP_ID>
 $ bart-rs trip 1965366
 Trip 1965366
 
-  route         5 (Green-S)
+  route         █ Green-S (5)
   service       2026_08_10-DX-MVS-Weekday-015
   headsign      Daly City
   direction     1

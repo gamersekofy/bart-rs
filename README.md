@@ -53,8 +53,29 @@ To build a release binary:
 $ nix build          # ./result/bin/bart-rs
 ```
 
+To run it straight from the repository, without building it first:
+
+```console
+$ nix run . -- --help
+```
+
 Without Nix you need a Rust toolchain (1.85 or newer) and can just use
 `cargo build --release`.
+
+### Trying it without cloning
+
+Once the repository is public, anyone with Nix can run it directly from
+GitHub, with no clone and no install:
+
+```console
+$ nix run github:gamersekofy/bart-rs -- --help
+```
+
+`nix` fetches the flake, builds the binary in the store and runs it. Add
+`--` before the arguments to pass them to `bart-rs` rather than to `nix`.
+
+> This uses the repository's **default branch**, so it runs whatever is
+> merged into it — not an unmerged feature branch.
 
 ## Getting started
 
