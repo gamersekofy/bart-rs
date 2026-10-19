@@ -42,5 +42,27 @@ project stalled. These documents fix that.
    mislabelled `text/html` and serve protobuf (see `03-data-sources.md`).
 4. **Never index GTFS rows by column position.** The `stops.txt` schema already
    changed once (10 → 11 columns). Use header-driven deserialization.
-5. **When you finish a task, tick its checkbox in `05-implementation.md`** and
+5. **Do not trust `feed_info.txt`.** Its dates describe the previous release,
+   and its `feed_version` is the same in every release. Take the coverage
+   window from the calendar, and identify a release by the versioned filename
+   the permalink redirects to (see `03-data-sources.md`).
+6. **When you finish a task, tick its checkbox in `05-implementation.md`** and
    note any deviation in `07-decisions.md`. The checkbox is the shared state.
+
+## Where the work stands
+
+The rewrite described in `05-implementation.md` is complete: every phase is
+ticked, and the ten phases' worth of decisions are in `07-decisions.md`. The
+three things the original project got wrong — the stale feed, the
+non-conformant alert feed, and the two `feed_info.txt` traps — are all
+written up.
+
+What is *not* done, and is deliberately out of scope for now:
+
+- **A journey planner** that finds connections between two stations. The
+  per-stop arrival tables are the groundwork for it, but the search itself
+  is a separate piece of work.
+- **A map view** of the route shapes. The shape points are parsed and
+  available through the library, but there is no renderer.
+- **Publishing to crates.io.** The crate is written to be publishable, but
+  publishing it is not a goal of this work.

@@ -57,31 +57,33 @@ stop hierarchy, and BART's non-conformant alert feed.
 
 The project is "done" when:
 
-- [ ] `bart-rs update` downloads and extracts the current feed with no manual steps.
-- [ ] `bart-rs status` reports the feed version, its coverage window, and warns
+- [x] `bart-rs update` downloads and extracts the current feed with no manual steps.
+- [x] `bart-rs status` reports the feed version, its coverage window, and warns
       when the feed has expired or has not been checked recently.
-- [ ] All 18 GTFS tables are parsed into typed structs and can be dumped via
+- [x] All 18 GTFS tables are parsed into typed structs and can be dumped via
       `bart-rs table <name>`.
-- [ ] `bart-rs arrivals <stop>` returns correct scheduled arrivals for a given
+- [x] `bart-rs arrivals <stop>` returns correct scheduled arrivals for a given
       stop and time, honouring `calendar.txt` and `calendar_dates.txt`.
-- [ ] `bart-rs arrivals <stop> --realtime` overlays live trip updates with
+- [x] `bart-rs arrivals <stop> --realtime` overlays live trip updates with
       delay information.
-- [ ] `bart-rs alerts` renders BART's service alerts legibly.
-- [ ] `bart-rs fare --from A --to B` returns the fare and its rider-category
+- [x] `bart-rs alerts` renders BART's service alerts legibly.
+- [x] `bart-rs fare --from A --to B` returns the fare and its rider-category
       variants.
-- [ ] `cargo test` passes offline against committed fixtures.
-- [ ] `cargo clippy --all-targets -- -D warnings` is clean.
-- [ ] The public library API is documented and has no `missing_docs` warnings.
+- [x] `cargo test` passes offline against committed fixtures.
+- [x] `cargo clippy --all-targets -- -D warnings` is clean.
+- [x] The public library API is documented and has no `missing_docs` warnings.
 
-## Current state (as of 2026-10-19)
+## State before the rewrite
 
-The repository has three commits, the last from January 2025. The code parses
+For reference, this is what the project looked like when the work started.
+The repository had three commits, the last from January 2025. The code parsed
 `stops.txt` by splitting lines on `,` and leaking every field with
-`Box::leak`; the `trips` parser is a stub that prints `"hi"`. The `gtfs-structures`
-dependency is declared but never used. The committed `data/` directory holds a
-**stale January-2024 feed** whose coverage window ended on 2024-08-11.
+`Box::leak`; the `trips` parser was a stub that printed `"hi"`. The
+`gtfs-structures` dependency was declared but never used. The committed `data/`
+directory held a **stale January-2024 feed** whose coverage window ended on
+2024-08-11.
 
-`git log` for the full history:
+`git log` for the original history:
 
 ```
 05e1796 Added better error handling code for when a file isn't found and added the
@@ -94,6 +96,29 @@ dependency is declared but never used. The committed `data/` directory holds a
 The rewrite on `feat/rewrite` replaces the source tree wholesale while keeping
 the module-per-GTFS-file idea from `src/attributes/`, which was the one good
 structural decision in the original code.
+
+## State after the rewrite
+
+- A library (`bart_rs`) and a thin binary on top of it.
+- All 18 tables parsed with `csv` and `serde`, header-driven.
+- The feed downloaded, extracted and installed by the tool itself, in the user
+  cache directory, with an atomic swap.
+- Twelve commands, all of them `--json`-capable where that makes sense.
+- 108 tests, offline except for four that are `#[ignore]`d.
+- A Nix flake that builds the binary, a dev shell, and a CI workflow.
+
+Three upstream behaviours had to be worked around, all of them found by
+running the tool against the live feed rather than by reading the code. They
+are written up in
+[03-data-sources.md](03-data-sources.md) and
+[07-decisions.md](07-decisions.md):
+
+1. BART's alert feed does not follow the GTFS-Realtime field numbering, and
+   is not self-consistent about the shape of its own text fields.
+2. `feed_info.txt`'s dates describe the *previous* release, so the coverage
+   window has to come from the calendar.
+3. `feed_version` is the same in every release, so a release has to be
+   identified by the versioned filename the permalink redirects to.
 
 ## Related reading
 
