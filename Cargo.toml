@@ -2,7 +2,54 @@
 name = "bart-rs"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.85"
+description = "Command line tool and library for exploring BART's GTFS schedule and realtime data"
+license = "MIT"
+repository = "https://github.com/gamersekofy/bart-rs"
+homepage = "https://github.com/gamersekofy/bart-rs"
+readme = "README.md"
+keywords = ["gtfs", "bart", "transit", "realtime", "cli"]
+categories = ["command-line-utilities", "api-bindings"]
+
+[features]
+default = ["cli", "download"]
+# The `cli` feature is the binary front end. A library consumer that only
+# wants to parse a feed does not need to pull in clap.
+cli = ["dep:clap", "dep:colored"]
+# The `download` feature is the network + archive stack, used by `update` and
+# by the realtime fetchers.
+download = ["dep:reqwest", "dep:zip"]
 
 [dependencies]
-gtfs-structures = "0.42.0"
-colored = "2.2.0"
+chrono = { version = "0.4", features = ["serde"] }
+chrono-tz = "0.10"
+csv = "1"
+dirs = "5"
+prost = "0.14"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+clap = { version = "4", features = ["derive"], optional = true }
+colored = { version = "2", optional = true }
+reqwest = { version = "0.12", default-features = false, features = [
+    "blocking",
+    "rustls-tls",
+    "gzip",
+], optional = true }
+zip = { version = "2", optional = true }
+
+[dev-dependencies]
+# Used only as a cross-validation oracle in the test suite: the live-feed
+# integration test asserts that our hand-rolled parser agrees with a
+# well-known reference implementation. Never used by the library itself.
+#
+# `default-features = false` is important: the default `read-url` feature
+# pulls in `reqwest` -> `native-tls` -> `openssl-sys`, which would make the
+# whole project depend on OpenSSL headers for no benefit.
+gtfs-structures = { version = "0.42", default-features = false }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

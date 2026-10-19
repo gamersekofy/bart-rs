@@ -1,0 +1,6 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,trip_load_information,wheelchair_accessible,bikes_allowed
+1,WEEKDAY,1001,"SF Int'l Airport",1,,001A_shp,,1,1
+1,WEEKDAY,1002,"SF Int'l Airport",1,,001A_shp,,0,0
+5,SATURDAY,1003,"Daly City",1,,001B_shp,,1,1
+7,SUNDAY,1004,"SF Int'l Airport",1,,001A_shp,,1,1
+7,WEEKDAY,1005,"SF Int'l Airport",1,,001A_shp,,1,1

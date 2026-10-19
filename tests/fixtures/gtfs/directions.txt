@@ -1,0 +1,5 @@
+route_id,direction_id,direction
+1,0,North
+1,1,South
+5,1,South
+7,0,North

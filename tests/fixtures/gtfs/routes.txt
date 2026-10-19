@@ -1,0 +1,4 @@
+route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1,Yellow-S,"Antioch to SF Int'l Airport SFO/Millbrae",,1,https://www.bart.gov/schedules/bylineresults?route=1,FFFF33,000000
+5,Green-S,"Berryessa/North San Jose to Daly City",,1,https://www.bart.gov/schedules/bylineresults?route=5,339933,FFFFFF
+7,Red-S,"Richmond to SF Int'l Airport SFO/Millbrae",,1,https://www.bart.gov/schedules/bylineresults?route=7,FF0000,FFFFFF

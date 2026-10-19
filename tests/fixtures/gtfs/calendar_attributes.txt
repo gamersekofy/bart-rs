@@ -1,0 +1,4 @@
+service_id,service_description
+WEEKDAY,"Weekday"
+SATURDAY,"Saturday"
+SUNDAY,"Sunday"

@@ -1,0 +1,5 @@
+"stop_id","stop_code","stop_name","stop_desc","stop_lat","stop_lon","zone_id","plc_url","location_type","parent_station"
+"LAKE","","Lake Merritt","","37.797357","-122.265232","LAKE","","0","place_LAKE"
+"place_LAKE","","Lake Merritt","","37.797357","-122.265232","LAKE","https://www.bart.gov/stations/lake","1",""
+"EMBR","","Embarcadero","","37.792960","-122.296950","EMBR","","0","place_EMBR"
+"place_EMBR","","Embarcadero","","37.792960","-122.296950","EMBR","https://www.bart.gov/stations/embr","1",""
