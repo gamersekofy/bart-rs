@@ -44,12 +44,37 @@ pub struct Arrival {
     pub route_short_name: Option<String>,
     /// Where the train is headed, e.g. `Richmond`.
     pub headsign: Option<String>,
-    /// The platform the train arrives at.
+    /// The platform the train arrives at, as a GTFS stop id.
+    ///
+    /// This is the platform's id in `stops.txt`, e.g. `M80-1` for platform 1
+    /// of Balboa Park. BART's ids are built from a legacy station code and
+    /// the platform number, so they are not something to show a user; see
+    /// [`Arrival::platform_code`] and [`Arrival::platform_label`] for that.
     pub platform_id: Option<String>,
+    /// The platform number as BART displays it, e.g. `3`.
+    ///
+    /// This is the `platform_code` column of `stops.txt`, which is what
+    /// appears on the platform signs. It is `None` for the handful of
+    /// platforms in the feed that have no code.
+    pub platform_code: Option<String>,
     /// The service pattern the trip belongs to.
     pub service_id: String,
     /// The human-readable name of that service pattern, e.g. `Weekday`.
     pub service_description: Option<String>,
+}
+
+impl Arrival {
+    /// The platform to show a user: the platform number if the feed has one,
+    /// otherwise the platform's id.
+    ///
+    /// BART signs its platforms with a bare number (`3`), but a few
+    /// platforms in the feed have no `platform_code`, so this falls back to
+    /// the id rather than showing nothing.
+    pub fn platform_label(&self) -> Option<&str> {
+        self.platform_code
+            .as_deref()
+            .or(self.platform_id.as_deref())
+    }
 }
 
 /// A train departing from a stop.
@@ -623,6 +648,9 @@ impl Feed {
                 }
 
                 let route = self.route(&trip.route_id);
+                let platform_code = self
+                    .stop(&stop_time.stop_id)
+                    .and_then(|stop| stop.platform_code.clone());
                 results.push(Arrival {
                     time,
                     trip_id: trip.trip_id.clone(),
@@ -630,6 +658,7 @@ impl Feed {
                     route_short_name: route.and_then(|r| r.short_name.clone()),
                     headsign: trip.trip_headsign.clone(),
                     platform_id: Some(stop_time.stop_id.clone()),
+                    platform_code,
                     service_id: trip.service_id.clone(),
                     service_description: self
                         .service_description(&trip.service_id)

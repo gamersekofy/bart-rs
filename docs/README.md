@@ -20,6 +20,7 @@ project stalled. These documents fix that.
 | [05-implementation.md](05-implementation.md) | The phased build plan with per-task acceptance criteria. **Start here to do work.** |
 | [06-testing.md](06-testing.md) | Test strategy, fixture layout, and how to validate against the live feed. |
 | [07-decisions.md](07-decisions.md) | Architecture decision records. The "why" behind the choices, including the rejected alternatives. |
+| [08-library-guide.md](08-library-guide.md) | How to use `bart-rs` from another Rust project — a GUI, a web service, a bot. The worked example, the threading notes, and the upstream gotchas. |
 
 ## Conventions used in these documents
 

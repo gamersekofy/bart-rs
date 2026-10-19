@@ -24,10 +24,10 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
         feed.arrivals_at(&stop.id, date, from)
     };
 
-    let mut rows_source: Vec<(Arrival, Option<i32>, bool)> = scheduled
+    let mut rows_source: Vec<(Arrival, Option<i32>, bool, bool)> = scheduled
         .iter()
         .take(args.limit)
-        .map(|a| (a.clone(), None, false))
+        .map(|a| (a.clone(), None, false, false))
         .collect();
 
     if args.realtime {
@@ -47,11 +47,13 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
                         route_short_name: a.route_short_name.clone(),
                         headsign: a.headsign.clone(),
                         platform_id: a.platform_id.clone(),
+                        platform_code: a.platform_code.clone(),
                         service_id: String::new(),
                         service_description: None,
                     },
                     Some(a.delay),
                     a.skipped,
+                    a.has_update,
                 )
             })
             .collect();
@@ -60,7 +62,7 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
     if cli.json {
         let payload: Vec<serde_json::Value> = rows_source
             .iter()
-            .map(|(arrival, delay, skipped)| {
+            .map(|(arrival, delay, skipped, has_update)| {
                 serde_json::json!({
                     "time": schedule::fmt_gtfs_time(arrival.time),
                     "trip_id": arrival.trip_id,
@@ -68,8 +70,10 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
                     "route_short_name": arrival.route_short_name,
                     "headsign": arrival.headsign,
                     "platform_id": arrival.platform_id,
+                    "platform_code": arrival.platform_code,
                     "delay_seconds": delay,
                     "skipped": skipped,
+                    "has_realtime_update": has_update,
                 })
             })
             .collect();
@@ -87,11 +91,14 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
 
     let rows: Vec<Vec<String>> = rows_source
         .iter()
-        .map(|(arrival, delay, skipped)| {
-            let status = match (*delay, *skipped) {
-                (Some(_), true) => "skipped".to_string(),
-                (Some(d), false) => describe_delay(d),
-                (None, _) => String::new(),
+        .map(|(arrival, delay, skipped, has_update)| {
+            let status = match (*delay, *skipped, *has_update) {
+                (Some(_), true, _) => "skipped".to_string(),
+                (Some(d), false, true) => describe_delay(d),
+                // Either the schedule only, or a train the realtime feed is
+                // not tracking. Either way, nothing is known about it, and
+                // saying "on time" would be a claim the feed has not made.
+                _ => "scheduled".to_string(),
             };
             vec![
                 schedule::fmt_short_time(arrival.time),
@@ -101,7 +108,7 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
                 ),
                 arrival.route_short_name.clone().unwrap_or_default(),
                 arrival.headsign.clone().unwrap_or_default(),
-                arrival.platform_id.clone().unwrap_or_default(),
+                arrival.platform_label().unwrap_or_default().to_string(),
                 status,
             ]
         })

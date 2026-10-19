@@ -211,16 +211,34 @@ pub struct LiveArrival {
     pub route_short_name: Option<String>,
     /// Where the train is headed.
     pub headsign: Option<String>,
-    /// The platform.
+    /// The platform, as a GTFS stop id.
     pub platform_id: Option<String>,
+    /// The platform number as BART displays it, e.g. `3`.
+    pub platform_code: Option<String>,
     /// Whether the stop is skipped.
     pub skipped: bool,
+    /// Whether the realtime feed had anything to say about this train.
+    ///
+    /// The realtime feed only covers the trains it is currently tracking, so
+    /// a scheduled arrival two hours out has no live update at all. That is
+    /// not the same as being on time, and a caller should not present it as
+    /// such: a `delay` of zero on a train with no live update means "nothing
+    /// is known", not "the train is punctual".
+    pub has_update: bool,
 }
 
 impl LiveArrival {
     /// The delay in whole minutes, rounded towards zero.
     pub fn delay_minutes(&self) -> i32 {
         self.delay / 60
+    }
+
+    /// The platform to show a user: the platform number if the feed has one,
+    /// otherwise the platform's id.
+    pub fn platform_label(&self) -> Option<&str> {
+        self.platform_code
+            .as_deref()
+            .or(self.platform_id.as_deref())
     }
 }
 
@@ -249,7 +267,9 @@ pub fn overlay(
                 route_short_name: arrival.route_short_name.clone(),
                 headsign: arrival.headsign.clone(),
                 platform_id: arrival.platform_id.clone(),
+                platform_code: arrival.platform_code.clone(),
                 skipped: false,
+                has_update: false,
             });
             continue;
         };
@@ -278,7 +298,9 @@ pub fn overlay(
                 route_short_name: arrival.route_short_name.clone(),
                 headsign: arrival.headsign.clone(),
                 platform_id: arrival.platform_id.clone(),
+                platform_code: arrival.platform_code.clone(),
                 skipped: false,
+                has_update: false,
             });
             continue;
         };
@@ -311,7 +333,9 @@ pub fn overlay(
                 .or_else(|| arrival.route_short_name.clone()),
             headsign: arrival.headsign.clone(),
             platform_id: arrival.platform_id.clone(),
+            platform_code: arrival.platform_code.clone(),
             skipped: update.skipped,
+            has_update: true,
         });
     }
 

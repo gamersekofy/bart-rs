@@ -168,9 +168,12 @@ platform id (`A10-1`), or a name (`Lake Merritt`).
 
 ## Using it as a library
 
+The command line tool is a thin adapter over the library. Anything it can do,
+the library can do — and quite a lot that it does not.
+
 ```toml
 [dependencies]
-bart-rs = { git = "https://github.com/gamersekofy/bart-rs" }
+bart-rs = { git = "https://github.com/gamersekefy/bart-rs" }
 ```
 
 ```rust
@@ -178,13 +181,14 @@ use bart_rs::Feed;
 
 let feed = Feed::from_data_dir()?;
 
-for route in &feed.routes {
-    println!("{} {}", route.id, route.display_name());
-}
-
 // Which lines serve Lake Merritt?
 for route in feed.routes_serving("LAKE") {
     println!("  {}", route.display_name());
+}
+
+// What is the fare between two places?
+if let Some(fare) = feed.fare("Lake Merritt", "San Francisco Airport") {
+    println!("  {}", fare.base_price_display());
 }
 # Ok::<(), bart_rs::Error>(())
 ```
@@ -197,7 +201,49 @@ The library is feature-flagged so that a consumer only pays for what it uses:
   the realtime fetchers.
 
 `default-features = false` gives you the parsing, the service-day arithmetic
-and the GTFS-Realtime decoding with no `clap`, no `reqwest` and no `zip`.
+and the GTFS-Realtime decoding with no `clap`, no `reqwest` and no `zip`. A
+GUI wants `download` but not `cli`:
+
+```toml
+[dependencies]
+bart-rs = { git = "https://github.com/gamersekefy/bart-rs", default-features = false, features = ["download"] }
+```
+
+### The realtime feed is in the library too
+
+GTFS-Realtime is decoded by the `realtime` module and merged onto the
+schedule, so a GUI can show live times without any extra work:
+
+```rust
+use bart_rs::realtime;
+
+let client = bart_rs::update::client()?;
+let live = realtime::fetch_trip_updates(&client)?;
+let arrivals = realtime::overlay(&feed, &scheduled, &live, false);
+
+for arrival in arrivals.iter().take(5) {
+    println!("{} {}", arrival.time, arrival.delay);
+}
+```
+
+`update::ensure_current()` will fetch a new schedule feed if there is one,
+and reports being offline as a value rather than as an error, so an
+application keeps working with the feed it already has.
+
+### Building a GUI on this
+
+Two things to know before you start:
+
+- **Everything blocks.** Parsing the feed takes about 65 ms and a realtime
+  fetch about 500 ms, so do both on a worker thread.
+- **Four upstream quirks will bite you** — the coverage window is not in
+  `feed_info.txt`, the service day starts at 04:00, a platform's id is not
+  its number, and a zero delay does not always mean "on time". The library
+  handles all four, and [`docs/08-library-guide.md`](docs/08-library-guide.md)
+  explains how to use each of them correctly.
+
+That guide is the place to start: it has a complete worked example, the
+threading notes, and the gotchas.
 
 ## Data sources
 

@@ -623,3 +623,95 @@ decoration. It also survives `--no-color`: the swatch becomes a blank
 column and the table still lines up.
 
 **Cost.** One extra column in three commands.
+
+---
+
+## D22 — Show the platform number, not the platform id
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `stop_times.txt` refers to platforms by their `stop_id`, and
+BART's platform ids are built from a legacy station code and the platform
+number: `M80-1` is platform 1 of Balboa Park, `W40-3` is platform 3 of
+Millbrae. The number a passenger actually sees, painted on the sign, is the
+`platform_code` column of `stops.txt`.
+
+The arrivals table was showing the id.
+
+**Decision.** Show the `platform_code`. The library exposes both — the id as
+`Arrival::platform_id` and the number as `Arrival::platform_code` — and
+`Arrival::platform_label()` picks the number, falling back to the id for the
+handful of platforms with no code.
+
+**Why.** `M80-1` is an internal identifier that happens to be visible. It
+looks like a platform number with a prefix, and reading it requires knowing
+BART's station code scheme. `1` is what the sign says and what the
+passenger is looking for.
+
+**Cost.** One extra field on `Arrival` and `LiveArrival`, and a lookup in
+`stops.txt` when building an arrival.
+
+**Rejected.**
+
+- *Show both, in two columns.* The id is not information a passenger wants;
+  it is an identifier for looking up the platform, which the library
+  already provides.
+- *Derive the number from the id by splitting on `-`.* It happens to work for
+  most platforms, but `H10` — the Caltrain transfer platform at Millbrae —
+  does not follow the pattern, and its code is `3`. The feed says so
+  explicitly; read it.
+
+---
+
+## D23 — Distinguish "on time" from "nothing is known"
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** The realtime feed only covers the trains it is currently
+tracking. A train two hours out has no live update at all. The overlay
+gave every unmatched arrival a delay of zero, and the CLI rendered a zero
+delay as `on time`.
+
+Measured against the live feed: at 15:00 the realtime feed had updates for
+10 of the next 10 trains at Embarcadero; at 17:00 it had updates for 0 of
+the next 10.
+
+**Decision.** `LiveArrival` gains a `has_update` flag. The CLI shows
+`on time` only when the realtime feed actually reported on that train, and
+`scheduled` when it did not. Without `--realtime`, every row is
+`scheduled`, because the static feed carries no delay information at all.
+
+**Why.** `on time` is a claim about the world. A train with no live data has
+not been reported punctual; it has not been reported on at all. A departure
+board that says "on time" about a train it knows nothing about is worse
+than one that says nothing, because the reader trusts it.
+
+**Cost.** One field on `LiveArrival`, and a third arm in the status
+rendering.
+
+---
+
+## D24 — Give the library a one-call update, and a guide for building on it
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** The update lifecycle — probe, compare, download, extract,
+install, write state — lived in the `bart-rs update` command. A library
+consumer wanting a current feed had to copy that sequence out of the
+command and into their own program.
+
+**Decision.** Two additions:
+
+1. `update::ensure_current(client)` runs the whole lifecycle and returns an
+   `UpdateOutcome`: `UpToDate`, `Updated`, or `Unreachable`. Being unable
+   to reach the server is a *value*, not an error, because an application
+   showing a schedule should keep working with the feed it already has.
+2. `docs/08-library-guide.md`, a guide to using the crate from another Rust
+   project, with a worked example, the feature-flag and `reqwest`
+   requirements, the measured timings, and the four upstream gotchas.
+
+**Why.** The library exists to be used by other programs. An update
+lifecycle that only exists in the command line is a lifecycle that other
+programs have to reimplement, and reimplement it badly.
+
+**Cost.** About a hundred lines in `update.rs`, and a document.

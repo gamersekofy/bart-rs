@@ -552,3 +552,129 @@ pub fn is_covered(info: &FeedInfo, date: NaiveDate) -> bool {
 pub fn age_in_days(now: DateTime<Utc>, then: DateTime<Utc>) -> i64 {
     Duration::num_days(&(now - then))
 }
+
+/// What [`ensure_current`] did.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum UpdateOutcome {
+    /// The installed feed was already the release the server is offering.
+    UpToDate {
+        /// The release that is installed.
+        release: Option<Release>,
+    },
+    /// A new release was downloaded and installed.
+    Updated {
+        /// The release that was installed, if it could be identified.
+        release: Option<Release>,
+        /// How many bytes were downloaded.
+        bytes: usize,
+    },
+    /// The server could not be reached, so the installed feed was left alone.
+    ///
+    /// This is not an error: an application that is merely showing a
+    /// schedule should keep working offline with whatever it already has.
+    /// The installed feed may still be perfectly good.
+    Unreachable {
+        /// Why the check failed.
+        reason: String,
+    },
+}
+
+/// Make sure the installed feed is the current release, downloading it if not.
+///
+/// This is the whole update lifecycle in one call, and it is what an
+/// application should do on startup: ask the server which release it is
+/// offering (a `HEAD` request, so it costs nothing), compare that with the
+/// installed feed, and download only if they differ.
+///
+/// A failure to reach the server is reported as
+/// [`UpdateOutcome::Unreachable`] rather than as an error, because an
+/// application that is showing a schedule should keep working offline with
+/// whatever feed it already has. Everything else — a corrupt archive, a
+/// missing table, a failure to write the feed directory — is an error.
+///
+/// The feed is installed atomically, so a reader never sees a half-written
+/// feed, even if this is called while another process is reading.
+///
+/// # Example
+///
+/// ```no_run
+/// use bart_rs::update::{self, UpdateOutcome};
+///
+/// let client = update::client()?;
+/// match update::ensure_current(&client)? {
+///     UpdateOutcome::UpToDate { .. } => println!("already current"),
+///     UpdateOutcome::Updated { bytes, .. } => println!("downloaded {bytes} bytes"),
+///     UpdateOutcome::Unreachable { reason } => println!("offline: {reason}"),
+/// }
+/// # Ok::<(), bart_rs::Error>(())
+/// ```
+pub fn ensure_current(client: &reqwest::blocking::Client) -> Result<UpdateOutcome> {
+    ensure_current_with(client, false)
+}
+
+/// Make sure the installed feed is current, optionally forcing a download.
+///
+/// With `force`, the feed is downloaded and installed even if it is already
+/// the current release. That is worth doing occasionally, because BART
+/// occasionally re-publishes a release with corrections under the same
+/// versioned name.
+pub fn ensure_current_with(
+    client: &reqwest::blocking::Client,
+    force: bool,
+) -> Result<UpdateOutcome> {
+    let mut state = read_state()?;
+    let local = state.release();
+
+    // A HEAD request tells us which release is on offer without paying for
+    // the feed. If it fails, we cannot tell whether an update is needed, so
+    // the safest thing is to leave the installed feed alone.
+    let remote = match probe_release(client) {
+        Ok(release) => release,
+        Err(e) => {
+            return Ok(UpdateOutcome::Unreachable {
+                reason: e.to_string(),
+            })
+        }
+    };
+
+    if !force {
+        if let Some(local) = &local {
+            if local.is_same(&remote) {
+                state.last_checked_at = Some(Utc::now().to_rfc3339());
+                write_state(&state)?;
+                return Ok(UpdateOutcome::UpToDate {
+                    release: Some(remote),
+                });
+            }
+        }
+    }
+
+    let download = download_latest(client)?;
+
+    let archive = store_archive(&download.bytes, download.version.as_deref())?;
+
+    let feed_dir = paths::feed_dir()?;
+    let staging = feed_dir.join(format!(".staging-{}", std::process::id()));
+    if staging.exists() {
+        let _ = fs::remove_dir_all(&staging);
+    }
+
+    extract(&download.bytes, &staging)?;
+    install(&staging, &feed_dir)?;
+
+    write_state(&UpdateState {
+        feed_version: download.version.clone(),
+        downloaded_at: Some(Utc::now().to_rfc3339()),
+        last_checked_at: Some(Utc::now().to_rfc3339()),
+        source_url: Some(download.source_url.clone()),
+        last_modified: download.last_modified.clone(),
+    })?;
+
+    Ok(UpdateOutcome::Updated {
+        release: Some(remote),
+        bytes: archive
+            .metadata()
+            .map(|m| m.len() as usize)
+            .unwrap_or(download.bytes.len()),
+    })
+}

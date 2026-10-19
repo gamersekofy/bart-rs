@@ -156,6 +156,53 @@ fn departures_are_shown_for_a_time() {
     let _ = std::fs::remove_dir_all(&data_dir);
 }
 
+/// The platform column shows the number on the sign, not the platform id.
+///
+/// The fixture's platform `A10-1` has the platform code `1`.
+#[test]
+fn the_platform_column_shows_the_number_and_not_the_id() {
+    let data_dir = fixture_data_dir();
+    let (stdout, _, ok) = run(
+        &data_dir,
+        &["arrivals", "A10-1", "--date", "2026-10-19", "--at", "05:00"],
+    );
+    assert!(ok, "{stdout}");
+
+    let row = stdout
+        .lines()
+        .find(|line| line.contains("Yellow-S"))
+        .expect("a row for the first train");
+    assert!(
+        row.contains(" 1 ") || row.trim_end().ends_with(" 1"),
+        "the platform should be 1: {row:?}"
+    );
+    assert!(
+        !row.contains("A10-1"),
+        "the platform id should not be shown: {row:?}"
+    );
+    let _ = std::fs::remove_dir_all(&data_dir);
+}
+
+/// Without the realtime feed there is nothing to say about a train's
+/// punctuality, so the status must not claim it is on time.
+#[test]
+fn a_scheduled_train_is_not_reported_as_on_time() {
+    let data_dir = fixture_data_dir();
+    let (stdout, _, ok) = run(
+        &data_dir,
+        &["arrivals", "A10-1", "--date", "2026-10-19", "--at", "05:00"],
+    );
+    assert!(ok, "{stdout}");
+
+    let row = stdout
+        .lines()
+        .find(|line| line.contains("Yellow-S"))
+        .expect("a row for the first train");
+    assert!(row.contains("scheduled"), "{row:?}");
+    assert!(!row.contains("on time"), "{row:?}");
+    let _ = std::fs::remove_dir_all(&data_dir);
+}
+
 #[test]
 fn a_trip_lists_its_stop_times() {
     let data_dir = fixture_data_dir();

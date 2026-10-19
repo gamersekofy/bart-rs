@@ -309,30 +309,55 @@ bart-rs arrivals <STOP> [--at HH:MM] [--date YYYY-MM-DD] [--limit N] [--realtime
 
 ```
 $ bart-rs arrivals EMBR --at 17:30
-TIME       ROUTE     DESTINATION                          PLATFORM
-17:31  █   Yellow-S  San Francisco International Airport  M16-1
-17:31  █   Yellow-N  SFO / SF / Pittsburg/Bay Point       M16-2
-17:36  █   Blue-S    OAK Airport / SF / Daly City         M16-1
-17:37  █   Green-N   SF / OAK Airport / Berryessa         M16-2
-17:40  █   Yellow-S  San Francisco International Airport  M16-1
+TIME       ROUTE     DESTINATION                          PLATFORM  STATUS
+17:31  █   Yellow-S  San Francisco International Airport  1         scheduled
+17:31  █   Yellow-N  SFO / SF / Pittsburg/Bay Point       2         scheduled
+17:36  █   Blue-S    OAK Airport / SF / Daly City         1         scheduled
+17:37  █   Green-N   SF / OAK Airport / Berryessa         2         scheduled
+17:40  █   Yellow-S  San Francisco International Airport  1         scheduled
 ```
 
 The swatch column holds the route's own colour, so the lines can be told
 apart at a glance. It is empty in `--json` output, which carries the
 `route_id` instead.
 
+**`PLATFORM` is the platform number**, the same number that is painted on
+the platform sign — `1`, `2`, `3`. BART's platform *ids* are built from a
+legacy station code and the platform number (`M80-1` is platform 1 of Balboa
+Park), and are not shown to the user. In `--json` output both are present:
+`platform_code` is the number and `platform_id` is the id.
+
+**`STATUS` says what is known about the train**, and the three values mean
+three different things:
+
+| Status | Meaning |
+| --- | --- |
+| `scheduled` | Nothing is known about this train beyond the timetable. |
+| `on time` | The realtime feed has a live update for this train and it reports no delay. |
+| `+N min late` / `+N sec late` | The realtime feed reports a delay. |
+
+Without `--realtime` every row is `scheduled`: the static feed carries no
+delay information at all, and showing `on time` would be a claim the data
+does not make.
+
 With `--realtime`:
 
 ```
 $ bart-rs arrivals EMBR --realtime --limit 3
 TIME       ROUTE     DESTINATION                           PLATFORM  STATUS
-12:45  █   Blue-N    SF / OAK Airport / Dublin/Pleasanton  M16-2     on time
-12:45  █   Green-S   OAK Airport / SF / Daly City          M16-1     +1 min late
-12:47  █   Red-S     SF / SFO Airport / Millbrae           M16-1     on time
+12:45  █   Blue-N    SF / OAK Airport / Dublin/Pleasanton  2         on time
+12:45  █   Green-S   OAK Airport / SF / Daly City          1         +1 min late
+12:47  █   Red-S     SF / SFO Airport / Millbrae           1         on time
 ```
 
-Realtime rows that cannot be matched to a scheduled trip are shown with the
-time the realtime feed reports, marked `live`.
+The realtime feed only covers the trains it is currently tracking, so a
+train further out still says `scheduled` even under `--realtime`. That is
+deliberate: the realtime feed knows nothing about it, and saying `on time`
+would be claiming something it has not said.
+
+Realtime updates for trips that match nothing in the schedule are dropped.
+Without a schedule there is no headsign or platform to show alongside them,
+and a row with only a time and a route would be more confusing than useful.
 
 Delays are reported by the realtime feed in seconds. A delay of less than a
 minute is shown in seconds (`+33 sec late`) rather than rounded away to
@@ -346,9 +371,9 @@ Scheduled departures from a stop. Same flags as `arrivals`.
 
 ```
 $ bart-rs departures EMBR --at 17:30
-TIME       ROUTE     DESTINATION                           PLATFORM
-17:32  █   Red-S     SF / SFO Airport / Millbrae            A10-1
-17:36  █   Blue-S    OAK Airport / SF / Daly City          A10-1
+TIME       ROUTE     DESTINATION                           PLATFORM  STATUS
+17:32  █   Red-S     SF / SFO Airport / Millbrae            1         scheduled
+17:36  █   Blue-S    OAK Airport / SF / Daly City          1         scheduled
 ```
 
 ---
