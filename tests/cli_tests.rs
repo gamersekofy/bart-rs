@@ -234,3 +234,45 @@ fn a_missing_feed_is_reported_clearly() {
     assert!(stderr.contains("no GTFS feed found"), "{stderr}");
     let _ = std::fs::remove_dir_all(&empty);
 }
+
+#[test]
+fn a_closed_output_pipe_is_not_an_error() {
+    // `bart-rs table stop_times | head -1` closes the pipe while the tool
+    // is still writing. Rust turns that into a panic on the next
+    // `println!`, so the tool has to handle it and exit quietly.
+    let data_dir = fixture_data_dir();
+
+    // Make the output larger than the pipe buffer, so that the writer is
+    // still going when the reader goes away. Without this the whole table
+    // fits in the buffer and the pipe is never actually broken.
+    let stop_times = data_dir.join("feed/current/stop_times.txt");
+    let original = std::fs::read_to_string(&stop_times).expect("reads the fixture");
+    let mut big = original;
+    for i in 0..5_000 {
+        big.push_str(&format!("T{i},05:00:00,05:00:00,A10-1,{i},,0,0,0.0\n"));
+    }
+    std::fs::write(&stop_times, big).expect("writes the large table");
+
+    let output = Command::new("sh")
+        .arg("-c")
+        .arg(format!(
+            "'{}' table stop_times --limit 5000 | head -1",
+            binary()
+        ))
+        .env("BART_RS_DATA_DIR", &data_dir)
+        .env("NO_COLOR", "1")
+        .output()
+        .expect("the shell runs");
+
+    let stderr = String::from_utf8_lossy(&output.stderr).to_string();
+    assert!(
+        !stderr.contains("Broken pipe"),
+        "the tool panicked on a closed pipe: {stderr}"
+    );
+    assert!(
+        !stderr.contains("panicked"),
+        "the tool panicked on a closed pipe: {stderr}"
+    );
+
+    let _ = std::fs::remove_dir_all(&data_dir);
+}
