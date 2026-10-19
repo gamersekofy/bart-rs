@@ -274,7 +274,7 @@ well as the current 11-column one. — **met**
 - [x] `tests/live_feed.rs` — `#[ignore]`d; downloads the real feed and
       cross-checks against `gtfs-structures`.
 
-**Acceptance:** `cargo test` passes offline with no network access (107
+**Acceptance:** `cargo test` passes offline with no network access (108
 tests); `cargo test -- --ignored` passes when the network is available. —
 **met**
 
@@ -320,7 +320,7 @@ plan is supposed to enable.
       back to white for any colour name it does not recognise, so every
       route's swatch was white. (D19)
 
-**Acceptance:** each fix has a regression test that fails without it; 107
+**Acceptance:** each fix has a regression test that fails without it; 108
 tests pass; the live output was re-checked by hand. — **met**
 
 ---

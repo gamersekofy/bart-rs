@@ -32,7 +32,7 @@ Live next to the code they test. Cover the pure functions:
 
 ### Integration tests — `tests/*.rs`
 
-These use the public library API and the committed fixtures. There are 107
+These use the public library API and the committed fixtures. There are 108
 tests in total; they run offline and take well under a second.
 
 | File | Covers |

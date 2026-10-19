@@ -334,6 +334,10 @@ TIME       ROUTE     DESTINATION                           PLATFORM  STATUS
 Realtime rows that cannot be matched to a scheduled trip are shown with the
 time the realtime feed reports, marked `live`.
 
+Delays are reported by the realtime feed in seconds. A delay of less than a
+minute is shown in seconds (`+33 sec late`) rather than rounded away to
+`+0 min late`.
+
 ---
 
 ## `bart-rs departures <STOP>`

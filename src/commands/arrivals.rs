@@ -90,9 +90,7 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
         .map(|(arrival, delay, skipped)| {
             let status = match (*delay, *skipped) {
                 (Some(_), true) => "skipped".to_string(),
-                (Some(d), false) if d > 0 => format!("+{} min late", d / 60),
-                (Some(d), false) if d < 0 => format!("{} min early", -d / 60),
-                (Some(_), false) => "on time".to_string(),
+                (Some(d), false) => describe_delay(d),
                 (None, _) => String::new(),
             };
             vec![
@@ -115,6 +113,32 @@ pub fn run(cli: &Cli, args: &ScheduleArgs, departing: bool) -> Result<()> {
     );
 
     Ok(())
+}
+
+/// Describe a delay in seconds.
+///
+/// BART's realtime feed reports delays in seconds, so a delay of less than a
+/// minute is worth saying in seconds rather than rounding it away to
+/// "on time" or to a misleading "+0 min late".
+fn describe_delay(seconds: i32) -> String {
+    match seconds {
+        0 => "on time".to_string(),
+        s if s > 0 => {
+            if s < 60 {
+                format!("+{s} sec late")
+            } else {
+                format!("+{} min late", s / 60)
+            }
+        }
+        s => {
+            let s = -s;
+            if s < 60 {
+                format!("{s} sec early")
+            } else {
+                format!("{} min early", s / 60)
+            }
+        }
+    }
 }
 
 /// Work out the service date and the time of day to start from.
@@ -169,4 +193,21 @@ pub fn line_names(feed: &Feed, stop_id: &str) -> Vec<String> {
         .into_iter()
         .map(|r| r.short_name.clone().unwrap_or_else(|| r.id.clone()))
         .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::describe_delay;
+
+    #[test]
+    fn a_delay_is_described_in_seconds_or_minutes() {
+        assert_eq!(describe_delay(0), "on time");
+        assert_eq!(describe_delay(30), "+30 sec late");
+        assert_eq!(describe_delay(59), "+59 sec late");
+        assert_eq!(describe_delay(60), "+1 min late");
+        assert_eq!(describe_delay(600), "+10 min late");
+        assert_eq!(describe_delay(-30), "30 sec early");
+        assert_eq!(describe_delay(-60), "1 min early");
+        assert_eq!(describe_delay(-600), "10 min early");
+    }
 }
