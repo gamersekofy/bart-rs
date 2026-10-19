@@ -467,3 +467,101 @@ only**, for the lifetime of that command, and never touches the user's shell.
 **Why.** A shell that has been mutated by hand is a shell that differs from
 what the project says it is. Putting the configuration in the flake means
 `nix develop`, `direnv allow` and CI all see exactly the same environment.
+
+---
+
+## D17 — Identify a feed release by the URL it is served from, not by `feed_version`
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** The update check compared the installed feed's `feed_version`
+against the remote feed's. In practice `feed_version` is `72` in every
+release BART has published — the January 2026 feed and the August 2026 feed
+both say `72` — so the comparison always succeeded, the tool always said
+"The installed feed is already version 72", and it never once downloaded a
+new feed. The check was not just imprecise, it was permanently satisfied.
+
+**Decision.** Identify a release by the **versioned filename** the permalink
+redirects to — `google_transit_20260810-20270108_v02.zip` — which encodes
+both the coverage window and a revision counter, and changes on every
+release. The final URL and the response's `Last-Modified` header are stored
+in `state.json` and compared. `feed_version` is still parsed and displayed,
+but never used to decide anything.
+
+**Why.** A release identifier has to change when the release changes. The
+filename does; the version number does not. The `Last-Modified` header is
+kept as a secondary signal, used only to break ties between two releases
+with the same name.
+
+**Cost.** A `HEAD` request instead of a `GET` for the check, so that
+checking for a new release does not transfer 900 KB. The server has to
+answer `HEAD`; if it does not, the code falls back to downloading the feed
+and comparing there.
+
+**Rejected.**
+
+- *Trust `feed_version` and hope BART starts bumping it.* The bug is silent
+  and permanent; there is no version of "hope" that fixes it.
+- *Compare the feed's contents.* Requires downloading the whole feed to
+  answer a question that a `HEAD` answers.
+- *Compare only the `Last-Modified` header.* A CDN may re-stamp it without
+  the content changing, and it says nothing about which release is on offer.
+
+---
+
+## D18 — Take the feed's coverage window from the calendar, not from `feed_info.txt`
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `feed_info.txt` carries `feed_start_date` and `feed_end_date`,
+which the GTFS spec defines as the window for which the dataset is complete
+and reliable. BART does not maintain them: the release whose file is named
+`google_transit_20260810-20270108_v02.zip` declares `20260112` → `20260830`,
+which is the *previous* release's window. Its calendar covers
+`20260810` → `20270110`.
+
+**Decision.** Derive the coverage window from `calendar.txt` — the earliest
+`start_date` and the latest `end_date` — widened by any single-date
+exception in `calendar_dates.txt`. Use it for the staleness check. Show
+`feed_info.txt`'s dates in `bart-rs status` too, labelled as the stale claim
+they are, so the discrepancy is visible rather than hidden.
+
+**Why.** The tool told the user that a perfectly current feed had expired
+50 days ago, and then refused to download a newer one — a dead end with no
+way out. The guarantee BART actually offers is the calendar's, so that is
+what the tool should believe.
+
+**Cost.** One extra pass over `calendar.txt` and `calendar_dates.txt`, and
+a slightly more honest `status` output.
+
+---
+
+## D19 — Parse hex colours by hand rather than through `colored`'s string conversion
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** BART publishes route colours as six-digit hex strings such as
+`FF0000`. They were passed straight to the `colored` crate as
+`.color("FF0000")`. `colored`'s `From<&str> for Color` is implemented as
+`src.parse().unwrap_or(Color::White)`, and its `FromStr` only understands
+the sixteen *named* colours — so `FF0000` did not parse, the fallback
+applied, and every route's swatch was rendered **white**. The hex string
+was printed correctly next to it, which is what made the bug look like a
+terminal problem rather than a code problem.
+
+**Decision.** Parse the hex into its three components and build a
+`Color::TrueColor` explicitly. `colored` then emits a 24-bit colour escape
+on terminals that advertise `COLORTERM=truecolor`, and the nearest of the
+sixteen ANSI colours otherwise.
+
+**Why.** The failure mode was silent and total: the code did the wrong
+thing for every colour, and the output looked plausible. Parsing the hex
+ourselves is four lines and cannot fail silently.
+
+**Rejected.**
+
+- *Use `colored`'s named colours and map hex to the nearest name by hand.*
+  Loses the exact colour, which is the whole point of the swatch.
+- *Emit the escape sequence directly, bypassing `colored`.* Would have to
+  reimplement `--no-color` and `NO_COLOR` handling, and the nearest-ANSI
+  fallback, for no gain.

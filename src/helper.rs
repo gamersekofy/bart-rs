@@ -55,6 +55,25 @@ pub fn read_table<T: serde::de::DeserializeOwned>(path: &Path) -> Result<Vec<T>>
     Ok(rows)
 }
 
+/// Parse a GTFS table from CSV text.
+///
+/// The same strictness as [`read_table`]: a row whose column count does not
+/// match the header is an error rather than being silently padded. `name` is
+/// only used in error messages.
+pub fn parse_table<T: serde::de::DeserializeOwned>(text: &str, name: &str) -> Result<Vec<T>> {
+    let mut reader = csv::ReaderBuilder::new()
+        .has_headers(true)
+        .trim(csv::Trim::All)
+        .flexible(false)
+        .from_reader(text.as_bytes());
+
+    let mut rows = Vec::new();
+    for record in reader.deserialize() {
+        rows.push(record.map_err(|e| Error::msg(format!("could not parse {name}: {e}")))?);
+    }
+    Ok(rows)
+}
+
 /// Parse a GTFS time (`HH:MM:SS`) into seconds since midnight.
 ///
 /// GTFS permits hours greater than 24: a train that leaves at 00:30 the

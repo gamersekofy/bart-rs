@@ -67,12 +67,16 @@ Downloading https://www.bart.gov/dev/schedules/google_transit.zip …
   resolved to https://www.bart.gov/sites/default/files/2026-08/google_transit_20260810-20270108_v02.zip
   downloaded 892312 bytes
 Feed version 72
-  covers 2026-01-12 → 2026-08-30
+  covers 2026-08-10 → 2027-01-10
   stored /home/you/.local/share/bart-rs/archives/72.zip
   extracted 18 tables
 Installed to /home/you/.local/share/bart-rs/feed/current
 Done.
 ```
+
+`update` first asks the server which release it is offering, and only
+downloads when that is not the release already installed. Running it when
+the feed is current prints one line and stops.
 
 The feed lives in `$XDG_DATA_HOME/bart-rs` (usually
 `~/.local/share/bart-rs`). Set `BART_RS_DATA_DIR` to put it somewhere else.
@@ -186,6 +190,16 @@ BART's alert feed does not follow the GTFS-Realtime specification's field
 numbering, and is not even self-consistent about the shape of its text
 fields. `bart-rs` handles this with a tolerant decoder; the details are in
 [`docs/03-data-sources.md`](docs/03-data-sources.md).
+
+Two more quirks in the static feed are worth knowing about, because both
+would otherwise make the tool lie to you:
+
+- `feed_info.txt`'s `feed_start_date` and `feed_end_date` describe the
+  *previous* release, so the coverage window is taken from `calendar.txt`
+  and `calendar_dates.txt` instead.
+- `feed_info.txt`'s `feed_version` is the same in every release, so the
+  release is identified by the versioned filename the permalink redirects
+  to.
 
 ## Documentation
 

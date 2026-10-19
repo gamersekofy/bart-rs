@@ -274,7 +274,7 @@ well as the current 11-column one. — **met**
 - [x] `tests/live_feed.rs` — `#[ignore]`d; downloads the real feed and
       cross-checks against `gtfs-structures`.
 
-**Acceptance:** `cargo test` passes offline with no network access (90
+**Acceptance:** `cargo test` passes offline with no network access (103
 tests); `cargo test -- --ignored` passes when the network is available. —
 **met**
 
@@ -302,6 +302,29 @@ tests); `cargo test -- --ignored` passes when the network is available. —
 
 ---
 
+## Phase 10 — Fixes found by using the tool
+
+These were not in the original plan. They were found by running the finished
+tool against the live feed and reading its output, which is the thing the
+plan is supposed to enable.
+
+- [x] **The coverage window comes from the calendar, not from
+      `feed_info.txt`.** BART leaves `feed_info.txt`'s dates describing the
+      previous release, so `status` reported a current feed as expired 50
+      days ago, and `update` would not download a newer one. (D18)
+- [x] **A release is identified by the versioned filename, not by
+      `feed_version`.** `feed_version` is `72` in every release, so the
+      update check was permanently satisfied and never downloaded a new
+      feed. The check is now a `HEAD` request, so it is also free. (D17)
+- [x] **Hex route colours are parsed by hand.** `colored` silently falls
+      back to white for any colour name it does not recognise, so every
+      route's swatch was white. (D19)
+
+**Acceptance:** each fix has a regression test that fails without it; 103
+tests pass; the live output was re-checked by hand. — **met**
+
+---
+
 ## Appendix — verified facts this plan depends on
 
 Measured on 2026-10-19 against feed version 72.
@@ -321,4 +344,7 @@ Measured on 2026-10-19 against feed version 72.
 | Stop hierarchy | station → platform, and station → entrance; all resolve |
 | Fare rules | keyed on **station** ids, `contains_id` always empty |
 | BART alert fields | text lives in Alert fields **10/11**, not the spec's 6/8; and the shapes of the text fields are inconsistent |
+| `feed_info.txt` dates | describe the **previous** release; the calendar's window is `20260810` → `20270110` |
+| `feed_version` | `72` in every release; cannot identify a release |
+| Release identifier | the versioned filename, e.g. `google_transit_20260810-20270108_v02.zip` |
 | Rust toolchain | rustc 1.99.1 after `nix flake update` (was 1.82.0) |

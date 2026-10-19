@@ -40,30 +40,40 @@ bart-rs update [--check] [--force]
 
 | Flag | Effect |
 | --- | --- |
-| `--check` | Do not download. Report whether a newer feed is available and exit. Writes nothing. |
-| `--force` | Download and install even if the remote `feed_version` matches the local one. |
+| `--check` | Do not download. Report whether a newer feed is available and exit. |
+| `--force` | Download and install even if the remote release matches the installed one. |
 
 Output:
 
 ```
 $ bart-rs update
+The installed feed is already up to date (google_transit_20260810-20270108_v02.zip).
+```
+
+```
+$ bart-rs update
+A newer feed is available (google_transit_20260810-20270108_v02.zip); downloading it.
 Downloading https://www.bart.gov/dev/schedules/google_transit.zip …
   resolved to https://www.bart.gov/sites/default/files/2026-08/google_transit_20260810-20270108_v02.zip
   downloaded 892312 bytes
 Feed version 72
-  covers 2026-01-12 → 2026-08-30
+  covers 2026-08-10 → 2027-01-10
   stored /home/you/.local/share/bart-rs/archives/72.zip
   extracted 18 tables
 Installed to /home/you/.local/share/bart-rs/feed/current
 Done.
 ```
 
+The `covers` line is the calendar's window, not `feed_info.txt`'s — see
+`03-data-sources.md`.
+
 ```
 $ bart-rs update --check
 Checking https://www.bart.gov/dev/schedules/google_transit.zip
-Local feed version:  72
-Remote feed version: 73
-A newer feed is available. Run `bart-rs update`.
+Installed release: google_transit_20260810-20270108_v02.zip
+Feed version:      72
+Offered release:   google_transit_20260810-20270108_v02.zip
+The installed feed is up to date.
 ```
 
 Exit codes: `0` success (or "already up to date"), `1` error.
@@ -82,9 +92,11 @@ bart-rs status
 $ bart-rs status
 BART GTFS feed
   version        72
-  coverage       2026-01-12 → 2026-08-30
+  release        google_transit_20260810-20270108_v02.zip
+  coverage       2026-08-10 → 2027-01-10
   publisher      Bay Area Rapid Transit
   language       en
+                 note: feed_info.txt says 2026-01-12 → 2026-08-30; BART leaves it stale
   downloaded     2026-10-19T19:39:31.010512220+00:00
   last checked   2026-10-19T19:39:31.010521567+00:00
   location       /home/you/.local/share/bart-rs/feed/current
@@ -97,7 +109,7 @@ BART GTFS feed
   stop times     57188
   fares          2500
 
-⚠ the feed expired 50 days ago; run `bart-rs update`
+The feed is current (18 of 18 tables loaded).
 ```
 
 Warning lines (at most one of each) appear when the conditions in
@@ -133,7 +145,10 @@ BB-B  BridgeB   Bus Bridge                                 Bus     █  000000
 ```
 
 The swatch column is rendered in the route's own colour when colour is
-enabled.
+enabled. BART publishes the colour as a six-digit hex string, which is
+emitted as a 24-bit colour escape (`\e[38;2;R;G;Bm`) on terminals that
+advertise `COLORTERM=truecolor`, and as the nearest of the sixteen ANSI
+colours otherwise.
 
 ---
 

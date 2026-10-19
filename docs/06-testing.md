@@ -32,7 +32,7 @@ Live next to the code they test. Cover the pure functions:
 
 ### Integration tests — `tests/*.rs`
 
-These use the public library API and the committed fixtures. There are 90
+These use the public library API and the committed fixtures. There are 103
 tests in total; they run offline and take well under a second.
 
 | File | Covers |
@@ -41,8 +41,29 @@ tests in total; they run offline and take well under a second.
 | `tests/schema_drift_tests.rs` | the old 10-column `stops.txt` and the current 11-column one both parse to the same `Stop` shape; the `plc_url` alias works |
 | `tests/schedule_tests.rs` | `service_ids_for` across a weekday, a Saturday, a Sunday, a holiday exception (added), and a holiday exception (removed) |
 | `tests/feed_tests.rs` | `routes_serving`, `stations_on_route`, `arrivals_at`, `departures_from`, `fare`, `station_of`, `find_stops` |
+| `tests/coverage_tests.rs` | the coverage window comes from the calendar, not from `feed_info.txt`; a current feed is not reported as expired |
+| `tests/release_tests.rs` | two releases with the same `feed_version` are still different releases; the release is recovered from `state.json` |
+| `tests/colour_tests.rs` | a hex route colour becomes a true-colour escape, and never the white fallback |
 | `tests/cli_tests.rs` | spawn the built binary; assert on exit codes and key substrings in stdout |
 | `tests/live_feed.rs` | `#[ignore]`d; downloads the real feed and cross-checks against `gtfs-structures` |
+
+### Regression tests for the upstream quirks
+
+Three of the tests above exist because of a bug that shipped and was caught
+in use. They are worth naming, because each one guards a piece of BART's
+behaviour that looks like a bug in this code but is not:
+
+- **`coverage_tests.rs`** guards the finding that `feed_info.txt`'s dates
+  describe the previous release. Without it, `bart-rs status` reports a
+  current feed as expired.
+- **`release_tests.rs`** guards the finding that `feed_version` never
+  changes. Without it, `bart-rs update` never downloads a new feed.
+- **`colour_tests.rs`** guards the `colored` crate's silent white
+  fallback for colour names it does not recognise.
+
+Each of these was found by running the tool against the real feed and
+reading the output, not by reading the code. The live-feed test cannot
+catch any of them: they are all about *reporting*, not about the data.
 
 ### Live-feed test — `tests/live_feed.rs`
 

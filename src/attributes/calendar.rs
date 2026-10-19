@@ -5,8 +5,54 @@ use std::path::Path;
 use chrono::{Datelike, NaiveDate};
 use serde::{Deserialize, Serialize};
 
+use crate::attributes::calendar_dates::CalendarDate;
 use crate::error::Result;
 use crate::helper::{de_bool_01, de_gtfs_date, read_table};
+
+/// The window during which the given service patterns actually run.
+///
+/// This is the earliest start and the latest end across every
+/// `calendar.txt` row, widened by any single-date exception in
+/// `calendar_dates.txt`.
+///
+/// It is *not* the same thing as `feed_info.txt`'s `feed_start_date` and
+/// `feed_end_date`: BART publishes a new feed without updating those, so
+/// they describe the previous release. See `docs/03-data-sources.md`.
+pub fn coverage(
+    calendar: &[Calendar],
+    calendar_dates: &[CalendarDate],
+) -> Option<(NaiveDate, NaiveDate)> {
+    let mut start: Option<NaiveDate> = None;
+    let mut end: Option<NaiveDate> = None;
+
+    let mut widen = |date: NaiveDate| {
+        start = Some(match start {
+            Some(current) => current.min(date),
+            None => date,
+        });
+        end = Some(match end {
+            Some(current) => current.max(date),
+            None => date,
+        });
+    };
+
+    for row in calendar {
+        if let Some(date) = row.start_date {
+            widen(date);
+        }
+        if let Some(date) = row.end_date {
+            widen(date);
+        }
+    }
+
+    for row in calendar_dates {
+        if let Some(date) = row.date {
+            widen(date);
+        }
+    }
+
+    Some((start?, end?))
+}
 
 /// A recurring service pattern.
 ///

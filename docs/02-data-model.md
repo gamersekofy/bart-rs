@@ -228,9 +228,23 @@ row.
 
 `feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version`
 
-The feed's own metadata, and the basis of the staleness check.
-`feed_start_date` / `feed_end_date` are `YYYYMMDD`; `feed_version` is a
-monotonically increasing integer string (`"72"`).
+The feed's own metadata. `feed_start_date` / `feed_end_date` are `YYYYMMDD`;
+`feed_version` is an integer string (`"72"`).
+
+> **Two of these three fields cannot be trusted.**
+>
+> - `feed_start_date` and `feed_end_date` describe the *previous* release.
+>   BART does not update them when it publishes a new feed, so they are not
+>   the feed's coverage window. The window comes from `calendar.txt` and
+>   `calendar_dates.txt` instead — see
+>   [03-data-sources.md](03-data-sources.md#-feed_infotxts-dates-describe-the-previous-release).
+> - `feed_version` is the same (`72`) in every release BART has published,
+>   so it cannot be used to tell two releases apart. The release is
+>   identified by the versioned filename the permalink redirects to.
+
+The struct still parses all of them: they are worth showing, and the
+discrepancy is worth making visible. They are just not used as the source
+of truth for anything.
 
 ```rust
 #[derive(Debug, Clone, Deserialize)]

@@ -306,6 +306,15 @@ impl Feed {
         self.feed_info().and_then(|f| f.version.as_deref())
     }
 
+    /// The window during which the feed's service actually runs.
+    ///
+    /// Derived from `calendar.txt` and `calendar_dates.txt` rather than from
+    /// `feed_info.txt`, because BART leaves `feed_info.txt`'s dates
+    /// describing the previous release.
+    pub fn coverage(&self) -> Option<(NaiveDate, NaiveDate)> {
+        crate::attributes::calendar::coverage(&self.calendar, &self.calendar_dates)
+    }
+
     /// The description of a service pattern, e.g. `Weekday`.
     pub fn service_description(&self, service_id: &str) -> Option<&str> {
         self.service_descriptions

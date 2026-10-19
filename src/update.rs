@@ -15,8 +15,11 @@ use std::path::{Path, PathBuf};
 use chrono::{DateTime, Duration, NaiveDate, Utc};
 use serde::{Deserialize, Serialize};
 
+use crate::attributes::calendar::Calendar;
+use crate::attributes::calendar_dates::CalendarDate;
 use crate::attributes::feed_info::FeedInfo;
 use crate::error::{Error, Result};
+use crate::helper;
 use crate::paths;
 
 /// The permalink to BART's current GTFS schedule feed.
@@ -38,6 +41,58 @@ pub struct DownloadedFeed {
     pub version: Option<String>,
     /// The feed's metadata, read out of the archive.
     pub feed_info: Option<FeedInfo>,
+    /// The window during which the feed's service actually runs.
+    pub coverage: Option<(NaiveDate, NaiveDate)>,
+    /// The `Last-Modified` header of the response, if the server sent one.
+    pub last_modified: Option<String>,
+}
+
+/// A pointer to the release the server is currently offering.
+///
+/// BART's permalink redirects to a file whose name encodes the coverage
+/// window and a release counter — `google_transit_20260810-20270108_v02.zip`
+/// — and that name changes with every release.
+///
+/// It is the only reliable release identifier: `feed_info.txt`'s
+/// `feed_version` is the same in every release BART has published, so
+/// comparing it can never detect a new feed.
+#[derive(Debug, Clone, PartialEq, Eq, Default, Serialize, Deserialize)]
+pub struct Release {
+    /// The URL the release is served from, after redirects.
+    pub url: String,
+    /// The file name, e.g. `google_transit_20260810-20270108_v02.zip`.
+    pub name: Option<String>,
+    /// The `Last-Modified` header of the release, if the server sent one.
+    pub last_modified: Option<String>,
+}
+
+impl Release {
+    /// Whether this release is the same as `other`.
+    ///
+    /// The name is the primary signal. The modification time only breaks
+    /// ties, and only when both sides have one.
+    pub fn is_same(&self, other: &Release) -> bool {
+        if self.name != other.name {
+            return false;
+        }
+        match (&self.last_modified, &other.last_modified) {
+            (Some(a), Some(b)) => a == b,
+            _ => true,
+        }
+    }
+
+    /// A short name for the release, for printing.
+    pub fn label(&self) -> &str {
+        self.name.as_deref().unwrap_or(&self.url)
+    }
+}
+
+/// The name of the release a URL points at.
+pub fn release_name(url: &str) -> Option<String> {
+    url.rsplit('/')
+        .next()
+        .filter(|name| !name.is_empty())
+        .map(str::to_string)
 }
 
 /// The bookkeeping the tool keeps about the installed feed.
@@ -55,6 +110,21 @@ pub struct UpdateState {
     /// The URL the feed was downloaded from.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub source_url: Option<String>,
+    /// The `Last-Modified` header of the downloaded release.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub last_modified: Option<String>,
+}
+
+impl UpdateState {
+    /// The release the installed feed came from, as far as the state records.
+    pub fn release(&self) -> Option<Release> {
+        let url = self.source_url.clone()?;
+        Some(Release {
+            name: release_name(&url),
+            url,
+            last_modified: self.last_modified.clone(),
+        })
+    }
 }
 
 /// Something worth telling the user about the installed feed.
@@ -79,6 +149,8 @@ pub enum Staleness {
     },
     /// There is no feed installed.
     Missing,
+    /// The feed is installed but its coverage window could not be worked out.
+    UnknownCoverage,
 }
 
 impl Staleness {
@@ -101,6 +173,9 @@ impl Staleness {
                 if *days == 1 { "" } else { "s" }
             ),
             Staleness::Missing => "no feed is installed; run `bart-rs update`".to_string(),
+            Staleness::UnknownCoverage => {
+                "the feed's coverage window could not be determined".to_string()
+            }
         }
     }
 }
@@ -134,6 +209,11 @@ pub fn download_latest(client: &reqwest::blocking::Client) -> Result<DownloadedF
     }
 
     let source_url = response.url().to_string();
+    let last_modified = response
+        .headers()
+        .get(reqwest::header::LAST_MODIFIED)
+        .and_then(|value| value.to_str().ok())
+        .map(str::to_string);
     let bytes = response
         .bytes()
         .map_err(|e| Error::Http {
@@ -143,12 +223,72 @@ pub fn download_latest(client: &reqwest::blocking::Client) -> Result<DownloadedF
         .to_vec();
 
     let (version, feed_info) = read_feed_info(&bytes)?;
+    let coverage = coverage_from_archive(&bytes);
+
     Ok(DownloadedFeed {
         bytes,
         source_url,
         version,
         feed_info,
+        coverage,
+        last_modified,
     })
+}
+
+/// Ask the server which release it is offering, without downloading it.
+///
+/// A `HEAD` request follows the permalink's redirect to the versioned file
+/// and reports the name and modification time of that file, which is enough
+/// to tell whether the installed feed is still the current one.
+pub fn probe_release(client: &reqwest::blocking::Client) -> Result<Release> {
+    let response = client.head(FEED_URL).send().map_err(|e| Error::Http {
+        url: FEED_URL.to_owned(),
+        source: e,
+    })?;
+
+    let status = response.status();
+    if !status.is_success() {
+        return Err(Error::HttpStatus {
+            url: FEED_URL.to_owned(),
+            status: status.as_u16(),
+        });
+    }
+
+    let url = response.url().to_string();
+    let last_modified = response
+        .headers()
+        .get(reqwest::header::LAST_MODIFIED)
+        .and_then(|value| value.to_str().ok())
+        .map(str::to_string);
+
+    Ok(Release {
+        name: release_name(&url),
+        url,
+        last_modified,
+    })
+}
+
+/// Read one of the GTFS tables out of a zipped feed.
+fn read_archive_table<T: serde::de::DeserializeOwned>(bytes: &[u8], name: &str) -> Result<Vec<T>> {
+    let mut archive =
+        zip::ZipArchive::new(Cursor::new(bytes)).map_err(|e| Error::BadArchive(e.to_string()))?;
+
+    let mut file = archive
+        .by_name(name)
+        .map_err(|_| Error::BadArchive(format!("the archive has no {name}")))?;
+
+    let mut text = String::new();
+    file.read_to_string(&mut text)
+        .map_err(|e| Error::BadArchive(format!("could not read {name}: {e}")))?;
+
+    helper::parse_table(&text, name)
+}
+
+/// The window during which a downloaded feed's service actually runs.
+fn coverage_from_archive(bytes: &[u8]) -> Option<(NaiveDate, NaiveDate)> {
+    let calendar = read_archive_table::<Calendar>(bytes, "calendar.txt").ok()?;
+    let calendar_dates = read_archive_table::<CalendarDate>(bytes, "calendar_dates.txt").ok()?;
+    crate::attributes::calendar::coverage(&calendar, &calendar_dates)
 }
 
 /// Read `feed_info.txt` out of a zipped feed.
@@ -344,43 +484,49 @@ pub fn write_state(state: &UpdateState) -> Result<()> {
     })
 }
 
-/// Check the remote feed version without downloading the whole feed.
-pub fn check_latest(client: &reqwest::blocking::Client) -> Result<Option<String>> {
-    let download = download_latest(client)?;
-    Ok(download.version)
+/// Check the release the server is offering, without downloading the feed.
+///
+/// The whole feed is not fetched: a `HEAD` request is enough to learn which
+/// release is current.
+pub fn check_latest(client: &reqwest::blocking::Client) -> Result<Release> {
+    probe_release(client)
 }
 
 /// Work out what is worth telling the user about the installed feed.
+///
+/// `coverage` is the window during which the feed's service actually runs.
+/// It is taken from the calendar rather than from `feed_info.txt`, because
+/// BART leaves `feed_info.txt` describing the previous release.
 pub fn staleness(
-    feed_info: Option<&FeedInfo>,
+    coverage: Option<(NaiveDate, NaiveDate)>,
     state: &UpdateState,
     now: DateTime<Utc>,
 ) -> Vec<Staleness> {
     let mut warnings = Vec::new();
 
-    let Some(info) = feed_info else {
-        warnings.push(Staleness::Missing);
+    let Some((start, end)) = coverage else {
+        warnings.push(if state.feed_version.is_some() {
+            Staleness::UnknownCoverage
+        } else {
+            Staleness::Missing
+        });
         return warnings;
     };
 
     let today = now.date_naive();
 
-    if let Some(end) = info.end_date {
-        if end < today {
-            warnings.push(Staleness::Expired {
-                days: (today - end).num_days(),
-            });
-        } else if (end - today).num_days() <= 7 {
-            warnings.push(Staleness::ExpiringSoon {
-                days: (end - today).num_days(),
-            });
-        }
+    if end < today {
+        warnings.push(Staleness::Expired {
+            days: (today - end).num_days(),
+        });
+    } else if (end - today).num_days() <= 7 {
+        warnings.push(Staleness::ExpiringSoon {
+            days: (end - today).num_days(),
+        });
     }
 
-    if let Some(start) = info.start_date {
-        if start > today {
-            warnings.push(Staleness::NotYetValid);
-        }
+    if start > today {
+        warnings.push(Staleness::NotYetValid);
     }
 
     if let Some(checked) = state

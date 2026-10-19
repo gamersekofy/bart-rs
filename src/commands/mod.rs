@@ -16,7 +16,7 @@ pub mod table;
 pub mod trip;
 pub mod update;
 
-use colored::Colorize;
+use colored::{Color, Colorize};
 
 use crate::cli::Cli;
 use crate::error::{Error, Result};
@@ -123,13 +123,28 @@ pub fn resolve_stop<'a>(feed: &'a Feed, query: &str) -> Result<&'a crate::attrib
 }
 
 /// Render a route's colour as an ANSI-coloured block.
+///
+/// The colour is a hex string such as `FF0000`, which has to be turned into
+/// a true-colour value by hand: `colored`'s own `&str` conversion only
+/// understands the sixteen named colours and silently falls back to white
+/// for anything else.
 pub fn swatch(color: Option<&str>) -> String {
-    match color {
-        Some(hex) if hex.len() == 6 && hex.chars().all(|c| c.is_ascii_hexdigit()) => {
-            "\u{2588}".to_string().color(hex.to_string()).to_string()
-        }
-        _ => " ".to_string(),
+    match color.and_then(parse_hex_colour) {
+        Some((r, g, b)) => "\u{2588}"
+            .to_string()
+            .color(Color::TrueColor { r, g, b })
+            .to_string(),
+        None => " ".to_string(),
     }
+}
+
+/// Parse a six-digit hex colour into its red, green and blue components.
+fn parse_hex_colour(hex: &str) -> Option<(u8, u8, u8)> {
+    if hex.len() != 6 {
+        return None;
+    }
+    let component = |range: std::ops::Range<usize>| u8::from_str_radix(&hex[range], 16).ok();
+    Some((component(0..2)?, component(2..4)?, component(4..6)?))
 }
 
 /// Format a count with a pluralised noun.

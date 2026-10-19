@@ -11,41 +11,62 @@ pub fn run(args: &UpdateArgs) -> Result<()> {
     let client = update::client()?;
     let mut state = update::read_state()?;
 
+    // Ask the server which release it is offering. This is a HEAD request,
+    // so it costs nothing even when the feed is 900 kB.
+    //
+    // If the server will not answer a HEAD request, fall back to fetching
+    // the feed and comparing the releases that way.
+    let remote = update::probe_release(&client).ok();
+
+    let local = state.release();
+
     if args.check {
         println!("Checking {}", update::FEED_URL);
-        let remote = update::check_latest(&client)?;
-
         state.last_checked_at = Some(Utc::now().to_rfc3339());
         update::write_state(&state)?;
 
-        let local = state.feed_version.as_deref().unwrap_or("(none)");
-        match remote {
+        let local_label = local
+            .as_ref()
+            .map(update::Release::label)
+            .unwrap_or("(none)");
+        println!("Installed release: {local_label}");
+        println!(
+            "Feed version:      {}",
+            state.feed_version.as_deref().unwrap_or("(none)")
+        );
+
+        match &remote {
             Some(remote) => {
-                println!("Local feed version:  {local}");
-                println!("Remote feed version: {remote}");
-                if remote != local {
-                    println!("A newer feed is available. Run `bart-rs update`.");
-                } else {
+                println!("Offered release:   {}", remote.label());
+                let up_to_date = local.as_ref().is_some_and(|local| local.is_same(remote));
+                if up_to_date {
                     println!("The installed feed is up to date.");
+                } else {
+                    println!("A newer feed is available. Run `bart-rs update`.");
                 }
             }
             None => {
-                println!("Local feed version:  {local}");
-                println!("Could not determine the remote feed version.");
+                println!("Could not determine which release the server is offering.");
             }
         }
         return Ok(());
     }
 
     if !args.force {
-        if let Some(remote) = update::check_latest(&client)? {
-            let local = state.feed_version.as_deref().unwrap_or("");
-            if remote == local {
-                println!("The installed feed is already version {remote}.");
+        if let (Some(local), Some(remote)) = (&local, &remote) {
+            if local.is_same(remote) {
+                println!(
+                    "The installed feed is already up to date ({}).",
+                    remote.label()
+                );
                 state.last_checked_at = Some(Utc::now().to_rfc3339());
                 update::write_state(&state)?;
                 return Ok(());
             }
+            println!(
+                "A newer feed is available ({}); downloading it.",
+                remote.label()
+            );
         }
     }
 
@@ -59,10 +80,8 @@ pub fn run(args: &UpdateArgs) -> Result<()> {
         println!("Feed version {version}");
     }
 
-    if let Some(info) = &download.feed_info {
-        if let (Some(start), Some(end)) = (info.start_date, info.end_date) {
-            println!("  covers {start} → {end}");
-        }
+    if let Some((start, end)) = download.coverage {
+        println!("  covers {start} → {end}");
     }
 
     let archive = update::store_archive(&download.bytes, version.as_deref())?;
@@ -91,6 +110,7 @@ pub fn run(args: &UpdateArgs) -> Result<()> {
         downloaded_at: Some(Utc::now().to_rfc3339()),
         last_checked_at: Some(Utc::now().to_rfc3339()),
         source_url: Some(download.source_url),
+        last_modified: download.last_modified.clone(),
     };
     update::write_state(&new_state)?;
 

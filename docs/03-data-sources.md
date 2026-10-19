@@ -24,7 +24,51 @@ which point at dated files.
 - Cloudflare sits in front of it, so set a descriptive `User-Agent`.
 
 **Always follow the redirect and record the final URL.** The versioned filename
-is a useful cross-check against `feed_version` in `feed_info.txt`.
+is the *only* reliable release identifier — see the two findings below.
+
+### ⚠ `feed_info.txt`'s dates describe the previous release
+
+`feed_info.txt` carries `feed_start_date` and `feed_end_date`, which the GTFS
+spec defines as the window for which the dataset is complete and reliable.
+BART does not maintain them. Measured on the release whose file is named
+`google_transit_20260810-20270108_v02.zip`:
+
+| Source | Window |
+| --- | --- |
+| `feed_info.txt` | `20260112` → `20260830` |
+| `calendar.txt` (earliest `start_date`, latest `end_date`) | `20260810` → `20270110` |
+| `calendar_dates.txt` (earliest and latest date) | `20260822` → `20270101` |
+
+`feed_info.txt` is describing the release *before* this one. A tool that
+trusts it will tell the user that a perfectly current feed expired 50 days
+ago, and will not let them download the feed that would fix it.
+
+**The coverage window therefore comes from the calendar**, not from
+`feed_info.txt`: the earliest `start_date` and the latest `end_date` across
+`calendar.txt`, widened by any single-date exception in `calendar_dates.txt`.
+`feed_info.txt`'s dates are still shown in `bart-rs status`, labelled as the
+stale claim they are, so the discrepancy is visible rather than hidden.
+
+### ⚠ `feed_version` is a constant, and cannot detect a new release
+
+`feed_info.txt`'s `feed_version` was `72` in both the January 2026 release
+and the August 2026 release. It does not change between releases, so
+comparing it can never tell you that a new feed has been published — the
+check silently succeeds forever, and the tool never downloads a new feed.
+
+The release is identified instead by the **versioned filename** the permalink
+redirects to:
+
+```
+google_transit_20260810-20270108_v02.zip
+           ^^^^^^^^ ^^^^^^^   ^^
+           coverage window    revision counter
+```
+
+Both parts change on every release. A `HEAD` request to the permalink
+follows the redirect and reports the final URL and its `Last-Modified`
+header without transferring the body, so checking for a new release costs
+almost nothing.
 
 ### 2. Realtime trip updates (GTFS-Realtime)
 
@@ -238,9 +282,14 @@ $XDG_DATA_HOME/bart-rs/          (default: ~/.local/share/bart-rs)
   "feed_version": "72",
   "downloaded_at": "2026-10-19T12:00:00Z",
   "last_checked_at": "2026-10-19T12:00:00Z",
-  "source_url": "https://www.bart.gov/sites/default/files/2026-08/google_transit_20260810-20270108_v02.zip"
+  "source_url": "https://www.bart.gov/sites/default/files/2026-08/google_transit_20260810-20270108_v02.zip",
+  "last_modified": "Tue, 04 Aug 2026 18:23:24 GMT"
 }
 ```
+
+`source_url` and `last_modified` together identify the release. `feed_version`
+is recorded because it is worth showing, but it is never used to decide
+whether anything needs downloading.
 
 ### Resolution order
 
@@ -263,44 +312,52 @@ tool manages its own data; the repository carries no feed.
 
 `bart-rs update` performs, in order:
 
-1. **Fetch** the permalink with `reqwest` (blocking client, `rustls-tls`).
-   Follow redirects. Capture the final URL.
-2. **Validate** that the payload is a zip archive and contains the 18 expected
+1. **Probe** the permalink with a `HEAD` request, following redirects, to
+   learn which release is on offer: its versioned filename and its
+   `Last-Modified` header. If the server will not answer a `HEAD`, fall
+   through to step 2 and decide there instead.
+2. **Compare** the offered release against the one recorded in `state.json`.
+   If they match and `--force` was not given, stop: the installed feed is
+   already current. (Never compare `feed_version` — it never changes.)
+3. **Fetch** the permalink with `reqwest` (blocking client, `rustls-tls`).
+   Follow redirects. Capture the final URL and its `Last-Modified` header.
+4. **Validate** that the payload is a zip archive and contains the 18 expected
    file names. Fail loudly if BART changed the file set.
-3. **Store** the archive at `archives/<feed_version>.zip`. `feed_version` is
+5. **Store** the archive at `archives/<feed_version>.zip`. `feed_version` is
    read from the archive's own `feed_info.txt` — so the archive has to be
    opened before it can be named. (Read `feed_info.txt` out of the zip into
    memory, then write the archive.)
-4. **Extract** to a temporary directory `feed/.staging-<pid>/`.
-5. **Swap**: rename `feed/.staging-<pid>` → `feed/current`, replacing the
+6. **Extract** to a temporary directory `feed/.staging-<pid>/`.
+7. **Swap**: rename `feed/.staging-<pid>` → `feed/current`, replacing the
    previous `feed/current`. On Linux `rename` over an existing directory fails
    if the target is non-empty, so the sequence is:
    - `rename(feed/current, feed/.old-<pid>)` (if it exists)
    - `rename(feed/.staging-<pid>, feed/current)`
    - `remove_dir_all(feed/.old-<pid>)`
-   If step 2 fails, restore `.old-<pid>` back to `feed/current`. A partially
+   If step 4 fails, restore `.old-<pid>` back to `feed/current`. A partially
    extracted feed is never visible to readers.
-6. **Record** `state.json`.
+8. **Record** `state.json`.
 
-`bart-rs update --check` performs steps 1–2 and the `feed_info.txt` read only,
-then reports whether the remote `feed_version` differs from the local one. It
-does not write anything.
+`bart-rs update --check` performs step 1 only, then reports whether the
+offered release differs from the installed one. It does not write anything
+except the `last_checked_at` timestamp.
 
 ### Staleness rules
 
-`bart-rs status` (and a warning printed by other commands) reports:
+`bart-rs status` reports:
 
 | Condition | Message |
 | --- | --- |
-| `feed_end_date` < today | **expired** — "the feed expired N days ago" |
-| `feed_end_date` within 7 days | **expiring soon** |
-| `feed_start_date` > today | **not yet valid** |
+| coverage window ended | **expired** — "the feed expired N days ago" |
+| coverage window ends within 7 days | **expiring soon** |
+| coverage window has not started | **not yet valid** |
 | `last_checked_at` older than 7 days | **stale check** — "run `bart-rs update --check`" |
 | no local feed at all | **missing** — "run `bart-rs update`" |
+| a feed is installed but its window cannot be worked out | **unknown coverage** |
 
-The expiry check uses `feed_end_date` because that is what BART guarantees; the
-feed *content* often runs past `feed_end_date` in practice, but the guarantee
-is the contract.
+The expiry check uses the **calendar's** window, not `feed_info.txt`'s — see
+the finding above. The guarantee BART actually offers is the calendar's, and
+`feed_info.txt` does not describe the release it published.
 
 ### Times and timezones
 
