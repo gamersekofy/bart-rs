@@ -28,6 +28,14 @@ bart-rs [GLOBAL OPTIONS] <COMMAND> [ARGS]
 command has no natural JSON representation (`update`, `status`), `--json` is
 rejected with a clear error rather than silently ignored.
 
+### Exit codes
+
+| Code | Meaning |
+| --- | --- |
+| `0` | Success. Also used when the output pipe is closed early — `bart-rs routes \| head -1` exits quietly, as any Unix tool should, rather than panicking with "Broken pipe". |
+| `1` | The command failed. The error is printed to stderr in its `Display` form. |
+| `2` | The command line was wrong. `clap` prints the usage message. |
+
 ---
 
 ## `bart-rs update`
