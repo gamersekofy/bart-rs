@@ -116,5 +116,11 @@ jobs:
       - name: Check the flake
         run: nix flake check --no-build
 
+      # `--no-build` evaluates the flake's checks without building them, so
+      # the binary itself is built here. The flake's test check is not run:
+      # it is the same test suite the `test` job already runs.
+      - name: Build the binary with Nix
+        run: nix build
+
       - name: Build the dev shell
         run: nix develop --command cargo --version
