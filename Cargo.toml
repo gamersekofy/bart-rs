@@ -26,6 +26,22 @@ categories = ["command-line-utilities", "api-bindings"]
 # Rust 1.88 ends up in a crate claiming 1.85.
 resolver = "3"
 
+# What goes into the published crate.
+#
+# The source, the tests and the fixtures all ship, so that `cargo test`
+# works on the published crate and the design record travels with it. What
+# does not ship is the development scaffolding: the flake, the toolchain
+# file, the direnv hook and the CI workflows are all about working on the
+# project, not about using it.
+exclude = [
+    ".github/",
+    ".envrc",
+    ".gitignore",
+    "flake.lock",
+    "flake.nix",
+    "rust-toolchain.toml",
+]
+
 [features]
 default = ["cli", "download"]
 # The `cli` feature is the binary front end. A library consumer that only
@@ -52,7 +68,7 @@ reqwest = { version = "0.12", default-features = false, features = [
     "rustls-tls",
     "gzip",
 ], optional = true }
-zip = { version = "2", optional = true }
+zip = { version = "9", optional = true }
 
 [dev-dependencies]
 # Used only as a cross-validation oracle in the test suite: the live-feed
@@ -62,7 +78,7 @@ zip = { version = "2", optional = true }
 # `default-features = false` is important: the default `read-url` feature
 # pulls in `reqwest` -> `native-tls` -> `openssl-sys`, which would make the
 # whole project depend on OpenSSL headers for no benefit.
-gtfs-structures = { version = "0.42", default-features = false }
+gtfs-structures = { version = "0.50", default-features = false }
 
 [profile.release]
 lto = "thin"

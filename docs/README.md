@@ -21,6 +21,7 @@ project stalled. These documents fix that.
 | [06-testing.md](06-testing.md) | Test strategy, fixture layout, and how to validate against the live feed. |
 | [07-decisions.md](07-decisions.md) | Architecture decision records. The "why" behind the choices, including the rejected alternatives. |
 | [08-library-guide.md](08-library-guide.md) | How to use `bart-rs` from another Rust project — a GUI, a web service, a bot. The worked example, the threading notes, and the upstream gotchas. |
+| [09-releasing.md](09-releasing.md) | How to publish to crates.io, and how the release is wired up. |
 
 ## Conventions used in these documents
 

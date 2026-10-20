@@ -359,7 +359,13 @@ pub fn extract(bytes: &[u8], dest: &Path) -> Result<()> {
             continue;
         }
 
-        let name = entry.name().to_string();
+        // `zip` 9 validates the entry name and returns an error rather than
+        // handing back a lossy string, so a name that is not valid UTF-8 is
+        // rejected here rather than being mangled.
+        let name = entry
+            .name()
+            .map_err(|e| Error::BadArchive(e.to_string()))?
+            .into_owned();
         // Refuse anything that could escape the destination directory.
         if name.contains("..") || name.starts_with('/') || name.contains('\\') {
             return Err(Error::BadArchive(format!(

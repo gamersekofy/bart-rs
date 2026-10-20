@@ -10,7 +10,7 @@ you if you do not know about them.
 ## General rules for every table
 
 1. **Never index by column position.** Deserialize by header name. The
-   `stops.txt` schema has already changed once (see [Stops](#stops)).
+   `stops.txt` schema has already changed once (see [Stops](02-data-model.md#stops)).
 2. **Missing columns are normal.** BART adds and removes columns between feed
    versions. Every non-essential field is `Option<T>` with `#[serde(default)]`.
 3. **Renamed columns need `alias`.** Where a column was renamed, declare the
@@ -194,6 +194,7 @@ pub struct FareRiderCategory {
 }
 ```
 
+<a id="fare-rules"></a>
 ### `fare_rules.txt` — 2500 rows, 5 columns
 
 `fare_id,route_id,origin_id,destination_id,contains_id`
@@ -220,7 +221,7 @@ pub struct FareRule {
 ```
 
 **Lookup rule:** resolve the user's `--from`/`--to` to a *station* id first
-(see [Stops](#stops)), then look for an exact `(origin_id, destination_id)`
+(see [Stops](02-data-model.md#stops)), then look for an exact `(origin_id, destination_id)`
 match, then the reverse, then fall back to the `origin_id == destination_id`
 row.
 
@@ -237,7 +238,7 @@ The feed's own metadata. `feed_start_date` / `feed_end_date` are `YYYYMMDD`;
 >   BART does not update them when it publishes a new feed, so they are not
 >   the feed's coverage window. The window comes from `calendar.txt` and
 >   `calendar_dates.txt` instead — see
->   [03-data-sources.md](03-data-sources.md#-feed_infotxts-dates-describe-the-previous-release).
+>   [03-data-sources.md](03-data-sources.md#feed-info-dates).
 > - `feed_version` is the same (`72`) in every release BART has published,
 >   so it cannot be used to tell two releases apart. The release is
 >   identified by the versioned filename the permalink redirects to.
@@ -381,6 +382,7 @@ pub struct Shape {
 }
 ```
 
+<a id="stops"></a>
 ### `stops.txt` — 287 rows, **11** columns
 
 `stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,platform_code`

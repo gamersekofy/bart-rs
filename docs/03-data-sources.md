@@ -26,6 +26,7 @@ which point at dated files.
 **Always follow the redirect and record the final URL.** The versioned filename
 is the *only* reliable release identifier — see the two findings below.
 
+<a id="feed-info-dates"></a>
 ### ⚠ `feed_info.txt`'s dates describe the previous release
 
 `feed_info.txt` carries `feed_start_date` and `feed_end_date`, which the GTFS
@@ -342,6 +343,7 @@ tool manages its own data; the repository carries no feed.
 offered release differs from the installed one. It does not write anything
 except the `last_checked_at` timestamp.
 
+<a id="staleness-rules"></a>
 ### Staleness rules
 
 `bart-rs status` reports:
@@ -359,6 +361,7 @@ The expiry check uses the **calendar's** window, not `feed_info.txt`'s — see
 the finding above. The guarantee BART actually offers is the calendar's, and
 `feed_info.txt` does not describe the release it published.
 
+<a id="times-and-timezones"></a>
 ### Times and timezones
 
 All schedule arithmetic happens in `America/Los_Angeles` (BART's

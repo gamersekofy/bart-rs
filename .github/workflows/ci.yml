@@ -40,6 +40,62 @@ jobs:
         env:
           RUSTDOCFLAGS: -D warnings
 
+  msrv:
+    name: msrv (1.88)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The version declared as `rust-version` in Cargo.toml. If a dependency
+      # raises its floor, this job fails and the manifest has to be updated
+      # rather than quietly going stale.
+      - name: Install the minimum supported Rust
+        uses: dtolnay/rust-toolchain@1.88.0
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Build with the minimum supported Rust
+        run: cargo build --all-features --locked
+
+      - name: Test with the minimum supported Rust
+        run: cargo test --all-features --locked
+
+  deny:
+    name: dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Checks the dependency tree for known security advisories, licence
+      # compatibility, duplicate versions and unexpected sources. A new
+      # advisory breaks the build instead of sitting unnoticed in the
+      # lockfile.
+      - uses: EmbarkStudios/cargo-deny-action@v2
+
+  package:
+    name: publishable
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      # Builds the crate exactly as it would be published, and then builds
+      # and tests it again from the packaged tarball, which is the only way
+      # to be sure the package is self-contained.
+      - name: Check the package
+        run: cargo package --locked
+
+      - name: Test the packaged crate
+        run: |
+          cargo package --locked --no-verify
+          tar -xzf target/package/*.crate -C target/package
+          cd target/package/bart-rs-*/
+          cargo test --all-features --offline --locked
+
   nix:
     name: nix flake
     runs-on: ubuntu-latest

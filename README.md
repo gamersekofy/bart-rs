@@ -77,6 +77,24 @@ $ nix run github:gamersekofy/bart-rs -- --help
 > This uses the repository's **default branch**, so it runs whatever is
 > merged into it — not an unmerged feature branch.
 
+### Using it as a Rust dependency
+
+```toml
+[dependencies]
+bart-rs = "0.1"
+```
+
+Or, to work against the repository rather than a published release:
+
+```toml
+[dependencies]
+bart-rs = { git = "https://github.com/gamersekofy/bart-rs" }
+```
+
+See [`docs/08-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/08-library-guide.md)
+for how to use it, and [`docs/09-releasing.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/09-releasing.md)
+for how the release process works.
+
 ## Getting started
 
 The tool downloads the schedule feed itself; the repository does not carry a
@@ -239,7 +257,7 @@ Two things to know before you start:
 - **Four upstream quirks will bite you** — the coverage window is not in
   `feed_info.txt`, the service day starts at 04:00, a platform's id is not
   its number, and a zero delay does not always mean "on time". The library
-  handles all four, and [`docs/08-library-guide.md`](docs/08-library-guide.md)
+  handles all four, and [`docs/08-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/08-library-guide.md)
   explains how to use each of them correctly.
 
 That guide is the place to start: it has a complete worked example, the
@@ -256,7 +274,7 @@ threading notes, and the gotchas.
 BART's alert feed does not follow the GTFS-Realtime specification's field
 numbering, and is not even self-consistent about the shape of its text
 fields. `bart-rs` handles this with a tolerant decoder; the details are in
-[`docs/03-data-sources.md`](docs/03-data-sources.md).
+[`docs/03-data-sources.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/03-data-sources.md).
 
 Two more quirks in the static feed are worth knowing about, because both
 would otherwise make the tool lie to you:
@@ -270,9 +288,10 @@ would otherwise make the tool lie to you:
 
 ## Documentation
 
-[`docs/`](docs/README.md) holds the full design record: the architecture, the
-data model, the CLI contract, the build plan, the testing strategy, and the
-architecture decision log.
+[`docs/`](https://github.com/gamersekofy/bart-rs/blob/master/docs/README.md)
+holds the full design record: the architecture, the data model, the CLI
+contract, the build plan, the testing strategy, the architecture decision log,
+and a guide to using the library.
 
 ## Development
 
@@ -286,4 +305,5 @@ $ cargo fmt --check
 
 ## License
 
-MIT.
+[MIT](https://github.com/gamersekofy/bart-rs/blob/master/LICENSE) — see the
+`LICENSE` file.

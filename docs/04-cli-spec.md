@@ -431,7 +431,7 @@ Clipper START            16  $6.10
 
 `--from` and `--to` accept station ids, platform ids, or names, and are
 normalised to **station** ids before lookup (see the `fare_rules` note in
-[02-data-model.md](02-data-model.md#fare_rulestxt--2500-rows-5-columns)).
+[02-data-model.md](02-data-model.md#fare-rules)).
 
 ---
 

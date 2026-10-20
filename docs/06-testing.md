@@ -32,7 +32,7 @@ Live next to the code they test. Cover the pure functions:
 
 ### Integration tests — `tests/*.rs`
 
-These use the public library API and the committed fixtures. There are 118
+These use the public library API and the committed fixtures. There are 124
 tests in total; they run offline and take well under a second.
 
 | File | Covers |
@@ -45,6 +45,7 @@ tests in total; they run offline and take well under a second.
 | `tests/release_tests.rs` | two releases with the same `feed_version` are still different releases; the release is recovered from `state.json` |
 | `tests/colour_tests.rs` | a hex route colour becomes a true-colour escape, and never the white fallback; escape sequences do not count towards a column's width |
 | `tests/platform_tests.rs` | an arrival carries the platform number as well as the id; the label is the number; a train the realtime feed is not tracking is not reported as on time |
+| `tests/doc_tests.rs` | every relative link in the documentation points at a file that exists; every anchor points at a heading that exists; the README uses only absolute links, because crates.io rewrites relative ones against a base it derives itself; the changelog names the current version; the licence is declared and the file is present; the declared MSRV is not below the floor of the edition |
 | `tests/cli_tests.rs` | spawn the built binary; assert on exit codes and key substrings in stdout; the swatch does not push a table out of alignment; a closed output pipe is not an error |
 | `tests/live_feed.rs` | `#[ignore]`d; downloads the real feed and cross-checks against `gtfs-structures` |
 

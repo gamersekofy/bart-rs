@@ -799,3 +799,92 @@ where it previously nested an `if let` inside an `if`.
 **Cost.** Two `unsafe` blocks, both with a SAFETY comment, and the loss of
 one test *count* — the two colour checks are now one test, because they
 were already coupled by process-global state.
+
+---
+
+## D26 — Move to `zip` 9, and audit the dependency tree
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `cargo deny check` — which had never been run against this
+project, because there was no `deny.toml` — found three advisories against
+the `zip` crate: RUSTSEC-2026-0367, -0368 and -0369. All three are in the
+same family: the functions that write an archive's entries out to disk
+(`ZipArchive::extract` and `ZipStreamReader::extract`) did not confine
+symlink targets to the destination directory, and did not preserve file
+modes safely.
+
+**Decision.**
+
+1. Move the direct dependency from `zip` 2 to `zip` 9, which has the fix.
+2. Keep the three advisories in `deny.toml`'s ignore list, with the reason
+   written down, because the vulnerable functions are not reachable.
+3. Add `deny.toml` and wire `cargo deny` into CI.
+
+**Why the advisories are ignored rather than fixed.** The vulnerable
+functions are `ZipArchive::extract` and `ZipStreamReader::extract`, and
+neither is called anywhere in the tree:
+
+- `src/update.rs` opens the archive with `ZipArchive::new`, reads each entry
+  with `by_index`, and writes the bytes out itself, one plain file at a
+  time, after rejecting any path that could escape the destination
+  directory.
+- `gtfs-structures`, the dev-dependency used as a cross-validation oracle,
+  also reads entries with `by_index` and deserialises them in memory.
+
+The advisories are still reported because `gtfs-structures` requires `zip`
+8, and Cargo cannot resolve two semver-incompatible major versions of one
+crate to a single version. That is a dev-dependency: it is not part of the
+tree that reaches anyone who depends on `bart-rs`.
+
+If this ever needs to change, the options are to drop `gtfs-structures` and
+write the cross-validation against the fixture feed directly, or to wait for
+`gtfs-structures` to move to `zip` 9.
+
+**Why `cargo deny` at all.** A crate that is about to be published will be
+depended on by other people, and the advisories in its tree become their
+problem. `cargo audit` and `cargo deny` runs are common in consumer CI, and
+a crate that trips them is a crate people are told not to use. Checking the
+tree in this project's own CI means a new advisory is found here, where it
+can be fixed, rather than in someone else's build.
+
+The licence allow-list in `deny.toml` is the set of licences the tree
+actually uses, all of them permissive. A dependency with a different licence
+fails the check and forces a decision.
+
+---
+
+## D27 — Check the MSRV, rather than asserting it
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** `rust-version` is a promise: a crate that declares 1.88 says
+that 1.88 can build it. The value can be checked against the declared
+`rust-version` of every dependency, but that is a proxy — a crate that
+declares 1.70 may still use a 1.85 language feature.
+
+**Decision.** Three things:
+
+1. A CI job builds and tests the crate with exactly the declared MSRV, so
+   a dependency that raises its floor breaks the build rather than quietly
+   making the promise false.
+2. The MSRV was verified by hand against real toolchains, not inferred: with
+   Rust 1.88.0 the crate builds and all the tests pass; with Rust 1.87.0
+   `cargo` refuses to build it, naming `bart-rs` first in the error.
+3. The declared value is the *real* floor, not a round number below it. It
+   was 1.85 because that is the floor of edition 2024, which was a number
+   about the edition rather than about this crate.
+
+**Why.** The error a consumer gets matters. On Rust 1.87 the message is
+
+```
+error: rustc 1.87.0 is not supported by the following packages:
+  bart-rs@0.1.0 requires rustc 1.88
+```
+
+which says exactly what is wrong and what to do. Without the declared
+version being right, the same consumer would have got an error from `time`,
+a transitive dependency, about a crate they have never heard of.
+
+**Cost.** One CI job, and the discipline of re-checking the floor whenever
+the dependency tree changes.

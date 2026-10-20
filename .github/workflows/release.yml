@@ -1,0 +1,95 @@
+name: Release
+
+# Publishing to crates.io is triggered by pushing a tag, not by merging to
+# master. The tag must be `v<version>` and must match the version in
+# Cargo.toml, or the job refuses to publish.
+#
+# Before the first run, configure a trusted publisher on crates.io:
+#
+#   https://crates.io/settings/trusted-publishers
+#
+# with:
+#
+#   * owner        gamersekofy
+#   * repository   bart-rs
+#   * workflow     release.yml
+#   * environment  (leave empty unless you add one)
+#
+# Trusted publishing means there is no long-lived API token to store in the
+# repository's secrets. The workflow below asks crates.io for a short-lived
+# token using the job's OIDC identity, which crates.io verifies against the
+# trusted publisher you configured.
+#
+# If you would rather use an API token, replace the `crates-io-auth` step
+# with:
+#
+#   - name: Publish to crates.io
+#     run: cargo publish
+#     env:
+#       CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
+on:
+  push:
+    tags: ["v*"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  publish:
+    name: publish to crates.io
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for the OIDC token that trusted publishing uses.
+      id-token: write
+      # Required to create the GitHub release.
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Check the formatting
+        run: cargo fmt --check
+
+      - name: Lint
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Test
+        run: cargo test --all-features --locked
+
+      - name: Check the documentation
+        run: cargo doc --all-features --no-deps
+        env:
+          RUSTDOCFLAGS: -D warnings
+
+      # The tag and the manifest have to agree, or the published version
+      # would not be the one the tag names.
+      - name: Check the tag matches the manifest
+        run: |
+          tag_version="${GITHUB_REF_NAME#v}"
+          manifest_version="$(cargo pkgid | sed 's/.*#//; s/.*@//')"
+          if [ "$tag_version" != "$manifest_version" ]; then
+            echo "the tag says $tag_version but Cargo.toml says $manifest_version" >&2
+            exit 1
+          fi
+
+      - name: Get a token from crates.io
+        id: auth
+        uses: rust-lang/crates-io-auth-action@v1
+
+      - name: Publish to crates.io
+        run: cargo publish --locked
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
+
+      - name: Create the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes

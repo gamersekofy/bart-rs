@@ -1,0 +1,107 @@
+# Configuration for `cargo deny`, which checks the dependency tree for
+# known security advisories, licence compatibility, duplicate versions and
+# unexpected sources.
+#
+# Run it with:
+#
+#     cargo deny check
+#
+# It is wired into CI, so a new advisory breaks the build rather than
+# sitting unnoticed in the lockfile.
+
+[graph]
+# The platforms the crate is expected to build for. Restricting the graph
+# keeps platform-specific dependencies of *other* crates out of the report.
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+    "aarch64-apple-darwin",
+]
+all-features = true
+
+[advisories]
+# Three advisories against the `zip` crate, all of them in the same family:
+# the functions that write an archive's entries out to disk
+# (`ZipArchive::extract` and `ZipStreamReader::extract`) did not confine
+# symlink targets, and did not preserve file modes safely.
+#
+# None of those functions is reachable in this tree:
+#
+#   * `src/update.rs` opens the archive with `ZipArchive::new`, reads each
+#     entry with `by_index`, and writes the bytes out itself, one plain
+#     file at a time, after rejecting any path that could escape the
+#     destination directory. It never calls `extract`.
+#
+#   * `gtfs-structures`, the dev-dependency used as a cross-validation
+#     oracle, also reads entries with `by_index` and deserialises them in
+#     memory. It never calls `extract` either.
+#
+# The direct dependency is on `zip` 9, which has the fix. The advisory is
+# still reported because `gtfs-structures` requires `zip` 8, and Cargo
+# cannot resolve two semver-incompatible major versions to one.
+#
+# This is a dev-dependency: it is not part of the tree that reaches anyone
+# who depends on `bart-rs`.
+#
+# What to do if these start mattering: drop `gtfs-structures` and write the
+# cross-validation against the fixture feed directly, or wait for
+# `gtfs-structures` to move to `zip` 9.
+ignore = [
+    "RUSTSEC-2026-0367",
+    "RUSTSEC-2026-0368",
+    "RUSTSEC-2026-0369",
+]
+
+# Crates that are not maintained, are unsound, or have no advisory yet.
+# These are warnings rather than errors: an unmaintained crate is not
+# automatically a problem, but it is worth knowing about.
+unmaintained = "all"
+unsound = "all"
+yanked = "warn"
+
+[licenses]
+# Every licence in the tree, all of them permissive. The list is the set
+# that `cargo deny check licenses` actually found, so it is meant to be
+# kept honest: a new dependency with a different licence fails the check
+# and forces a decision.
+allow = [
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "BSL-1.0",
+    "CC0-1.0",
+    "CDLA-Permissive-2.0",
+    "ISC",
+    "MIT",
+    "MIT-0",
+    "MPL-2.0",
+    "Unicode-3.0",
+    "Unlicense",
+    "Zlib",
+    "0BSD",
+    "bzip2-1.0.6",
+]
+confidence-threshold = 0.8
+
+[licenses.private]
+# Nothing in the tree may be private. A `publish = false` dependency would
+# make the crate impossible to publish.
+ignore = true
+
+[bans]
+# Two versions of the same crate in one tree is normal and unavoidable
+# when a dependency needs an older major version of something. Report it,
+# do not fail on it.
+multiple-versions = "warn"
+wildcards = "deny"
+highlight = "all"
+deny = []
+
+[sources]
+# Every dependency must come from crates.io or be a path dependency in
+# this repository. A dependency from an unknown git host would be a
+# supply-chain risk, and there is no reason for one here.
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []
