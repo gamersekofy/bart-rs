@@ -24,10 +24,23 @@ fn root() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR"))
 }
 
+/// Whether these tests are running against the published package rather
+/// than a checkout of the repository.
+///
+/// `cargo package` rewrites `Cargo.toml` and keeps the original next to it
+/// as `Cargo.toml.orig`, which is the one file that tells the two apart.
+/// The distinction matters: the package deliberately leaves out the files
+/// that are only needed to work on the project -- the Nix flake, the
+/// toolchain file, the direnv hook and the CI workflows -- so a check that
+/// looks for one of those is only meaningful in a checkout.
+fn in_packaged_crate() -> bool {
+    root().join("Cargo.toml.orig").exists()
+}
+
 /// Every markdown file that ships with the crate.
 fn markdown_files() -> Vec<PathBuf> {
     let root = root();
-    let mut files = vec![root.join("README.md")];
+    let mut files = vec![root.join("README.md"), root.join("CONTRIBUTING.md")];
     let docs = root.join("docs");
     let mut entries: Vec<PathBuf> = std::fs::read_dir(&docs)
         .expect("the docs directory exists")
@@ -233,6 +246,13 @@ fn the_readme_links_to_files_that_are_in_the_repository() {
             continue;
         }
 
+        // The path is only checked against the checkout. The links are
+        // absolute URLs, so they resolve on crates.io whether or not the
+        // file they name also ships in the package.
+        if in_packaged_crate() {
+            continue;
+        }
+
         if let Some(path) = target.strip_prefix(prefix) {
             assert!(
                 root().join(path).exists(),
@@ -314,9 +334,23 @@ fn the_toolchain_and_the_manifest_agree_about_the_minimum_rust() {
 }
 
 /// The toolchain file has to exist for the Nix dev shell to know what to
-/// build. This is here because the file is easy to delete by accident.
+/// build, and it has to be absent from the published package, which only
+/// needs the library. This is here because the file is easy to delete by
+/// accident, and because the package's contents are easy to get wrong.
 #[test]
-fn the_toolchain_file_exists() {
+fn the_toolchain_file_is_in_the_checkout_and_not_in_the_package() {
+    if in_packaged_crate() {
+        assert!(
+            !root().join("rust-toolchain.toml").exists(),
+            "rust-toolchain.toml should not ship in the published package"
+        );
+        assert!(
+            !Path::new(&root().join("flake.nix")).exists(),
+            "flake.nix should not ship in the published package"
+        );
+        return;
+    }
+
     assert!(
         root().join("rust-toolchain.toml").exists(),
         "rust-toolchain.toml is missing; the flake reads it to pick the toolchain"

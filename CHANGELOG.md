@@ -30,7 +30,7 @@ repository.
 - Route colours, rendered as a swatch in each train's line colour.
 - A Nix flake, providing the development shell and the build.
 - A design record under `docs/`, and a guide to using the library in
-  `docs/08-library-guide.md`.
+  `docs/07-library-guide.md`.
 
 ### Fixed
 

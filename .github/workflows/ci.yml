@@ -86,15 +86,23 @@ jobs:
       # Builds the crate exactly as it would be published, and then builds
       # and tests it again from the packaged tarball, which is the only way
       # to be sure the package is self-contained.
+      #
+      # The second step is not run with `--offline`. `cargo package` only
+      # builds the library and the binary, so it never downloads the
+      # development dependencies -- but the lockfile it puts in the tarball
+      # does list them, and they are needed to run the tests. On a runner
+      # with a cold cache that combination fails with "attempting to make an
+      # HTTP request, but --offline was specified". `--locked` is what
+      # matters here: it proves the tarball ships a lockfile that resolves
+      # without being changed.
       - name: Check the package
         run: cargo package --locked
 
       - name: Test the packaged crate
         run: |
-          cargo package --locked --no-verify
           tar -xzf target/package/*.crate -C target/package
           cd target/package/bart-rs-*/
-          cargo test --all-features --offline --locked
+          cargo test --all-features --locked
 
   nix:
     name: nix flake

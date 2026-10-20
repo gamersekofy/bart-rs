@@ -1,4 +1,4 @@
-# 06 — Testing
+# 05 — Testing
 
 ## Goals
 
@@ -180,23 +180,22 @@ cargo fmt --check
 
 ## CI
 
-`.github/workflows/ci.yml` runs on every push and pull request:
-
-```yaml
-name: CI
-on: [push, pull_request]
+`.github/workflows/ci.yml` runs on every push and pull request, with five
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
-      - run: cargo fmt --check
-      - run: cargo clippy --all-targets --all-features -- -D warnings
-      - run: cargo test --all-features
-```
+
+| Job | What it checks |
+| --- | --- |
+| `test` | formatting, lints, build, tests, documentation |
+| `msrv` | builds and tests with exactly the Rust version in `rust-version` |
+| `deny` | advisories, licences, duplicate versions, unexpected sources |
+| `package` | builds and tests the crate as it would be published |
+| `nix` | `nix flake check` and the dev shell |
 
 The live-feed test is not run in CI. Run it locally before merging changes to
 the parsing layer.
+
+The `package` job is worth knowing about: it builds the tarball that
+`cargo publish` would upload, extracts it, and runs the tests again from
+inside it. That is the only way to find out that the published crate is
+missing something the repository has — a file that is in `.gitignore` but
+that the crate genuinely needs, for instance.

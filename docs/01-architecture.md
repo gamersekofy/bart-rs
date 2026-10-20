@@ -75,7 +75,7 @@ Declaring 1.85 would have been a promise the crate could not keep.
 Edition 2024 also means **resolver 3**, which honours `rust-version` when
 choosing dependency versions. Resolver 2, the edition 2021 default, ignores
 it — which is exactly how a crate claiming to support 1.85 ended up with a
-lockfile that needed 1.88. See `07-decisions.md` D25.
+lockfile that needed 1.88. See `06-decisions.md` D25.
 
 Two `unsafe` blocks exist, both for `std::env::set_var`, which became
 `unsafe` in edition 2024 because setting an environment variable is not
@@ -167,7 +167,7 @@ handled, and it keeps each file small enough to read in one sitting.
 `Feed` is constructed **once** and passed by reference. A `Feed` owns all 18
 tables in memory (~30 MB parsed for the current BART feed — see
 `02-data-model.md` for the per-table row counts). That is acceptable for a CLI;
-it is not appropriate for a long-lived server, and `06-testing.md` records the
+it is not appropriate for a long-lived server, and `05-testing.md` records the
 intended future change (a borrowed/lazy loader) if that ever matters.
 
 ## The `Feed` type

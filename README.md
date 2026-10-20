@@ -23,16 +23,25 @@ the service-day arithmetic, and the GTFS-Realtime decoding.
 - [x] Show BART's current service alerts
 - [x] Look up fares, including the per-rider-category prices
 - [x] Work as a library, with a documented public API
+- [ ] Verify that library + cli work on Windows and macOS
 - [ ] A journey planner that finds connections between two stations
 - [ ] A map view of route shapes
 
 ## Installing
 
-The project is a Nix flake. With [Nix](https://nixos.org) and flakes enabled:
+This project is a Nix flake. With [Nix](https://nixos.org) and flakes enabled:
+
+To immediately try it:
+
+```console
+$ nix run github:gamersekofy/bart-rs -- --help
+```
+
+Or to develop:
 
 ```console
 $ nix develop
-$ cargo run -- --help
+$ cargo build
 ```
 
 `nix develop` drops you into a shell with the right Rust toolchain, `clippy`,
@@ -62,22 +71,7 @@ $ nix run . -- --help
 Without Nix you need a Rust toolchain (1.88 or newer) and can just use
 `cargo build --release`.
 
-### Trying it without cloning
-
-Once the repository is public, anyone with Nix can run it directly from
-GitHub, with no clone and no install:
-
-```console
-$ nix run github:gamersekofy/bart-rs -- --help
-```
-
-`nix` fetches the flake, builds the binary in the store and runs it. Add
-`--` before the arguments to pass them to `bart-rs` rather than to `nix`.
-
-> This uses the repository's **default branch**, so it runs whatever is
-> merged into it — not an unmerged feature branch.
-
-### Using it as a Rust dependency
+### Using it as a crate
 
 ```toml
 [dependencies]
@@ -91,9 +85,8 @@ Or, to work against the repository rather than a published release:
 bart-rs = { git = "https://github.com/gamersekofy/bart-rs" }
 ```
 
-See [`docs/08-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/08-library-guide.md)
-for how to use it, and [`docs/09-releasing.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/09-releasing.md)
-for how the release process works.
+See [`docs/07-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/07-library-guide.md)
+for how to use it.
 
 ## Getting started
 
@@ -144,20 +137,32 @@ get machine-readable output.
 
 ```console
 $ bart-rs arrivals EMBR --at 17:30
-TIME   ROUTE     DESTINATION                          PLATFORM
-17:31  Yellow-S  San Francisco International Airport  M16-1
-17:31  Yellow-N  SFO / SF / Pittsburg/Bay Point       M16-2
-17:36  Blue-S    OAK Airport / SF / Daly City         M16-1
-17:37  Green-N   SF / OAK Airport / Berryessa         M16-2
-17:40  Yellow-S  San Francisco International Airport  M16-1
+TIME      ROUTE     DESTINATION                           PLATFORM  STATUS
+17:31  █  Yellow-S  San Francisco International Airport   1         scheduled
+17:31  █  Yellow-N  SFO / SF / Pittsburg/Bay Point        2         scheduled
+17:36  █  Blue-S    OAK Airport / SF / Daly City          1         scheduled
+17:37  █  Green-N   SF / OAK Airport / Berryessa          2         scheduled
+17:40  █  Yellow-S  San Francisco International Airport   1         scheduled
+17:40  █  Yellow-N  SFO / SF / Antioch                    2         scheduled
+17:44  █  Green-S   OAK Airport / SF / Daly City          1         scheduled
+17:45  █  Blue-N    SF / OAK Airport / Dublin/Pleasanton  2         scheduled
+17:47  █  Red-S     SF / SFO Airport / Millbrae           1         scheduled
+17:49  █  Red-N     SFO / SF / Richmond                   2         scheduled
 ```
 
 ```console
 $ bart-rs arrivals EMBR --realtime
-TIME   ROUTE     DESTINATION                          PLATFORM  STATUS
-12:45  Blue-N    SF / OAK Airport / Dublin/Pleasanton  M16-2     on time
-12:45  Green-S   OAK Airport / SF / Daly City          M16-1     +1 min late
-12:47  Red-S     SF / SFO Airport / Millbrae           M16-1     on time
+TIME      ROUTE     DESTINATION                           PLATFORM  STATUS
+19:51  █  Red-N     SFO / SF / Richmond                   2         +2 min late
+19:51  █  Yellow-S  San Francisco International Airport   1         +33 sec late
+19:56  █  Blue-S    OAK Airport / SF / Daly City          1         on time
+20:00  █  Yellow-S  San Francisco International Airport   1         on time
+20:00  █  Yellow-N  SFO / SF / Antioch                    2         +39 sec late
+20:05  █  Blue-N    SF / OAK Airport / Dublin/Pleasanton  2         on time
+20:07  █  Red-S     SF / SFO Airport / Millbrae           1         on time
+20:10  █  Red-N     SFO / SF / Richmond                   2         +1 min late
+20:16  █  Blue-S    OAK Airport / SF / Daly City          1         on time
+20:20  █  Yellow-S  San Francisco International Airport   1         on time
 ```
 
 ```console
@@ -168,16 +173,13 @@ Lake Merritt → San Francisco International Airport
 RIDER CATEGORY           ID  PRICE
 Youth Clipper            5   $6.10
 Senior/Disabled Clipper  2   $4.55
-Clipper START            16   $6.10
+Clipper START            16  $6.10
 ```
 
 ```console
 $ bart-rs alerts
 BART.gov Alert
-  Expect 30-minute delays starting at 9pm each night on Sunday-Thursday for
-  riders traveling between Milbrae, SFO, and Daly City stations due to
-  planned train control modernization construction work.
-
+  Expect 30-minute delays starting at 9pm each night on Sunday-Thursday for riders traveling between Millbrae, SFO, and Daly City stations due to planned train control modernization construction work.
   more info: http://www.bart.gov/schedules/advisories
 ```
 
@@ -188,11 +190,6 @@ platform id (`A10-1`), or a name (`Lake Merritt`).
 
 The command line tool is a thin adapter over the library. Anything it can do,
 the library can do — and quite a lot that it does not.
-
-```toml
-[dependencies]
-bart-rs = { git = "https://github.com/gamersekefy/bart-rs" }
-```
 
 ```rust
 use bart_rs::Feed;
@@ -224,7 +221,7 @@ GUI wants `download` but not `cli`:
 
 ```toml
 [dependencies]
-bart-rs = { git = "https://github.com/gamersekefy/bart-rs", default-features = false, features = ["download"] }
+bart-rs = { git = "https://github.com/gamersekofy/bart-rs", default-features = false, features = ["download"] }
 ```
 
 ### The realtime feed is in the library too
@@ -248,20 +245,20 @@ for arrival in arrivals.iter().take(5) {
 and reports being offline as a value rather than as an error, so an
 application keeps working with the feed it already has.
 
-### Building a GUI on this
+## Tips
 
-Two things to know before you start:
-
-- **Everything blocks.** Parsing the feed takes about 65 ms and a realtime
-  fetch about 500 ms, so do both on a worker thread.
-- **Four upstream quirks will bite you** — the coverage window is not in
-  `feed_info.txt`, the service day starts at 04:00, a platform's id is not
-  its number, and a zero delay does not always mean "on time". The library
-  handles all four, and [`docs/08-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/08-library-guide.md)
-  explains how to use each of them correctly.
-
-That guide is the place to start: it has a complete worked example, the
-threading notes, and the gotchas.
+- **Building a GUI on top of it?** The library is entirely blocking, so it
+  needs a worker thread — parsing the feed takes about 65 ms and a realtime
+  fetch about 500 ms. [`docs/08-gui-tips.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/08-gui-tips.md)
+  has the measurements, the shape of the solution, and notes for GTK, Qt and
+  TUI.
+- **Reading the feed yourself?** Four behaviours of BART's data are not what
+  the GTFS specification says. The library handles all four, but
+  [`docs/07-library-guide.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/07-library-guide.md)
+  explains what they are and how to use each one correctly.
+- **Need the raw tables?** `bart-rs table <name>` dumps any of the 18, and
+  [`docs/02-data-model.md`](https://github.com/gamersekofy/bart-rs/blob/master/docs/02-data-model.md)
+  documents every column.
 
 ## Data sources
 
@@ -290,18 +287,14 @@ would otherwise make the tool lie to you:
 
 [`docs/`](https://github.com/gamersekofy/bart-rs/blob/master/docs/README.md)
 holds the full design record: the architecture, the data model, the CLI
-contract, the build plan, the testing strategy, the architecture decision log,
-and a guide to using the library.
+contract, the testing strategy, the architecture decision log, and a guide to
+using the library.
 
-## Development
+## Contributing
 
-```console
-$ nix develop
-$ cargo test                # offline, against the committed fixtures
-$ cargo test -- --ignored   # the live feed; needs network
-$ cargo clippy --all-targets --all-features -- -D warnings
-$ cargo fmt --check
-```
+[`CONTRIBUTING.md`](https://github.com/gamersekofy/bart-rs/blob/master/CONTRIBUTING.md)
+covers the development setup, the test suite, and the conventions the code
+and the documentation follow.
 
 ## License
 

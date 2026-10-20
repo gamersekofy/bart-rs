@@ -112,7 +112,7 @@ http://api.bart.gov/gtfsrt/alerts.aspx
 ## The GTFS-Realtime protobuf
 
 We decode GTFS-Realtime with hand-written `#[derive(prost::Message)]` structs
-(see [07-decisions.md](07-decisions.md) for why we did not use a crate). The
+(see [06-decisions.md](06-decisions.md) for why we did not use a crate). The
 message definitions live in `src/gtfsrt.rs`.
 
 ### Message set to implement
@@ -226,9 +226,11 @@ there.
   field 10 → field 5. The URL comes from field 8 → field 4.
 - Decode *all* the fields regardless; a spec-conformant feed should still
   render correctly.
-- **Acceptance test:** decode the live alerts feed and render a non-empty,
-  human-readable line for every entity in it. A later agent should re-run this
-  against the live feed, because BART could fix their generator.
+- **How to check it:** decode the live alerts feed and render a non-empty,
+  human-readable line for every entity in it. The
+  [live-feed test](../tests/live_feed.rs) does this, and is worth re-running
+  against the live feed now and then, because BART could fix their
+  generator.
 
 ### Trip updates *are* spec-conformant
 
@@ -379,4 +381,4 @@ what you want for the 00:00–04:00 window), the tool must not silently use
 `[00:00, 04:00)` Pacific, when it is the *previous* date. The service day
 rolls over at 04:00. Trips departing between midnight and 04:00 belong to the
 previous service day. This is a detail that will be wrong if implemented
-naively, so it gets its own unit test (see [06-testing.md](06-testing.md)).
+naively, so it gets its own unit test (see [05-testing.md](05-testing.md)).

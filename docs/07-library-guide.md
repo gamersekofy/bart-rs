@@ -1,4 +1,4 @@
-# 08 — Using `bart-rs` as a library
+# 07 — Using `bart-rs` as a library
 
 This document is for someone who wants to build something on top of `bart-rs`
 rather than use the command line: a GUI, a web service, a Discord bot, a
@@ -297,41 +297,15 @@ if arrival.has_update {
 The CLI shows `scheduled` in that case, and `on time` only when the feed
 actually said so.
 
-## Building a GUI: the blocking problem
+## Building a GUI
 
-**The library is entirely blocking.** `Feed::from_data_dir()` parses 57,000
-rows of CSV synchronously, and `fetch_trip_updates()` does a network request
-synchronously. On a GUI thread this will freeze the window.
+The library is entirely blocking: `Feed::from_data_dir()` parses 57,000 rows
+of CSV synchronously, and `fetch_trip_updates()` does a network request
+synchronously. On a GUI thread that will freeze the window.
 
-The numbers, measured against the live feed on 2026-10-19:
-
-| Operation | Time |
-| --- | --- |
-| `Feed::from_data_dir()` | ~65 ms |
-| `realtime::fetch_trip_updates()` | ~500 ms |
-| `realtime::fetch_alerts()` | ~80 ms |
-| `update::ensure_current()` | ~0 ms if current, ~1 s if downloading |
-
-65 ms is survivable on a UI thread but not pleasant; 500 ms is not. Do this:
-
-- **Load the feed once at startup, on a background thread**, and keep it.
-  It does not change unless the user updates it.
-- **Poll the realtime feed on a timer, on a background thread.** 15 to 30
-  seconds is a sensible interval; the feed itself refreshes every minute or
-  so.
-- **Never block the UI thread on the network.** A failure to reach BART
-  should show the last known data with a "stale" marker, not an error
-  dialog.
-
-In a GTK or Qt application, that means a worker thread with a channel back
-to the main loop. In a TUI, it means a background thread and a redraw
-trigger. In a web service, it means a request handler that is allowed to
-block — or a cache in front of it.
-
-Because `Feed` is not `Sync`, the usual shape is to own the `Feed` inside
-the worker thread and send *derived* data (the `Vec<Arrival>`, or a
-serialized form of it) back to the UI. `Arrival`, `LiveArrival`, `Fare` and
-`Route` are all `Clone` and `Send`, so that works well.
+The short version is to put a worker thread between the library and your
+event loop. The measurements, the shape of the solution, and the toolkit
+notes are in [08-gui-tips.md](08-gui-tips.md).
 
 ## Serialization
 
@@ -368,7 +342,8 @@ implementation detail. Use the query methods to get data out of it.
 | [01-architecture.md](01-architecture.md) | how the crate is laid out, and what the feature flags do |
 | [02-data-model.md](02-data-model.md) | every table, every column, every BART-specific quirk |
 | [03-data-sources.md](03-data-sources.md) | the URLs, the cache layout, the update lifecycle |
-| [07-decisions.md](07-decisions.md) | why it is built this way, including the alternatives that were rejected |
+| [06-decisions.md](06-decisions.md) | why it is built this way, including the alternatives that were rejected |
+| [08-gui-tips.md](08-gui-tips.md) | putting a GUI on top of it, and the threading problem you have to solve |
 
 And the API documentation itself, which is built from the source and checked
 in CI with `missing_docs` warnings denied:

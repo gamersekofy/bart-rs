@@ -1,4 +1,4 @@
-# 07 — Decisions
+# 06 — Decisions
 
 Architecture decision records. Each entry states the decision, the reasoning,
 and the alternatives that were rejected. If you change one of these, add a new
@@ -100,7 +100,7 @@ warranted.
 
 **Context.** The original project committed the extracted feed to `data/`. The
 committed copy was **feed version 69 from January 2024**, whose coverage
-window ended 2024-08-11 — two years stale at the time of this rewrite, with
+window ended 2024-08-11 — two years stale, with
 nothing to warn about it.
 
 **Decision.** The feed lives in `$XDG_DATA_HOME/bart-rs` (default
@@ -185,9 +185,9 @@ rather than hidden inside a third-party crate.
 being tabulated in `03-data-sources.md`.
 
 **Risk accepted.** If BART's protobuf diverges further from the spec, our
-hand-written structs may not match. The mitigation is the acceptance test in
-Phase 6: decode the live feed and assert every entity renders. We keep all
-fields, decode leniently, and apply the fallback chain described in
+hand-written structs may not match. The mitigation is the live-feed test:
+decode the live feed and assert every entity renders. We keep all fields,
+decode leniently, and apply the fallback chain described in
 `03-data-sources.md`.
 
 ---
@@ -196,8 +196,8 @@ fields, decode leniently, and apply the fallback chain described in
 
 **Status:** Accepted · 2026-10-19
 
-**Context.** The user asked whether live data should be a separate command
-group or merged into the scheduled-data commands.
+**Context.** Live data could have been a separate command group, or merged
+into the scheduled-data commands.
 
 **Decision.** `bart-rs arrivals <stop> --realtime` overlays live trip updates
 onto the scheduled arrivals. `bart-rs alerts` is a separate top-level command,
@@ -252,12 +252,12 @@ Do not assume spec conformance.
 
 **Why.** Being spec-strict would render every BART alert as an empty string.
 Being BART-specific would break on a future spec-conformant feed. The
-fallback chain handles both, and the acceptance test in Phase 6 catches
-regressions in either direction.
+fallback chain handles both, and the live-feed test catches regressions in
+either direction.
 
 **Verification.** `protoc --decode_raw` output for a live alert is recorded in
 `03-data-sources.md#-bart-alert-feed-is-not-spec-conformant-and-is-not-self-consistent`
-so a future agent can compare without re-deriving it.
+so it can be compared later without re-deriving it.
 
 ---
 
@@ -723,7 +723,7 @@ command and into their own program.
    `UpdateOutcome`: `UpToDate`, `Updated`, or `Unreachable`. Being unable
    to reach the server is a *value*, not an error, because an application
    showing a schedule should keep working with the feed it already has.
-2. `docs/08-library-guide.md`, a guide to using the crate from another Rust
+2. `docs/07-library-guide.md`, a guide to using the crate from another Rust
    project, with a worked example, the feature-flag and `reqwest`
    requirements, the measured timings, and the four upstream gotchas.
 
