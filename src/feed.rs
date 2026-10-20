@@ -562,12 +562,11 @@ impl Feed {
         let mut seen = BTreeSet::new();
         let mut stations = Vec::new();
         for time in times {
-            if let Some(stop) = self.stop(&time.stop_id) {
-                if let Some(station) = self.station_of(&stop.id) {
-                    if seen.insert(station.id.clone()) {
-                        stations.push(station);
-                    }
-                }
+            if let Some(stop) = self.stop(&time.stop_id)
+                && let Some(station) = self.station_of(&stop.id)
+                && seen.insert(station.id.clone())
+            {
+                stations.push(station);
             }
         }
         stations

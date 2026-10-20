@@ -68,6 +68,17 @@ backend. Use `rustls-tls`, not the default `native-tls`, unless you have a
 reason not to: `native-tls` pulls OpenSSL in, and this crate is deliberately
 built without it.
 
+### Minimum supported Rust
+
+`bart-rs` needs **Rust 1.88 or newer**. That is the floor the dependency
+tree imposes — `time`, `zopfli` and the `icu_*` crates behind `idna` all
+require it — and not the 1.85 floor of edition 2024, which the crate also
+uses.
+
+Because the crate uses **resolver 3**, Cargo honours that floor when it
+resolves dependencies for *your* project too: `cargo update` will prefer
+dependency versions that still build on 1.88.
+
 ## The shape of the API
 
 The library has three layers, and you will use the top one for almost

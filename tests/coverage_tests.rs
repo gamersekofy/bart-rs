@@ -9,12 +9,11 @@ use std::path::PathBuf;
 
 use bart_rs::attributes::calendar::coverage;
 use bart_rs::feed::Feed;
-use bart_rs::update::{staleness, Staleness, UpdateState};
+use bart_rs::update::{Staleness, UpdateState, staleness};
 use chrono::{DateTime, NaiveDate};
 
 /// A `feed_info.txt` that describes an earlier window, the way BART's does.
-const STALE_FEED_INFO: &str =
-    "feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version\n\
+const STALE_FEED_INFO: &str = "feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version\n\
 Bay Area Rapid Transit,http://www.bart.gov,en,20250101,20251231,72\n";
 
 /// Removes a scratch directory when it goes out of scope.

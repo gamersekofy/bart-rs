@@ -6,7 +6,7 @@
 //! identified by the file the permalink redirects to, whose name encodes
 //! the coverage window and a release counter.
 
-use bart_rs::update::{release_name, Release, UpdateState};
+use bart_rs::update::{Release, UpdateState, release_name};
 
 /// The URL of the release that was current in January 2026.
 const OLD_URL: &str =

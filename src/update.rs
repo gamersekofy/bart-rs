@@ -633,20 +633,19 @@ pub fn ensure_current_with(
         Err(e) => {
             return Ok(UpdateOutcome::Unreachable {
                 reason: e.to_string(),
-            })
+            });
         }
     };
 
-    if !force {
-        if let Some(local) = &local {
-            if local.is_same(&remote) {
-                state.last_checked_at = Some(Utc::now().to_rfc3339());
-                write_state(&state)?;
-                return Ok(UpdateOutcome::UpToDate {
-                    release: Some(remote),
-                });
-            }
-        }
+    if !force
+        && let Some(local) = &local
+        && local.is_same(&remote)
+    {
+        state.last_checked_at = Some(Utc::now().to_rfc3339());
+        write_state(&state)?;
+        return Ok(UpdateOutcome::UpToDate {
+            release: Some(remote),
+        });
     }
 
     let download = download_latest(client)?;

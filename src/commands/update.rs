@@ -52,22 +52,22 @@ pub fn run(args: &UpdateArgs) -> Result<()> {
         return Ok(());
     }
 
-    if !args.force {
-        if let (Some(local), Some(remote)) = (&local, &remote) {
-            if local.is_same(remote) {
-                println!(
-                    "The installed feed is already up to date ({}).",
-                    remote.label()
-                );
-                state.last_checked_at = Some(Utc::now().to_rfc3339());
-                update::write_state(&state)?;
-                return Ok(());
-            }
+    if !args.force
+        && let (Some(local), Some(remote)) = (&local, &remote)
+    {
+        if local.is_same(remote) {
             println!(
-                "A newer feed is available ({}); downloading it.",
+                "The installed feed is already up to date ({}).",
                 remote.label()
             );
+            state.last_checked_at = Some(Utc::now().to_rfc3339());
+            update::write_state(&state)?;
+            return Ok(());
         }
+        println!(
+            "A newer feed is available ({}); downloading it.",
+            remote.label()
+        );
     }
 
     println!("Downloading {} …", update::FEED_URL);

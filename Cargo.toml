@@ -1,15 +1,30 @@
 [package]
 name = "bart-rs"
 version = "0.1.0"
-edition = "2021"
-rust-version = "1.85"
+edition = "2024"
+# The minimum Rust this crate supports.
+#
+# This is not the floor of edition 2024, which is 1.85. It is 1.88 because
+# the dependency tree needs it: `time`, `time-core` and `zopfli` require
+# 1.88.0, and the `icu_*` crates behind `url` -> `idna` -> `icu_normalizer`
+# require 1.88. Declaring anything lower would promise a toolchain that
+# cannot actually build the lockfile, and would leave `cargo` picking
+# dependency versions that fail to compile.
+rust-version = "1.88"
 description = "Command line tool and library for exploring BART's GTFS schedule and realtime data"
 license = "MIT"
 repository = "https://github.com/gamersekofy/bart-rs"
 homepage = "https://github.com/gamersekofy/bart-rs"
+documentation = "https://docs.rs/bart-rs"
 readme = "README.md"
 keywords = ["gtfs", "bart", "transit", "realtime", "cli"]
 categories = ["command-line-utilities", "api-bindings"]
+
+# Edition 2024 already implies resolver 3, which is stated here so that the
+# reason is written down: resolver 3 honours `rust-version` when choosing
+# dependency versions. Resolver 2 does not, which is how a tree needing
+# Rust 1.88 ends up in a crate claiming 1.85.
+resolver = "3"
 
 [features]
 default = ["cli", "download"]

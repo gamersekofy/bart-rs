@@ -19,10 +19,10 @@ pub const DATA_DIR_ENV: &str = "BART_RS_DATA_DIR";
 /// 2. `$XDG_DATA_HOME/bart-rs`.
 /// 3. `~/.local/share/bart-rs`.
 pub fn data_dir() -> Result<PathBuf> {
-    if let Some(dir) = std::env::var_os(DATA_DIR_ENV) {
-        if !dir.is_empty() {
-            return Ok(PathBuf::from(dir));
-        }
+    if let Some(dir) = std::env::var_os(DATA_DIR_ENV)
+        && !dir.is_empty()
+    {
+        return Ok(PathBuf::from(dir));
     }
 
     dirs::data_dir()

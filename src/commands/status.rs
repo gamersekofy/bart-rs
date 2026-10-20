@@ -42,14 +42,13 @@ pub fn run(cli: &Cli) -> Result<()> {
 
     // Point out the discrepancy rather than hiding it: the feed_info dates
     // are what a reader of the raw files would expect, and they are wrong.
-    if let (Some((start, end)), Some(info)) = (coverage, info) {
-        if let (Some(claimed_start), Some(claimed_end)) = (info.start_date, info.end_date) {
-            if (claimed_start, claimed_end) != (start, end) {
-                println!(
-                    "                 note: feed_info.txt says {claimed_start} → {claimed_end}; BART leaves it stale"
-                );
-            }
-        }
+    if let (Some((start, end)), Some(info)) = (coverage, info)
+        && let (Some(claimed_start), Some(claimed_end)) = (info.start_date, info.end_date)
+        && (claimed_start, claimed_end) != (start, end)
+    {
+        println!(
+            "                 note: feed_info.txt says {claimed_start} → {claimed_end}; BART leaves it stale"
+        );
     }
 
     if let Some(downloaded) = &state.downloaded_at {

@@ -2,8 +2,8 @@
 
 use std::path::PathBuf;
 
-use bart_rs::attributes::calendar_dates::ExceptionType;
 use bart_rs::Feed;
+use bart_rs::attributes::calendar_dates::ExceptionType;
 
 fn fixture_feed() -> Feed {
     let dir = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/gtfs");

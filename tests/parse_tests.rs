@@ -2,8 +2,8 @@
 
 use std::path::PathBuf;
 
-use bart_rs::attributes::*;
 use bart_rs::Feed;
+use bart_rs::attributes::*;
 
 fn fixture_dir() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/gtfs")

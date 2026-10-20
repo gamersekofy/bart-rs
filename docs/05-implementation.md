@@ -39,7 +39,13 @@ alerts?" without reading any Rust source.
       and that `rustfmt` and `clippy` are on the path.
 - [x] Add `rust-toolchain.toml` with `channel = "stable"` so non-Nix users get
       a current toolchain. The flake's `fromRustupToolchainFile` branch picks
-      it up; verified working.
+      it up; verified working. *Note:* `stable` is not a pin for rustup users
+      — reproducibility for Nix users comes from `flake.lock` pinning the
+      rust-overlay revision, whose manifest maps `stable` to 1.99.1. See D10.
+- [x] Move to edition 2024 and declare the MSRV the dependency tree actually
+      imposes. Edition 2024 implies resolver 3, which honours `rust-version`
+      when resolving; resolver 2 did not, which is how the tree ended up
+      needing 1.88 while the manifest claimed 1.85. See D25.
 - [x] Rewrite `Cargo.toml`:
       - `[lib]` (auto-discovered from `src/lib.rs`) + `[[bin]` (auto-discovered
         from `src/main.rs`).
@@ -348,3 +354,5 @@ Measured on 2026-10-19 against feed version 72.
 | `feed_version` | `72` in every release; cannot identify a release |
 | Release identifier | the versioned filename, e.g. `google_transit_20260810-20270108_v02.zip` |
 | Rust toolchain | rustc 1.99.1 after `nix flake update` (was 1.82.0) |
+| Rust edition | 2024, which implies resolver 3 (MSRV-aware dependency resolution) |
+| Minimum supported Rust | 1.88 — the floor imposed by `time`, `zopfli` and the `icu_*` crates, not the 1.85 floor of the edition |

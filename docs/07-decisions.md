@@ -324,10 +324,27 @@ rust-overlay to 2026-10-19, which provides rustc **1.99.1** with `rustfmt`
 and `clippy`. Add a `rust-toolchain.toml` with `channel = "stable"` for
 non-Nix users.
 
-**Why.** The flake is the project's declared development environment (there is
-a `.envrc` with `use flake`), so keeping it current is the right fix. The
+**Why.** The flake is the project's declared development environment (there
+is a `.envrc` with `use flake`), so keeping it current is the right fix. The
 alternative — pinning a long tail of transitive crates to old versions — is
 fiddly and would break again with the next `cargo add`.
+
+**How the toolchain is pinned, precisely.** `channel = "stable"` is not a
+pin, and the two audiences get different guarantees:
+
+- **Nix users** get a reproducible toolchain. `flake.lock` pins the
+  rust-overlay revision, and rust-overlay's manifest maps `stable` to a
+  specific version at that revision — 1.99.1 here. The flake reads the same
+  `rust-toolchain.toml` through `fromRustupToolchainFile`, so the file is
+  load-bearing for the dev shell and not merely a courtesy to non-Nix users.
+- **rustup users** get whatever stable is current. The file tells rustup to
+  install the stable channel, which floats.
+
+That is deliberate rather than an oversight: a project that wants to track
+current Rust should not have to bump a version string by hand, and the Nix
+path — the one this project actually develops in — is reproducible either
+way. The `rust-src` component is there because the dev shell sets
+`RUST_SRC_PATH`, which rust-analyzer needs.
 
 **Note for the user's shell.** After `nix flake update`, run
 `direnv reload` in the project directory so the new toolchain is on the path.
@@ -715,3 +732,70 @@ lifecycle that only exists in the command line is a lifecycle that other
 programs have to reimplement, and reimplement it badly.
 
 **Cost.** About a hundred lines in `update.rs`, and a document.
+
+---
+
+## D25 — Edition 2024, and an MSRV that matches the dependency tree
+
+**Status:** Accepted · 2026-10-19
+
+**Context.** The crate was on edition 2021 and declared
+`rust-version = "1.85"`. Both numbers were wrong in the same direction:
+conservative to the point of being untrue.
+
+**Decision.**
+
+1. Move to **edition 2024**, which implies **resolver 3**.
+2. Declare `rust-version = "1.88"` — the floor the locked dependency tree
+   actually imposes, not the floor of the edition.
+3. Keep `resolver = "3"` written out explicitly, so that the reason is on
+   the manifest rather than in a reader's head.
+4. Accept two `unsafe { std::env::set_var(...) }` blocks, which edition 2024
+   requires.
+
+**Why resolver 3 is the important half.** Resolver 3 honours `rust-version`
+when it chooses dependency versions. Resolver 2 — the edition 2021
+default — ignores it, so the resolver cheerfully picks the newest version of
+every crate regardless of whether it will compile. That is exactly how a
+crate claiming to support Rust 1.85 ended up with a lockfile that needs
+1.88.
+
+**Why 1.88 and not 1.85.** The floor comes from the dependencies:
+
+| Crate | Needs | Reached through |
+| --- | --- | --- |
+| `time 0.3.55`, `time-core 0.1.9` | 1.88.0 | `zip` → `cookie` |
+| `zopfli 0.8.4` | 1.88.0 | `zip` |
+| `icu_properties`, `icu_normalizer`, `icu_provider`, `icu_collections`, `icu_locale_core`, `icu_normalizer_data`, `icu_properties_data` | 1.88 | `reqwest` → `url` → `idna` → `idna_adapter` → `icu_normalizer` |
+
+Declaring 1.85 would have been a promise the crate could not keep: someone
+on 1.85 would get `package 'time v0.3.55' cannot be built because it
+requires rustc 1.88 or newer` from a transitive dependency, rather than a
+clear error from this crate's own manifest.
+
+With resolver 3 the promise is now enforced in both directions. `cargo
+update` picks the highest version that still builds on 1.88 — which is how
+`webpki-roots` was resolved to 1.0.10 rather than to a version needing a
+newer compiler.
+
+**Why edition 2024 anyway.** Edition 2021 has been in maintenance since
+February 2025. The only thing holding the crate on it was
+`std::env::set_var`, which became `unsafe` in edition 2024 because setting
+an environment variable is not thread safe on Unix. There are exactly two
+call sites, and both are sound:
+
+- `src/commands/mod.rs` — the `--data-dir` flag, handled by `dispatch` on
+  the main thread during start-up, before any other thread exists.
+- `tests/colour_tests.rs` — sets `COLORTERM` so that `colored` picks true
+  colour. Sound because the two checks in that file were merged into a
+  single test: the file's other check reads `COLORTERM` through `swatch`,
+  and with two tests running in parallel threads that was a write racing a
+  read. One test means one worker thread, and separate `tests/*.rs` files
+  are separate processes.
+
+Edition 2024 also buys let chains, which the code now uses in six places
+where it previously nested an `if let` inside an `if`.
+
+**Cost.** Two `unsafe` blocks, both with a SAFETY comment, and the loss of
+one test *count* — the two colour checks are now one test, because they
+were already coupled by process-global state.

@@ -13,8 +13,8 @@
 
 use std::path::PathBuf;
 
-use bart_rs::realtime::{overlay, LiveTrip};
 use bart_rs::Feed;
+use bart_rs::realtime::{LiveTrip, overlay};
 use chrono::NaiveDate;
 
 fn fixture_feed() -> Feed {

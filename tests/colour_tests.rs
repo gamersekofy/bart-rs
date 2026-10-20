@@ -6,8 +6,12 @@
 //! straight to it produced a white block instead of a red one. This is the
 //! regression test for that.
 //!
-//! The tests live in one function because the `colored` crate's colour
-//! support is process-global state, and the tests run in parallel.
+//! Both checks live in one test function on purpose. `colored`'s colour
+//! support is process-global state, and the test harness runs the tests in a
+//! file in parallel threads: one of them writes `COLORTERM` and the other
+//! reads it through `swatch`, which would be a data race. One test means
+//! one thread, and separate `tests/*.rs` files are separate processes, so
+//! nothing else in the suite touches the environment either.
 
 #![cfg(feature = "cli")]
 
@@ -18,7 +22,13 @@ fn route_colours_are_rendered_in_colour() {
     // `colored` decides between true colour and the sixteen ANSI colours
     // by looking at COLORTERM, so it is set here to make the expected
     // output deterministic.
-    std::env::set_var("COLORTERM", "truecolor");
+    //
+    // SAFETY: this is the only test in this binary, so the harness has
+    // spawned exactly one worker thread and its main thread is blocked
+    // waiting for it. Nothing else reads or writes the environment
+    // concurrently. Test binaries are separate processes, so the other
+    // test files cannot interfere either.
+    unsafe { std::env::set_var("COLORTERM", "truecolor") };
 
     // Colour is off by default when the output is not a terminal, so it has
     // to be forced on to see the escape sequence.
@@ -59,10 +69,9 @@ fn route_colours_are_rendered_in_colour() {
     assert_eq!(swatch(Some("FF00")), " ");
     assert_eq!(swatch(Some("GGGGGG")), " ");
     assert_eq!(swatch(Some("not a colour")), " ");
-}
 
-#[test]
-fn escape_sequences_do_not_count_towards_a_columns_width() {
+    // The second check: escape sequences must not count towards the width of
+    // a column, or every table with a swatch in it comes out ragged.
     assert_eq!(visible_width("plain"), 5);
     assert_eq!(visible_width(""), 0);
     assert_eq!(visible_width("█"), 1);

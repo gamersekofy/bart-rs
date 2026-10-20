@@ -48,7 +48,13 @@ pub fn dispatch(cli: Cli) -> Result<()> {
 
     if let Some(dir) = &cli.data_dir {
         // Process-local only: this never touches the user's shell.
-        std::env::set_var(crate::paths::DATA_DIR_ENV, dir);
+        //
+        // SAFETY: `dispatch` runs on the main thread during start-up, before
+        // any other thread exists, so nothing can be reading or writing the
+        // environment at the same time. Setting an environment variable is
+        // not thread safe on Unix, which is why edition 2024 requires this
+        // to be spelled out.
+        unsafe { std::env::set_var(crate::paths::DATA_DIR_ENV, dir) };
     }
 
     if cli.json && !cli.command.supports_json() {

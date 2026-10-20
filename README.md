@@ -59,7 +59,7 @@ To run it straight from the repository, without building it first:
 $ nix run . -- --help
 ```
 
-Without Nix you need a Rust toolchain (1.85 or newer) and can just use
+Without Nix you need a Rust toolchain (1.88 or newer) and can just use
 `cargo build --release`.
 
 ### Trying it without cloning

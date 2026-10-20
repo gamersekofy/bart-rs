@@ -58,6 +58,31 @@ The core (`attributes`, `feed`, `schedule`, `gtfsrt`, `realtime`, `paths`,
 fetch — see the note in `03-data-sources.md`; if that turns out to be awkward
 we can split the decode half from the fetch half and gate only the latter.
 
+## Edition and minimum supported Rust
+
+| | |
+| --- | --- |
+| Edition | 2024 |
+| Resolver | 3 (implied by edition 2024) |
+| `rust-version` | 1.88 |
+| Development toolchain | rustc 1.99.1, from the Nix flake |
+
+The MSRV is **1.88**, not the 1.85 floor of edition 2024. The dependency
+tree imposes it: `time`, `time-core` and `zopfli` require 1.88.0, and the
+`icu_*` crates behind `url` → `idna` → `icu_normalizer` require 1.88.
+Declaring 1.85 would have been a promise the crate could not keep.
+
+Edition 2024 also means **resolver 3**, which honours `rust-version` when
+choosing dependency versions. Resolver 2, the edition 2021 default, ignores
+it — which is exactly how a crate claiming to support 1.85 ended up with a
+lockfile that needed 1.88. See `07-decisions.md` D25.
+
+Two `unsafe` blocks exist, both for `std::env::set_var`, which became
+`unsafe` in edition 2024 because setting an environment variable is not
+thread safe on Unix. Both carry a SAFETY comment explaining why no other
+thread can be touching the environment at that point. There is no other
+`unsafe` in the crate.
+
 ## Module layout
 
 ```

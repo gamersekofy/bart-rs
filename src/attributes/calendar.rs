@@ -103,15 +103,15 @@ impl Calendar {
     ///
     /// The date must fall within the service's start and end dates.
     pub fn runs_on(&self, date: NaiveDate) -> bool {
-        if let Some(start) = self.start_date {
-            if date < start {
-                return false;
-            }
+        if let Some(start) = self.start_date
+            && date < start
+        {
+            return false;
         }
-        if let Some(end) = self.end_date {
-            if date > end {
-                return false;
-            }
+        if let Some(end) = self.end_date
+            && date > end
+        {
+            return false;
         }
 
         // `weekday()` returns Monday = 0, matching the column order used by
