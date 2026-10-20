@@ -24,15 +24,15 @@ like this rather than how to change it.
 
 ## Conventions
 
-- **"Must"** — required.
-- **"Should"** — strongly preferred; deviate only with a note in
-  [06-decisions.md](06-decisions.md).
-- **"May"** — optional.
 - Verified facts are stated as fact. Anything inferred is marked *(inferred)*.
 - Field numbers, column counts, and record counts were measured against the
   live BART feed on **2026-10-19** (feed version 72,
   `google_transit_20260810-20270108_v02.zip`). BART changes its feed between
   versions; re-verify anything load-bearing.
+- Significant decisions are recorded in
+  [06-decisions.md](06-decisions.md) as architecture decision records. If you
+  change one, add a new entry rather than editing the old one — the history
+  is the point.
 
 ## Things to know before you touch the code
 
