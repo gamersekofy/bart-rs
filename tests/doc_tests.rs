@@ -195,7 +195,10 @@ fn every_anchor_points_at_a_heading_that_exists() {
                 problems.push(format!(
                     "{} links to {target}, but there is no such anchor in {}",
                     file.strip_prefix(&root).unwrap_or(&file).display(),
-                    target_file.strip_prefix(&root).unwrap_or(&target_file).display()
+                    target_file
+                        .strip_prefix(&root)
+                        .unwrap_or(&target_file)
+                        .display()
                 ));
             }
 
@@ -250,7 +253,8 @@ fn the_changelog_names_the_current_version() {
         .and_then(|rest| rest.split('"').next())
         .expect("the manifest declares a version");
 
-    let changelog = std::fs::read_to_string(root().join("CHANGELOG.md")).expect("a readable changelog");
+    let changelog =
+        std::fs::read_to_string(root().join("CHANGELOG.md")).expect("a readable changelog");
     assert!(
         changelog.contains(&format!("## [{version}]")),
         "the changelog does not mention version {version}"
