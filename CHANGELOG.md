@@ -7,20 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Security
-
-- `rustls-webpki` is bumped to 0.103.16, which rejects certification paths
-  containing the eight compromised eMudhra intermediate CAs. Their private
-  keys were generated with effectively no entropy in April 2025, so the keys
-  are recoverable from the public certificates, and anyone able to obtain a
-  certificate from one of them could impersonate any domain. Browsers and
-  most certificate revocation mechanisms already refused them, but `rustls`
-  performs no revocation checking, so the denylist has to be explicit in the
-  verifier. The `download` feature is on by default, so this affects the
-  `update` command and the realtime fetchers. **Downstream consumers need to
-  re-resolve their lockfiles** to pick this up.
-
-## [0.1.0] — 2026-10-19
+## [0.1.0] — 2026-10-21
 
 The first release. This is a rewrite of the project from the ground up: the
 original code parsed `stops.txt` by splitting lines on commas and leaked every
@@ -65,6 +52,19 @@ repository.
 - The platform column shows the platform number rather than the platform's
   GTFS id, and a train the realtime feed is not tracking says `scheduled`
   rather than claiming to be on time.
+
+### Security
+
+- `rustls-webpki` is bumped to 0.103.16, which rejects certification paths
+  containing the eight compromised eMudhra intermediate CAs. Their private
+  keys were generated with effectively no entropy in April 2025, so the keys
+  are recoverable from the public certificates, and anyone able to obtain a
+  certificate from one of them could impersonate any domain. Browsers and
+  most certificate revocation mechanisms already refused them, but `rustls`
+  performs no revocation checking, so the denylist has to be explicit in the
+  verifier. The `download` feature is on by default, so this affects the
+  `update` command and the realtime fetchers. **Downstream consumers need to
+  re-resolve their lockfiles** to pick this up.
 
 [Unreleased]: https://github.com/gamersekofy/bart-rs/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/gamersekofy/bart-rs/releases/tag/v0.1.0

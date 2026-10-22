@@ -115,6 +115,22 @@ the numbering is the reading order.
   decision, the alternatives that were rejected, and the cost. It is the
   document that answers "why is it like this?".
 
+## Changelog
+
+`CHANGELOG.md` is for the people who use the crate, not a summary of the
+commits. Every user-visible change gets an entry under `Unreleased` in the
+same commit that makes it, not at release time. A change that ships without
+an entry is an incomplete change.
+
+Use `Security` for vulnerability fixes, and say what a consumer has to do
+about it — re-resolve a lockfile, raise a minimum version. The crate is
+published, so "a dependency was bumped" is not enough on its own: the
+reader needs to know whether the build they are running is affected.
+
+At release time, the `Unreleased` section becomes the released version's
+section: rename it to the version and give it the release date, or merge it
+into that version's section if one is already there.
+
 ## Releasing
 
 Releases are cut by tagging and pushing:
@@ -132,5 +148,5 @@ version, publishes to crates.io using [trusted publishing](https://crates.io/set
 — so there is no API token to store — and creates a GitHub release.
 
 The version must not already exist on crates.io; a published version cannot
-be replaced or removed. Bump it with `cargo set-version` and move the
-changelog's `Unreleased` section to the new version.
+be replaced or removed. Bump it with `cargo set-version`, and move the
+changelog's `Unreleased` section as described above.
