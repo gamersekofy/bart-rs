@@ -133,20 +133,53 @@ into that version's section if one is already there.
 
 ## Releasing
 
-Releases are cut by tagging and pushing:
+The first release of a crate is published by hand, and every release after
+that is published by a tag. The reason for the split is that
+[crates.io will not create a trusted publisher for a crate that does not
+exist yet](https://rust-lang.github.io/rfcs/3691-trusted-publishing-cratesio.html),
+so the first version needs a personal API token, and the automation can
+only be set up once there is something to automate.
+
+**The first release:**
 
 ```console
 $ cargo publish --dry-run
+$ cargo publish
 $ git tag -a v0.1.0 -m "v0.1.0"
 $ git push origin v0.1.0
 ```
 
-The push starts
+Then, once, at
+<https://crates.io/settings/trusted-publishers>:
+
+| Field | Value |
+| --- | --- |
+| Owner | `gamersekofy` |
+| Repository name | `bart-rs` |
+| Workflow filename | `release.yml` |
+| Environment | leave empty |
+
+**Every release after that:**
+
+```console
+$ cargo set-version 0.1.1
+$ git commit -am "chore: release 0.1.1"
+$ git tag -a v0.1.1 -m "v0.1.1"
+$ git push origin v0.1.1
+```
+
+Pushing the tag starts
 [the release workflow](https://github.com/gamersekofy/bart-rs/blob/master/.github/workflows/release.yml),
 which re-runs the checks, verifies that the tag and `Cargo.toml` agree on the
 version, publishes to crates.io using [trusted publishing](https://crates.io/settings/trusted-publishers)
-— so there is no API token to store — and creates a GitHub release.
+— so there is no API token to store — and creates a GitHub release whose notes
+are the matching section of `CHANGELOG.md`.
+
+The workflow checks whether the version is already on crates.io before it
+publishes, and skips the publish if it is. That is what lets the first
+release's tag be pushed after a manual publish, and it also means a failed
+run can be re-run without publishing twice.
 
 The version must not already exist on crates.io; a published version cannot
-be replaced or removed. Bump it with `cargo set-version`, and move the
-changelog's `Unreleased` section as described above.
+be replaced or removed. If one is published by mistake, `cargo yank` stops
+new dependents from picking it up, but it cannot be deleted.

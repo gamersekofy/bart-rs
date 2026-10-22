@@ -20,6 +20,15 @@ name: Release
 # token using the job's OIDC identity, which crates.io verifies against the
 # trusted publisher you configured.
 #
+# A trusted publisher can only be configured for a crate that already
+# exists -- see RFC 3691, "Security Improvements for CI Publishing to
+# crates.io" -- so the first version of a crate is published by hand, from
+# the developer's machine, with a personal API token. The workflow copes
+# with that: it checks whether the version is already on crates.io, and if
+# it is, it skips the publish and goes straight to making the GitHub
+# release. So the v0.1.0 tag can be pushed after a manual publish, and the
+# tag on a later version will publish by itself.
+#
 # If you would rather use an API token, replace the `crates-io-auth` step
 # with:
 #
@@ -77,19 +86,71 @@ jobs:
             exit 1
           fi
 
+      # The first version of a crate has to be published by hand, because
+      # crates.io will not create a trusted publisher for a crate that does
+      # not exist yet (RFC 3691). So the workflow may be asked to release a
+      # version that is already on crates.io.
+      #
+      # Asking crates.io whether the version exists is the only way to tell
+      # that apart from a version that has not been published yet. A status
+      # other than 200 or 404 means the question could not be answered, and
+      # the job stops rather than guessing -- guessing wrong here means
+      # either a duplicate publish or a skipped one.
+      - name: Check whether this version is already published
+        id: published
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          status="$(curl -sS -o /dev/null -w '%{http_code}' \
+            -H "User-Agent: bart-rs release workflow (https://github.com/gamersekofy/bart-rs)" \
+            "https://crates.io/api/v1/crates/bart-rs/$version")"
+          case "$status" in
+            200) echo "already=true" >> "$GITHUB_OUTPUT" ;;
+            404) echo "already=false" >> "$GITHUB_OUTPUT" ;;
+            *)
+              echo "could not tell whether $version is published: HTTP $status" >&2
+              exit 1
+              ;;
+          esac
+          echo "crates.io says $version is $( [ "$status" = 200 ] && echo published || echo unpublished )"
+
       - name: Get a token from crates.io
         id: auth
+        if: steps.published.outputs.already != 'true'
         uses: rust-lang/crates-io-auth-action@v1
 
       - name: Publish to crates.io
+        if: steps.published.outputs.already != 'true'
         run: cargo publish --locked
         env:
           CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
 
+      # The notes are the section of CHANGELOG.md for this version, which is
+      # written by hand as the changes land. GitHub's own `--generate-notes`
+      # would give a list of commit messages instead, which is not what the
+      # changelog is for.
       - name: Create the GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" \
-            --title "$GITHUB_REF_NAME" \
-            --generate-notes
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > notes.md
+
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            echo "the release $GITHUB_REF_NAME already exists, leaving it alone"
+            exit 0
+          fi
+
+          if [ -s notes.md ]; then
+            gh release create "$GITHUB_REF_NAME" \
+              --title "$GITHUB_REF_NAME" \
+              --notes-file notes.md
+          else
+            echo "no CHANGELOG.md section for $version, generating notes instead"
+            gh release create "$GITHUB_REF_NAME" \
+              --title "$GITHUB_REF_NAME" \
+              --generate-notes
+          fi
