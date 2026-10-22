@@ -10,15 +10,21 @@ Format: **Status** (Accepted / Superseded) · **Date** · **Context**.
 
 ## D1 — Parse GTFS by hand with `csv` + `serde`, not with `gtfs-structures`
 
-**Status:** Accepted · 2026-10-19
+**Status:** Accepted · 2026-10-19 · amended 2026-10-21 (see D28)
 
 **Context.** `gtfs-structures` 0.42 was already a declared dependency of the
 original project, but it was never used. It parses the standard GTFS files
-correctly and it was verified to ingest BART's live feed without error. It does
-*not* cover the six BART-specific extension files (`calendar_attributes`,
-`directions`, `fare_rider_categories`, `realtime_routes`, `rider_categories`,
-`route_attributes`), and it owns the data model, which makes it awkward to
-extend.
+correctly. It does *not* cover the five BART-only extension files
+(`calendar_attributes`, `directions`, `fare_rider_categories`,
+`realtime_routes`, `route_attributes`), and it owns the data model, which
+makes it awkward to extend.
+
+`rider_categories.txt` is a sixth file that `gtfs-structures` cannot read
+from BART's feed, but for a different reason: it is a core GTFS file that
+BART publishes with a field name the specification does not use. That is
+D28. This entry originally counted `rider_categories` as a BART extension,
+which conflated a file BART invented with a file BART publishes
+non-conformantly, and was amended when D28 was written.
 
 **Decision.** Hand-roll the parsing with the `csv` and `serde` crates, one
 module per GTFS table, keeping the original project's `src/attributes/`
@@ -29,9 +35,9 @@ cross-validation oracle in the test suite, with `default-features = false`.
 
 - The project's stated purpose is to practise Rust. This is the part of the
   problem where the practice is.
-- The six BART extension tables have no equivalent in `gtfs-structures`
+- The BART-only extension tables have no equivalent in `gtfs-structures`
   anyway, so a hand-rolled layer is needed regardless. Doing all 18 the same
-  way is more consistent than doing 12 one way and 6 another.
+  way is more consistent than doing 13 one way and 5 another.
 - Header-driven deserialization is what makes the `stops.txt` schema change a
   non-event. A library that owns the schema makes that a library upgrade.
 - The `gtfs-structures` data model is opinionated in ways that fight the
@@ -40,10 +46,10 @@ cross-validation oracle in the test suite, with `default-features = false`.
 
 **Rejected.**
 
-- *Use `gtfs-structures` for the 12 standard files.* Less code, but a split
+- *Use `gtfs-structures` for the 13 spec files.* Less code, but a split
   mental model and no path to the extension files.
 - *Use `gtfs-structures` for everything and accept the missing extensions.*
-  Would leave 6 of 18 tables unhandled, which is a third of the job.
+  Would leave 5 of 18 tables unhandled, close to a third of the job.
 - *Parse with `split(',')` as the original did.* Broken: breaks on quoted
   fields, treats the header as data, and is position-dependent.
 
@@ -888,3 +894,64 @@ a transitive dependency, about a crate they have never heard of.
 
 **Cost.** One CI job, and the discipline of re-checking the floor whenever
 the dependency tree changes.
+
+---
+
+## D28 — Follow BART's field names, not the specification's
+
+**Status:** Accepted · 2026-10-21
+
+**Context.** `rider_categories.txt` is an optional file in the core GTFS
+specification. The specification gives it three fields: `rider_category_id`,
+`rider_category_name`, both required, and `is_default_fare_category`, also
+required. BART publishes the file with two columns — `rider_category_id` and
+`rider_category_description` — and no `is_default_fare_category` at all.
+
+D1 originally listed `rider_categories` among BART's extension files, on the
+grounds that the specification's field name is not the one BART uses. That
+conflated a file BART invented with a file BART publishes non-conformantly,
+and it had a practical consequence that went unnoticed: `gtfs-structures`
+follows the specification, so it rejects BART's file outright with `missing
+field 'rider_category_name'`. The live-feed test that compares our parser
+against the oracle therefore failed every time it was run, and the failure
+read like upstream drift rather than the designed divergence it was. D1 has
+been amended accordingly.
+
+**Decision.** Parse the field BART actually serves. `RiderCategory` keeps
+`#[serde(rename = "rider_category_description")]`, and the crate does not
+attempt to parse the specification's name.
+
+The oracle test compares against a copy of the feed with that one file left
+out, and checks the file's header before it does so, so that a change at
+BART is reported as a change at BART rather than as an unexplained parse
+failure. Any other file the oracle cannot parse still fails the test.
+
+**Why.**
+
+- The crate exists to read BART's feed. A feed that does not conform to the
+  specification is still the feed, and a parser that insists on the
+  specification's field names parses none of it.
+- Accepting both names would be more forgiving, but it would hide a
+  divergence an operator should know about, and it would not help the
+  oracle comparison, which is about counts, not about our field names.
+- Excluding one file from the oracle is not the same as ignoring it. The
+  header is still checked on every run, so a change at BART is caught.
+
+**Rejected.**
+
+- *Rename the field to `rider_category_name` to match the specification.*
+  Breaks parsing of the feed we actually download: every rider category
+  would fail to deserialise, and `fare_rider_categories.txt` would have
+  nothing to refer to.
+- *Make the field optional and accept either name.* Hides the divergence,
+  and leaves the crate unable to say which name the feed actually used.
+- *Drop `rider_categories.txt` from the crate.* It is the only place the
+  rider categories are named, and the only thing that distinguishes
+  `Youth Clipper` from `Senior/Disabled Clipper` in the fare output.
+- *Give up on the oracle.* The oracle is what catches a change in the feed
+  that we do not notice. It is worth more than one file.
+
+**Cost.** The oracle test has to know about the divergence, and the crate
+exposes a field name that does not appear in the specification. Both are
+documented at the point where they bite: the module doc in
+`src/attributes/rider_categories.rs`, and `docs/05-testing.md`.

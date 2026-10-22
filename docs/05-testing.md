@@ -67,6 +67,7 @@ Each of these was found by running the tool against the real feed and
 reading the output, not by reading the code. The live-feed test cannot
 catch any of them: they are all about *reporting*, not about the data.
 
+<a id="live-feed-test"></a>
 ### Live-feed test — `tests/live_feed.rs`
 
 ```rust
@@ -110,6 +111,22 @@ Two differences in modelling to be aware of when writing assertions:
   shape count.
 - The reference merges `stop_times` into its `Trip` type, so there is no
   direct equivalent of our `stop_times` table.
+
+#### The one file the reference cannot parse
+
+`gtfs-structures` follows the GTFS specification; BART does not, in exactly
+one place. `rider_categories.txt` is a specification file, but BART names its
+second field `rider_category_description` where the specification says
+`rider_category_name`, and omits the required `is_default_fare_category`.
+The reference implementation rejects the file outright, so it cannot be
+pointed at the whole feed.
+
+The test therefore compares against a copy of the feed with that one file
+left out. The exclusion is not silent: the test first checks the header of
+the downloaded file, and fails with an explanation if BART ever changes it,
+so that a change at BART is reported as a change at BART rather than as an
+unexplained parse error. Any *other* file that the reference cannot parse
+still fails the test, which is the point of having an oracle.
 
 ## Fixtures
 

@@ -54,7 +54,13 @@ have each caused a bug at least once.
    cross-validation oracle in the test suite (see
    [05-testing.md](05-testing.md)). It must keep `default-features = false`,
    or OpenSSL comes back into the tree.
-5. **Do not change the MSRV without checking it.** `rust-version` is a
+5. **Do not rename `rider_category_description`.** It is not a typo, and it
+   is not a GTFS field name. The specification says `rider_category_name`;
+   BART says `rider_category_description`, and BART is the feed we are
+   given. This is also the one file the `gtfs-structures` oracle cannot
+   read, which is why the live-feed test has to exclude it. See
+   [06-decisions.md](06-decisions.md) D28.
+6. **Do not change the MSRV without checking it.** `rust-version` is a
    promise to consumers, and it is enforced by a CI job that builds the
    crate with exactly that toolchain. See
    [06-decisions.md](06-decisions.md) D25 and D27.

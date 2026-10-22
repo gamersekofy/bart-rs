@@ -290,8 +290,17 @@ pub struct RealtimeRoute {
 
 `rider_category_id,rider_category_description`
 
-BART extension. Current values: `5` = `Youth Clipper`, `2` =
-`Senior/Disabled Clipper`, `16` = `Clipper START`.
+Optional in the GTFS specification, and BART publishes it, but not
+quite to spec: the specification calls the second field
+`rider_category_name`, and BART calls it `rider_category_description`.
+BART also omits `is_default_fare_category`, which the specification
+requires. We follow BART, because BART is the feed we are given. The
+reference implementation used as a test oracle follows the specification
+instead, and cannot parse this file — see
+[05-testing.md](05-testing.md#live-feed-test).
+
+Current values: `5` = `Youth Clipper`, `2` = `Senior/Disabled Clipper`,
+`16` = `Clipper START`.
 
 ```rust
 #[derive(Debug, Clone, Deserialize)]
