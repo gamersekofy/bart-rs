@@ -32,6 +32,22 @@ jobs:
       - name: Build
         run: cargo build --all-features --locked
 
+      # The crate is published, and most consumers will want the library
+      # without the command line tool. These are the combinations the
+      # library guide tells people to use, so they have to keep building.
+      #
+      # The first one is the one that catches a missing `required-features`
+      # on the binary: with the default features off, `src/main.rs` reaches
+      # for `bart_rs::cli`, which does not exist.
+      - name: Build without the default features
+        run: cargo build --no-default-features --locked
+
+      - name: Build the library with the download feature
+        run: cargo build --no-default-features --features download --locked
+
+      - name: Build the command line tool
+        run: cargo build --no-default-features --features cli --locked
+
       - name: Test
         run: cargo test --all-features --locked
 

@@ -18,7 +18,7 @@ homepage = "https://github.com/gamersekofy/bart-rs"
 documentation = "https://docs.rs/bart-rs"
 readme = "README.md"
 keywords = ["gtfs", "bart", "transit", "realtime", "cli"]
-categories = ["command-line-utilities", "api-bindings"]
+categories = ["command-line-utilities", "parsing"]
 
 # Edition 2024 already implies resolver 3, which is stated here so that the
 # reason is written down: resolver 3 honours `rust-version` when choosing
@@ -45,11 +45,25 @@ exclude = [
 [features]
 default = ["cli", "download"]
 # The `cli` feature is the binary front end. A library consumer that only
-# wants to parse a feed does not need to pull in clap.
-cli = ["dep:clap", "dep:colored"]
+# wants to parse a feed does not pull in clap.
+#
+# It implies `download`, because the command line tool is the whole tool:
+# `update` fetches the feed and the realtime commands fetch the live
+# feeds, so a `cli` without the network stack would be missing commands
+# rather than having a lighter version of them.
+cli = ["dep:clap", "dep:colored", "download"]
 # The `download` feature is the network + archive stack, used by `update` and
 # by the realtime fetchers.
 download = ["dep:reqwest", "dep:zip"]
+
+# The binary is the command line tool, and `src/main.rs` reaches for
+# `bart_rs::cli`, which only exists with the `cli` feature. Without
+# `required-features`, cargo builds the binary anyway and the build fails
+# for anyone who turns the default features off.
+[[bin]]
+name = "bart-rs"
+path = "src/main.rs"
+required-features = ["cli"]
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }

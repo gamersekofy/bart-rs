@@ -42,13 +42,16 @@ below already allow forking the surface without forking the package.
 ```toml
 [features]
 default = ["cli", "download"]
-cli      = ["dep:clap", "dep:colored"]
+cli      = ["dep:clap", "dep:colored", "download"]
 download = ["dep:reqwest", "dep:zip"]
 ```
 
 - **`cli`** — the `cli` and `commands` modules, i.e. everything argument-parsing
   and colour-related. A library consumer that only wants to parse a feed does
-  not pull in `clap`.
+  not pull in `clap`. It implies `download`, because the command line tool is
+  the whole tool: `update` fetches the feed and the realtime commands fetch
+  the live feeds, so a `cli` without the network stack would be missing
+  commands rather than having a lighter version of them.
 - **`download`** — `update.rs`: the HTTP client and the zip extractor. A
   consumer that already has a feed on disk does not pull in `reqwest`, `zip`,
   or the `tokio` runtime that `reqwest`'s blocking API sits on.
@@ -57,6 +60,20 @@ The core (`attributes`, `feed`, `schedule`, `gtfsrt`, `realtime`, `paths`,
 `helper`, `error`) depends on neither. `realtime` needs only `reqwest` for the
 fetch — see the note in `03-data-sources.md`; if that turns out to be awkward
 we can split the decode half from the fetch half and gate only the latter.
+
+The binary is gated on the `cli` feature:
+
+```toml
+[[bin]]
+name = "bart-rs"
+path = "src/main.rs"
+required-features = ["cli"]
+```
+
+Without that, cargo builds `src/main.rs` even when the `cli` feature is off,
+and it fails to compile, because it reaches for `bart_rs::cli`. Turning the
+default features off is the documented way to use this as a library, so it
+has to build.
 
 ## Edition and minimum supported Rust
 
