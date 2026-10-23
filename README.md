@@ -31,7 +31,7 @@ the service-day arithmetic, and the GTFS-Realtime decoding.
 
 ## Installing
 
-This project is a Nix flake. With [Nix](https://nixos.org) and flakes enabled:
+ You have a few choices. This project is a Nix flake. With [Nix](https://nixos.org) and flakes enabled:
 
 To immediately try it:
 
@@ -46,32 +46,16 @@ $ nix develop
 $ cargo build
 ```
 
-`nix develop` drops you into a shell with the right Rust toolchain, `clippy`,
-`rustfmt`, `cargo-watch`, `rust-analyzer` and `cargo-deny` already on the
-path. Nothing is installed outside the Nix store.
-
-If you use [direnv](https://direnv.net), the included `.envrc` means the
-environment loads automatically when you `cd` into the project:
-
-```console
-$ direnv allow
-$ cargo run -- --help
-```
-
-To build a release binary:
-
-```console
-$ nix build          # ./result/bin/bart-rs
-```
-
-To run it straight from the repository, without building it first:
-
-```console
-$ nix run . -- --help
-```
-
 Without Nix you need a Rust toolchain (1.88 or newer) and can just use
 `cargo build --release`.
+
+Alternatively, since this project is published on [crates.io](https://crates.io), you can simply run:
+
+```console
+$ cargo install bart-rs
+```
+
+and have it become available system-wide.
 
 ### Using it as a crate
 
