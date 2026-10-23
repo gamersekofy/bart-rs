@@ -1,5 +1,7 @@
 # bart-rs
 
+[![Crates.io Version](https://img.shields.io/crates/v/bart-rs)](https://crates.io/crates/bart-rs)
+
 A command line tool — and a library — for exploring **BART** (Bay Area Rapid
 Transit) schedule and realtime data.
 
